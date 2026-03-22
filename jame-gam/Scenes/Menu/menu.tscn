@@ -1,0 +1,103 @@
+[gd_scene format=3 uid="uid://bva2jwpnnsqy7"]
+
+[ext_resource type="Script" uid="uid://b6xmxsoeb3fcd" path="res://Scenes/Menu/menu.gd" id="1_cqskg"]
+
+[sub_resource type="FontVariation" id="FontVariation_k4toc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k4toc"]
+bg_color = Color(0.2469503, 0.24695033, 0.24695021, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cqskg"]
+bg_color = Color(0.6255971, 0.6255971, 0.62559694, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3ymnh"]
+bg_color = Color(0.22094136, 0.22094145, 0.22094142, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="Menu" type="Node2D" unique_id=882106152]
+script = ExtResource("1_cqskg")
+
+[node name="HBoxContainer" type="VBoxContainer" parent="." unique_id=684405442]
+offset_left = 295.0
+offset_top = 135.0
+offset_right = 663.0
+offset_bottom = 367.0
+
+[node name="Start" type="Button" parent="HBoxContainer" unique_id=763560745]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(0.4817894, 0.4817894, 0.48179042, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.6321235, 0.6321235, 0.6321234, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.5006195, 0.5006196, 0.5006196, 1)
+theme_override_fonts/font = SubResource("FontVariation_k4toc")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_k4toc")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_cqskg")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3ymnh")
+text = "Start"
+
+[node name="Settings" type="Button" parent="HBoxContainer" unique_id=2114474116]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(0.4817894, 0.4817894, 0.48179042, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.6321235, 0.6321235, 0.6321234, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.5006195, 0.5006196, 0.5006196, 1)
+theme_override_fonts/font = SubResource("FontVariation_k4toc")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_k4toc")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_cqskg")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3ymnh")
+text = "Settings"
+
+[node name="Quit" type="Button" parent="HBoxContainer" unique_id=627165129]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(0.4817894, 0.4817894, 0.48179042, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.6321235, 0.6321235, 0.6321234, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.5006195, 0.5006196, 0.5006196, 1)
+theme_override_fonts/font = SubResource("FontVariation_k4toc")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_k4toc")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_cqskg")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3ymnh")
+text = "Quit
+"
+
+[connection signal="pressed" from="HBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="HBoxContainer/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="HBoxContainer/Quit" to="." method="_on_quit_pressed"]
