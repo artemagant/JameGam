@@ -1,3 +1,96 @@
 [gd_scene format=3 uid="uid://edocv3oc4u13"]
 
+[ext_resource type="Script" uid="uid://2jq0n47gb4ee" path="res://Scenes/Settings_Menu/settings_menu.gd" id="1_okp8p"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_xack3"]
+font_size = 50
+
+[sub_resource type="LabelSettings" id="LabelSettings_okp8p"]
+font_size = 50
+
+[sub_resource type="LabelSettings" id="LabelSettings_ikwko"]
+font_size = 50
+
 [node name="Settings_Menu" type="Node2D" unique_id=1819137404]
+script = ExtResource("1_okp8p")
+
+[node name="Labels" type="VBoxContainer" parent="." unique_id=575963615]
+offset_left = 264.0
+offset_top = 108.0
+offset_right = 527.0
+offset_bottom = 323.0
+theme_override_constants/separation = 8
+
+[node name="Music" type="Label" parent="Labels" unique_id=1586870963]
+layout_mode = 2
+size_flags_vertical = 6
+text = "Music:"
+label_settings = SubResource("LabelSettings_xack3")
+horizontal_alignment = 1
+
+[node name="SFX" type="Label" parent="Labels" unique_id=1291381473]
+layout_mode = 2
+size_flags_vertical = 6
+text = "SFX:"
+label_settings = SubResource("LabelSettings_okp8p")
+horizontal_alignment = 1
+
+[node name="FS" type="Label" parent="Labels" unique_id=519220271]
+layout_mode = 2
+size_flags_vertical = 6
+text = "FullScreen:"
+label_settings = SubResource("LabelSettings_ikwko")
+horizontal_alignment = 1
+
+[node name="Buttons" type="VBoxContainer" parent="." unique_id=996082209]
+offset_left = 599.0
+offset_top = 101.0
+offset_right = 761.0
+offset_bottom = 314.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Buttons" unique_id=353618761]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="+" type="Button" parent="Buttons/HBoxContainer" unique_id=2087740667]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 50
+text = "+"
+
+[node name="-" type="Button" parent="Buttons/HBoxContainer" unique_id=1974935378]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 50
+text = "-"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Buttons" unique_id=2000154362]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="+" type="Button" parent="Buttons/HBoxContainer2" unique_id=1352050452]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 50
+text = "+"
+
+[node name="-" type="Button" parent="Buttons/HBoxContainer2" unique_id=1721569694]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 50
+text = "-"
+
+[node name="Control" type="Control" parent="Buttons" unique_id=488941229]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="FS" type="CheckBox" parent="Buttons/Control" unique_id=118968263]
+texture_filter = 2
+layout_mode = 0
+offset_right = 24.0
+offset_bottom = 24.0
+scale = Vector2(3, 3)
+size_flags_vertical = 3
+alignment = 1
+
+[connection signal="toggled" from="Buttons/Control/FS" to="." method="_on_fs_toggled"]
