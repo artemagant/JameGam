@@ -78,3 +78,15 @@ func _input(event: InputEvent) -> void:
 		if event.is_action_pressed("exit"):
 			game.show_menu()
 			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+		if event.is_action_pressed("belt"):
+			game.belt = !game.belt
+		if event.is_action_pressed("honk"):
+			game.honk()
+		if event.is_action_pressed("emergency_lights"):
+			game.signal_emergency()
+		if event.is_action_pressed("turn_left"):
+			game.signal_left()
+		if event.is_action_pressed("turn_right"):
+			game.signal_right()
+		if event.is_action_pressed("lights"):
+			game.lights_connect()

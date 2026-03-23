@@ -1,23 +1,23 @@
 [gd_scene format=3 uid="uid://c0er2n5oh36t"]
 
 [ext_resource type="Script" uid="uid://b58desau1ovn3" path="res://Scenes/Game/game.gd" id="1_i1e5p"]
-[ext_resource type="Texture2D" uid="uid://baxybk8x45tje" path="res://icon.svg" id="2_qikps"]
 [ext_resource type="Texture2D" uid="uid://cuf402qw2hhyj" path="res://Sprites/vaz_2107.jpg" id="3_i1e5p"]
 [ext_resource type="PackedScene" uid="uid://cnh6ljnidsr7w" path="res://Scenes/Car/car.tscn" id="3_qikps"]
 [ext_resource type="PackedScene" uid="uid://bmh46qhptl0qk" path="res://Scenes/Menu_Game/menu_game.tscn" id="4_flgk0"]
 [ext_resource type="PackedScene" uid="uid://3e6yndw1osex" path="res://Scenes/Game_UI/ui.tscn" id="5_ciybh"]
+[ext_resource type="Texture2D" uid="uid://c7s5y6vn8b6bj" path="res://Sprites/colormap.png" id="5_flgk0"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ev4jc"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qikps"]
-albedo_texture = ExtResource("2_qikps")
+albedo_texture = ExtResource("5_flgk0")
 metallic = 1.0
 metallic_texture = ExtResource("3_i1e5p")
 metallic_texture_channel = 1
 roughness_texture = ExtResource("3_i1e5p")
 roughness_texture_channel = 1
 
-[sub_resource type="BoxMesh" id="BoxMesh_mv0hc"]
+[sub_resource type="BoxMesh" id="BoxMesh_vifcx"]
 material = SubResource("StandardMaterial3D_qikps")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_qxfds"]
@@ -47,7 +47,7 @@ physics_material_override = SubResource("PhysicsMaterial_ev4jc")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Floor" unique_id=1501619973]
 transform = Transform3D(19259.922, 0, 0, 0, 2.5270913, 0, 0, 0, 3231.72, 0, 0, 0)
-mesh = SubResource("BoxMesh_mv0hc")
+mesh = SubResource("BoxMesh_vifcx")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Floor" unique_id=725954734]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.76453, -63.62037, -75.71051)

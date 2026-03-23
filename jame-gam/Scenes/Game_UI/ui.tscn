@@ -21,12 +21,14 @@ size = Vector2(120, 120)
 [node name="UI" type="CanvasGroup" unique_id=1013923296]
 
 [node name="Game" type="Label" parent="." unique_id=430361927]
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 36.0
+offset_top = -2.0
+offset_right = 104.0
+offset_bottom = 21.0
 text = "car drive"
 
 [node name="Panel" type="Panel" parent="." unique_id=1757160726]
-offset_left = 746.0
+offset_left = 790.0
 offset_top = 2.0
 offset_right = 957.0
 offset_bottom = 313.0
@@ -50,16 +52,15 @@ t - clutch
 e - turn on engine
 l - light
 b - car belt
-<> - turn signals
+<> (, .) - turn signals
 h - honk
 esc - menu"
 label_settings = SubResource("LabelSettings_5ntg7")
 
 [node name="Panel2" type="Panel" parent="." unique_id=1769679220]
-offset_left = 2.0
-offset_top = 26.0
-offset_right = 213.0
-offset_bottom = 337.0
+offset_top = 3.0
+offset_right = 211.0
+offset_bottom = 314.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_rkyvi")
 metadata/_edit_group_ = true
 
@@ -71,7 +72,10 @@ offset_bottom = 309.0
 text = "Info:
 Speed - 
 Coordinates -
-Max Speed -"
+Max Speed -
+Belt -
+Signals -
+..."
 label_settings = SubResource("LabelSettings_aa8u4")
 
 [node name="Menu" type="Control" parent="." unique_id=1198609646]
@@ -80,11 +84,11 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Node" type="Node2D" parent="." unique_id=1395394327]
+[node name="Phone_Buttons" type="Node2D" parent="." unique_id=1395394327]
 position = Vector2(-1, -30)
 metadata/_edit_group_ = true
 
-[node name="Up" type="TouchScreenButton" parent="Node" unique_id=2121372585]
+[node name="Up" type="TouchScreenButton" parent="Phone_Buttons" unique_id=2121372585]
 position = Vector2(803, 420)
 scale = Vector2(0.7, 0.7)
 texture_normal = ExtResource("1_5ntg7")
@@ -93,7 +97,7 @@ passby_press = true
 action = "up"
 visibility_mode = 1
 
-[node name="Down" type="TouchScreenButton" parent="Node" unique_id=966324063]
+[node name="Down" type="TouchScreenButton" parent="Phone_Buttons" unique_id=966324063]
 position = Vector2(694, 422.00003)
 scale = Vector2(0.7, 0.7)
 texture_normal = ExtResource("1_5ntg7")
@@ -102,7 +106,7 @@ passby_press = true
 action = "down"
 visibility_mode = 1
 
-[node name="Left" type="TouchScreenButton" parent="Node" unique_id=511179016]
+[node name="Left" type="TouchScreenButton" parent="Phone_Buttons" unique_id=511179016]
 position = Vector2(70, 438)
 scale = Vector2(0.7, 0.7)
 texture_normal = ExtResource("1_5ntg7")
@@ -111,11 +115,74 @@ passby_press = true
 action = "left"
 visibility_mode = 1
 
-[node name="Right" type="TouchScreenButton" parent="Node" unique_id=1371538749]
+[node name="Right" type="TouchScreenButton" parent="Phone_Buttons" unique_id=1371538749]
 position = Vector2(184, 431)
 scale = Vector2(0.7, 0.7)
 texture_normal = ExtResource("1_5ntg7")
 shape = SubResource("RectangleShape2D_aa8u4")
 passby_press = true
 action = "right"
+visibility_mode = 1
+
+[node name="ESC" type="TouchScreenButton" parent="Phone_Buttons" unique_id=1614046851]
+position = Vector2(910, 35)
+scale = Vector2(0.35937402, 0.36718738)
+texture_normal = ExtResource("1_5ntg7")
+shape = SubResource("RectangleShape2D_aa8u4")
+passby_press = true
+action = "exit"
+visibility_mode = 1
+
+[node name="Belt" type="TouchScreenButton" parent="Phone_Buttons" unique_id=1458653585]
+position = Vector2(24, 294)
+scale = Vector2(0.42968744, 0.36406276)
+texture_normal = ExtResource("1_5ntg7")
+shape = SubResource("RectangleShape2D_aa8u4")
+passby_press = true
+action = "belt"
+visibility_mode = 1
+
+[node name="Lights" type="TouchScreenButton" parent="Phone_Buttons" unique_id=1718566869]
+position = Vector2(112, 324)
+scale = Vector2(0.42968744, 0.36406276)
+texture_normal = ExtResource("1_5ntg7")
+shape = SubResource("RectangleShape2D_aa8u4")
+passby_press = true
+action = "lights"
+visibility_mode = 1
+
+[node name="Honk" type="TouchScreenButton" parent="Phone_Buttons" unique_id=1689636599]
+position = Vector2(847, 293.00003)
+scale = Vector2(0.3874995, 0.41875008)
+texture_normal = ExtResource("1_5ntg7")
+shape = SubResource("RectangleShape2D_aa8u4")
+passby_press = true
+action = "honk"
+visibility_mode = 1
+
+[node name="Turn_Left" type="TouchScreenButton" parent="Phone_Buttons" unique_id=125241084]
+position = Vector2(724, 342.00003)
+scale = Vector2(0.3874995, 0.41875008)
+texture_normal = ExtResource("1_5ntg7")
+shape = SubResource("RectangleShape2D_aa8u4")
+passby_press = true
+action = "turn_left"
+visibility_mode = 1
+
+[node name="Turn_Right" type="TouchScreenButton" parent="Phone_Buttons" unique_id=1113148505]
+position = Vector2(793, 341)
+scale = Vector2(0.3874995, 0.41875008)
+texture_normal = ExtResource("1_5ntg7")
+shape = SubResource("RectangleShape2D_aa8u4")
+passby_press = true
+action = "turn_right"
+visibility_mode = 1
+
+[node name="Emergency_Lights" type="TouchScreenButton" parent="Phone_Buttons" unique_id=1001401609]
+position = Vector2(897.00006, 355)
+scale = Vector2(0.3874995, 0.41875008)
+texture_normal = ExtResource("1_5ntg7")
+shape = SubResource("RectangleShape2D_aa8u4")
+passby_press = true
+action = "emergency_lights"
 visibility_mode = 1

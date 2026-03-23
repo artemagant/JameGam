@@ -12,6 +12,9 @@ var speed: float
 @onready var _position = car.position
 @onready var previous_position = _position
 var max_speed: float
+var belt: bool = false
+var turn_signals: = Vector2.ZERO
+var lights: int = 0
 
 func _ready() -> void:
 	update_ui_stats()
@@ -27,7 +30,10 @@ func update_ui_stats() -> void:
 		Speed - %.2f mps
 		Coordinates - (%.1f, %.1f, %.1f)
 		Max Speed - %.2f mps
-		..." %[speed, _position.x, _position.y, _position.z, max_speed]
+		Belt - %d
+		Signals - (%d, %d)
+		Lights - %d
+		..." %[speed, _position.x, _position.y, _position.z, max_speed, int(belt), turn_signals.x, turn_signals.y, lights]
 
 func change_speed() -> void:
 	var dist = _position.distance_to(previous_position)
@@ -50,3 +56,32 @@ func show_menu():
 func return_to_menu():
 	ui.visible = false
 	main.return_to_menu_2()
+
+func honk():
+	print("honk")
+
+func signal_left():
+	if turn_signals == Vector2(1, 1):
+		return
+	if turn_signals == Vector2(1, 0):
+		turn_signals = Vector2.ZERO
+		return
+	turn_signals = Vector2(1, 0)
+func signal_right():
+	if turn_signals == Vector2(1, 1):
+		return
+	if turn_signals == Vector2(0, 1):
+		turn_signals = Vector2.ZERO
+		return
+	turn_signals = Vector2(0, 1)
+func signal_emergency():
+	if turn_signals == Vector2(1, 1):
+		turn_signals = Vector2.ZERO
+		return
+	turn_signals = Vector2(1,1)
+
+func lights_connect():
+	if lights == 2:
+		lights = 0
+		return
+	lights += 1
