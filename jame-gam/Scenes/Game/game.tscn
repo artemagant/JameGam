@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://c0er2n5oh36t"]
 
+[ext_resource type="Script" uid="uid://b58desau1ovn3" path="res://Scenes/Game/game.gd" id="1_i1e5p"]
 [ext_resource type="Texture2D" uid="uid://baxybk8x45tje" path="res://icon.svg" id="2_qikps"]
 [ext_resource type="Texture2D" uid="uid://cuf402qw2hhyj" path="res://Sprites/vaz_2107.jpg" id="3_i1e5p"]
 [ext_resource type="PackedScene" uid="uid://cnh6ljnidsr7w" path="res://Scenes/Car/car.tscn" id="3_qikps"]
+[ext_resource type="PackedScene" uid="uid://3e6yndw1osex" path="res://Scenes/Game_UI/ui.tscn" id="5_ciybh"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ev4jc"]
 
@@ -27,6 +29,11 @@ ambient_light_sky_contribution = 0.1
 ambient_light_energy = 8.0
 
 [node name="Game" type="Node3D" unique_id=613764105]
+script = ExtResource("1_i1e5p")
+
+[node name="Car" parent="." unique_id=1676619421 instance=ExtResource("3_qikps")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.2250214, 0)
+turn_amount = 0.6
 
 [node name="Floor" type="StaticBody3D" parent="." unique_id=879998053]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6820865, -3.974947, 0)
@@ -43,6 +50,4 @@ shape = SubResource("BoxShape3D_qxfds")
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1688672493]
 environment = SubResource("Environment_mv0hc")
 
-[node name="Car" parent="." unique_id=1676619421 instance=ExtResource("3_qikps")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.2250214, 0)
-max_RPM = 450
+[node name="UI" parent="." unique_id=1013923296 instance=ExtResource("5_ciybh")]

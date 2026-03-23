@@ -1,9 +1,9 @@
 extends VehicleBody3D
 
-@export var max_RPM = 450
-@export var max_torque = 300
-@export var turn_speed = 6
-@export var turn_amount = 0.05
+@export var max_RPM: = 450
+@export var max_torque: = 300
+@export var turn_speed: = 6.0
+@export var turn_amount: = 0.05
 @onready var cam_arm: SpringArm3D = $CamArm
 @onready var wheel_back_left: VehicleWheel3D = $wheel_back_left
 @onready var wheel_back_right: VehicleWheel3D = $wheel_back_right
@@ -27,4 +27,3 @@ func _physics_process(delta: float) -> void:
 	
 	if dir == 0:
 		brake = 2
-	

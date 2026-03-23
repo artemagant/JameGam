@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://3e6yndw1osex"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rkyvi"]
+bg_color = Color(0.15487596, 0.154876, 0.1548759, 0.19215687)
+
+[node name="UI" type="CanvasGroup" unique_id=1013923296]
+
+[node name="Game" type="Label" parent="." unique_id=430361927]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "car drive"
+
+[node name="Panel" type="Panel" parent="." unique_id=1757160726]
+offset_left = 746.0
+offset_top = 2.0
+offset_right = 957.0
+offset_bottom = 313.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_rkyvi")
+metadata/_edit_group_ = true
+
+[node name="Info" type="Label" parent="Panel" unique_id=91596802]
+modulate = Color(0.97881764, 0.97881764, 0.97881764, 0.34901962)
+layout_mode = 0
+offset_right = 206.0
+offset_bottom = 309.0
+text = "Controls:
+arrow up - Gas
+arrow down - break
+arrows left and right - turn
+w, s - transmissions
+t - clutch
+e - turn on engine
+l - light
+b - car belt
+<> - turn signals
+h - honk
+esc - menu"
+
+[node name="Menu" type="Control" parent="." unique_id=1198609646]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0

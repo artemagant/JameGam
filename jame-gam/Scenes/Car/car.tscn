@@ -121,8 +121,11 @@ albedo_texture = ExtResource("1_e7e8e")
 size = Vector3(1, 0.59069824, 1.3835449)
 
 [node name="Car" type="VehicleBody3D" unique_id=1676619421]
-mass = 240.0
+mass = 500.0
+center_of_mass_mode = 1
+center_of_mass = Vector3(0, -0.13, 0)
 script = ExtResource("1_y6gko")
+max_torque = 200
 
 [node name="body" type="MeshInstance3D" parent="." unique_id=1828985564]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, -2.8876456e-15)
@@ -134,7 +137,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -1.0499997)
 mesh = SubResource("ArrayMesh_afscr")
 
 [node name="wheel_back_left" type="VehicleWheel3D" parent="." unique_id=1539604403]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.49690866, 0.28904283, -0.5703136)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.43849683, 0.289, -0.57)
 use_as_traction = true
 wheel_roll_influence = 0.0
 wheel_radius = 0.3
@@ -144,12 +147,11 @@ damping_compression = 1.9
 damping_relaxation = 2.0
 
 [node name="wheel-back-left" type="MeshInstance3D" parent="wheel_back_left" unique_id=494611224]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.14406598, 0.010957181, 0.0103135705)
 mesh = SubResource("ArrayMesh_nkh8f")
 surface_material_override/0 = SubResource("StandardMaterial3D_imavk")
 
 [node name="wheel_back_right" type="VehicleWheel3D" parent="." unique_id=520500390]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5866277, 0.28904283, -0.5703136)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4265501, 0.28904283, -0.5703136)
 use_as_traction = true
 wheel_roll_influence = 0.0
 wheel_radius = 0.3
@@ -159,12 +161,12 @@ damping_compression = 1.9
 damping_relaxation = 2.0
 
 [node name="wheel-back-right" type="MeshInstance3D" parent="wheel_back_right" unique_id=2027629049]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0.19752717, 0.010957181, 0.0103135705)
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 0, 0)
 mesh = SubResource("ArrayMesh_nkh8f")
 surface_material_override/0 = SubResource("StandardMaterial3D_imavk")
 
 [node name="wheel_front_left" type="VehicleWheel3D" parent="." unique_id=726141367]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.49690866, 0.28904283, 0.7467271)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.45570582, 0.28904283, 0.7467271)
 use_as_traction = true
 use_as_steering = true
 wheel_roll_influence = 0.0
@@ -175,23 +177,22 @@ damping_compression = 1.9
 damping_relaxation = 2.0
 
 [node name="wheel-front-left" type="MeshInstance3D" parent="wheel_front_left" unique_id=1988126266]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.14406598, 0.010957181, 0.0103135705)
 mesh = SubResource("ArrayMesh_nkh8f")
 surface_material_override/0 = SubResource("StandardMaterial3D_imavk")
 
 [node name="wheel_front_right" type="VehicleWheel3D" parent="." unique_id=254015025]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.53299975, 0.28904283, 0.7467271)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4400885, 0.28871483, 0.7533526)
 use_as_traction = true
 use_as_steering = true
 wheel_roll_influence = 0.0
-wheel_radius = 0.3
+wheel_radius = 0.315
 suspension_travel = 10.0
 suspension_stiffness = 40.0
 damping_compression = 1.9
 damping_relaxation = 2.0
 
 [node name="wheel-front-right" type="MeshInstance3D" parent="wheel_front_right" unique_id=1727872460]
-transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0.16007912, 0.010957181, 0.0103135705)
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 0, 0)
 mesh = SubResource("ArrayMesh_nkh8f")
 surface_material_override/0 = SubResource("StandardMaterial3D_imavk")
 

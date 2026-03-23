@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://dyagfeyiuk77m" path="res://Scenes/Main/main.gd" id="1_1r6ip"]
 [ext_resource type="PackedScene" uid="uid://bva2jwpnnsqy7" path="res://Scenes/Menu/menu.tscn" id="2_lixft"]
 [ext_resource type="PackedScene" uid="uid://edocv3oc4u13" path="res://Scenes/Settings_Menu/settings_menu.tscn" id="3_qw60k"]
-[ext_resource type="PackedScene" uid="uid://c0er2n5oh36t" path="res://Scenes/Game/game.tscn" id="4_5yls4"]
 
 [node name="Main" type="Node2D" unique_id=1072729622]
 script = ExtResource("1_1r6ip")
@@ -12,8 +11,6 @@ script = ExtResource("1_1r6ip")
 
 [node name="Settings_Menu" parent="." unique_id=1819137404 instance=ExtResource("3_qw60k")]
 visible = false
-
-[node name="Game" parent="." unique_id=249295157 instance=ExtResource("4_5yls4")]
 
 [node name="Fade" type="ColorRect" parent="." unique_id=856592707]
 offset_right = 2056.0
