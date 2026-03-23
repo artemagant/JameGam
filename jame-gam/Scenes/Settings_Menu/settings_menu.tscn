@@ -11,6 +11,214 @@ font_size = 50
 [sub_resource type="LabelSettings" id="LabelSettings_ikwko"]
 font_size = 50
 
+[sub_resource type="FontVariation" id="FontVariation_3glqr"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g5mw4"]
+bg_color = Color(0.2469503, 0.24695033, 0.24695021, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c5mqg"]
+bg_color = Color(0.6255971, 0.6255971, 0.62559694, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gidls"]
+bg_color = Color(0.22094136, 0.22094145, 0.22094142, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="FontVariation" id="FontVariation_okp8p"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ikwko"]
+bg_color = Color(0.2469503, 0.24695033, 0.24695021, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bb7fx"]
+bg_color = Color(0.6255971, 0.6255971, 0.62559694, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lyxuw"]
+bg_color = Color(0.22094136, 0.22094145, 0.22094142, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="LabelSettings" id="LabelSettings_3glqr"]
+font_size = 50
+
+[sub_resource type="FontVariation" id="FontVariation_lyxuw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r1q0g"]
+bg_color = Color(0.2469503, 0.24695033, 0.24695021, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_okp8p"]
+bg_color = Color(0.6255971, 0.6255971, 0.62559694, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3glqr"]
+bg_color = Color(0.22094136, 0.22094145, 0.22094142, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="FontVariation" id="FontVariation_bb7fx"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t5yct"]
+bg_color = Color(0.2469503, 0.24695033, 0.24695021, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iqoi1"]
+bg_color = Color(0.6255971, 0.6255971, 0.62559694, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bwrp4"]
+bg_color = Color(0.22094136, 0.22094145, 0.22094142, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="FontVariation" id="FontVariation_ikwko"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xiekh"]
+bg_color = Color(0.2469503, 0.24695033, 0.24695021, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2q60e"]
+bg_color = Color(0.6255971, 0.6255971, 0.62559694, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xbdlx"]
+bg_color = Color(0.22094136, 0.22094145, 0.22094142, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
 [node name="Settings_Menu" type="Node2D" unique_id=1819137404]
 script = ExtResource("1_okp8p")
 
@@ -52,33 +260,81 @@ offset_bottom = 314.0
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="+" type="Button" parent="Buttons/HBoxContainer" unique_id=2087740667]
+[node name="Music_Minus" type="Button" parent="Buttons/HBoxContainer" unique_id=1974935378]
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_colors/font_focus_color = Color(0.48235294, 0.48235294, 0.48235294, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.6313726, 0.6313726, 0.6313726, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.48235294, 0.48235294, 0.48235294, 1)
+theme_override_fonts/font = SubResource("FontVariation_3glqr")
 theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_g5mw4")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_c5mqg")
+theme_override_styles/hover = SubResource("StyleBoxFlat_gidls")
+text = "-"
+
+[node name="Music_Plus" type="Button" parent="Buttons/HBoxContainer" unique_id=2087740667]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_focus_color = Color(0.48235294, 0.48235294, 0.48235294, 1)
+theme_override_colors/font_pressed_color = Color(0.6313726, 0.6313726, 0.6313726, 1)
+theme_override_colors/font_hover_color = Color(0.48235294, 0.48235294, 0.48235294, 1)
+theme_override_fonts/font = SubResource("FontVariation_okp8p")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_ikwko")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_bb7fx")
+theme_override_styles/hover = SubResource("StyleBoxFlat_lyxuw")
 text = "+"
 
-[node name="-" type="Button" parent="Buttons/HBoxContainer" unique_id=1974935378]
+[node name="CenterContainer" type="CenterContainer" parent="Buttons/HBoxContainer" unique_id=249280540]
 layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 50
-text = "-"
+use_top_left = true
+
+[node name="Music_Level" type="Label" parent="Buttons/HBoxContainer/CenterContainer" unique_id=1363341339]
+layout_mode = 2
+label_settings = SubResource("LabelSettings_3glqr")
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="Buttons" unique_id=2000154362]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="+" type="Button" parent="Buttons/HBoxContainer2" unique_id=1352050452]
+[node name="SFX_Minus" type="Button" parent="Buttons/HBoxContainer2" unique_id=1721569694]
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(0.48235294, 0.48235294, 0.48235294, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.6313726, 0.6313726, 0.6313726, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.48235294, 0.48235294, 0.48235294, 1)
+theme_override_fonts/font = SubResource("FontVariation_lyxuw")
 theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_r1q0g")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_okp8p")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3glqr")
+text = "-"
+
+[node name="SFX_Plus" type="Button" parent="Buttons/HBoxContainer2" unique_id=1352050452]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_focus_color = Color(0.48235294, 0.48235294, 0.48235294, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.6313726, 0.6313726, 0.6313726, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.48235294, 0.48235294, 0.48235294, 1)
+theme_override_fonts/font = SubResource("FontVariation_bb7fx")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_t5yct")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_iqoi1")
+theme_override_styles/hover = SubResource("StyleBoxFlat_bwrp4")
 text = "+"
 
-[node name="-" type="Button" parent="Buttons/HBoxContainer2" unique_id=1721569694]
+[node name="CenterContainer" type="CenterContainer" parent="Buttons/HBoxContainer2" unique_id=556308040]
 layout_mode = 2
-size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 50
-text = "-"
+use_top_left = true
+
+[node name="SFX_Level" type="Label" parent="Buttons/HBoxContainer2/CenterContainer" unique_id=1992794129]
+layout_mode = 2
+label_settings = SubResource("LabelSettings_3glqr")
 
 [node name="Control" type="Control" parent="Buttons" unique_id=488941229]
 layout_mode = 2
@@ -91,6 +347,49 @@ offset_right = 24.0
 offset_bottom = 24.0
 scale = Vector2(3, 3)
 size_flags_vertical = 3
+button_pressed = true
 alignment = 1
 
+[node name="Return_Butons" type="VBoxContainer" parent="." unique_id=499205168]
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 253.0
+offset_bottom = 134.0
+
+[node name="Return" type="Button" parent="Return_Butons" unique_id=1992245098]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_focus_color = Color(0.48235294, 0.48235294, 0.48235294, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.6313726, 0.6313726, 0.6313726, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.48235294, 0.48235294, 0.48235294, 1)
+theme_override_fonts/font = SubResource("FontVariation_ikwko")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_xiekh")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_2q60e")
+theme_override_styles/hover = SubResource("StyleBoxFlat_xbdlx")
+text = "Return
+"
+
+[node name="Return_To_Menu" type="Button" parent="Return_Butons" unique_id=2079129030]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_focus_color = Color(0.48235294, 0.48235294, 0.48235294, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.6313726, 0.6313726, 0.6313726, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.48235294, 0.48235294, 0.48235294, 1)
+theme_override_fonts/font = SubResource("FontVariation_ikwko")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_xiekh")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_2q60e")
+theme_override_styles/hover = SubResource("StyleBoxFlat_xbdlx")
+text = "Return To Menu
+"
+
+[connection signal="pressed" from="Buttons/HBoxContainer/Music_Minus" to="." method="_on_music_minus_pressed"]
+[connection signal="pressed" from="Buttons/HBoxContainer/Music_Plus" to="." method="_on_music_plus_pressed"]
+[connection signal="pressed" from="Buttons/HBoxContainer2/SFX_Minus" to="." method="_on_sfx_minus_pressed"]
+[connection signal="pressed" from="Buttons/HBoxContainer2/SFX_Plus" to="." method="_on_sfx_plus_pressed"]
 [connection signal="toggled" from="Buttons/Control/FS" to="." method="_on_fs_toggled"]
+[connection signal="pressed" from="Return_Butons/Return" to="." method="_on_return_pressed"]
+[connection signal="pressed" from="Return_Butons/Return_To_Menu" to="." method="_on_return_to_menu_pressed"]

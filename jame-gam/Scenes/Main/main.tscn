@@ -10,13 +10,13 @@ script = ExtResource("1_1r6ip")
 
 [node name="Menu" parent="." unique_id=882106152 instance=ExtResource("2_lixft")]
 
+[node name="Settings_Menu" parent="." unique_id=1819137404 instance=ExtResource("3_qw60k")]
+visible = false
+
+[node name="Game" parent="." unique_id=249295157 instance=ExtResource("4_5yls4")]
+
 [node name="Fade" type="ColorRect" parent="." unique_id=856592707]
 offset_right = 2056.0
 offset_bottom = 1285.0
 mouse_filter = 2
 color = Color(0, 0, 0, 1)
-
-[node name="Settings_Menu" parent="." unique_id=1819137404 instance=ExtResource("3_qw60k")]
-visible = false
-
-[node name="Game" parent="." unique_id=249295157 instance=ExtResource("4_5yls4")]
