@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://baxybk8x45tje" path="res://icon.svg" id="2_qikps"]
 [ext_resource type="Texture2D" uid="uid://cuf402qw2hhyj" path="res://Sprites/vaz_2107.jpg" id="3_i1e5p"]
 [ext_resource type="PackedScene" uid="uid://cnh6ljnidsr7w" path="res://Scenes/Car/car.tscn" id="3_qikps"]
+[ext_resource type="PackedScene" uid="uid://bmh46qhptl0qk" path="res://Scenes/Menu_Game/menu_game.tscn" id="4_flgk0"]
 [ext_resource type="PackedScene" uid="uid://3e6yndw1osex" path="res://Scenes/Game_UI/ui.tscn" id="5_ciybh"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ev4jc"]
@@ -35,6 +36,11 @@ script = ExtResource("1_i1e5p")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.8616495, 0)
 turn_amount = 0.6
 
+[node name="UI" parent="." unique_id=1013923296 instance=ExtResource("5_ciybh")]
+
+[node name="Menu_Game" parent="." unique_id=190589895 instance=ExtResource("4_flgk0")]
+visible = false
+
 [node name="Floor" type="StaticBody3D" parent="." unique_id=879998053]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6820865, -3.974947, 0)
 physics_material_override = SubResource("PhysicsMaterial_ev4jc")
@@ -49,5 +55,3 @@ shape = SubResource("BoxShape3D_qxfds")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1688672493]
 environment = SubResource("Environment_mv0hc")
-
-[node name="UI" parent="." unique_id=1013923296 instance=ExtResource("5_ciybh")]

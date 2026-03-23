@@ -343,7 +343,8 @@ size_flags_vertical = 3
 [node name="FS" type="CheckBox" parent="Buttons/Control" unique_id=118968263]
 texture_filter = 2
 layout_mode = 0
-offset_right = 24.0
+offset_left = 1.0
+offset_right = 25.0
 offset_bottom = 24.0
 scale = Vector2(3, 3)
 size_flags_vertical = 3

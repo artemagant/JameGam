@@ -125,9 +125,6 @@ mass = 500.0
 center_of_mass_mode = 1
 center_of_mass = Vector3(0, -0.1, 0.07)
 script = ExtResource("1_y6gko")
-max_RPM = 1000
-max_torque = 1000
-turn_amount = 0.08
 
 [node name="body" type="MeshInstance3D" parent="." unique_id=1828985564]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, -2.8876456e-15)

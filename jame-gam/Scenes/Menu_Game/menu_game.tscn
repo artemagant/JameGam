@@ -1,0 +1,87 @@
+[gd_scene format=3 uid="uid://bmh46qhptl0qk"]
+
+[ext_resource type="Script" uid="uid://bb1p41fwc3pwl" path="res://Scenes/Menu_Game/menu_game.gd" id="1_5niqt"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v6s2y"]
+bg_color = Color(0, 0, 0, 0.7490196)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5niqt"]
+bg_color = Color(0.2469503, 0.24695033, 0.24695021, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2q60e"]
+bg_color = Color(0.6255971, 0.6255971, 0.62559694, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xbdlx"]
+bg_color = Color(0.22094136, 0.22094145, 0.22094142, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="Menu_Game" type="Node2D" unique_id=190589895]
+script = ExtResource("1_5niqt")
+
+[node name="Panel" type="Panel" parent="." unique_id=2059041473]
+offset_left = 124.0
+offset_top = 64.0
+offset_right = 855.0
+offset_bottom = 465.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_v6s2y")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel" unique_id=1235377295]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Return" type="Button" parent="Panel/VBoxContainer" unique_id=1157768776]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_5niqt")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_2q60e")
+theme_override_styles/hover = SubResource("StyleBoxFlat_xbdlx")
+text = "Return"
+
+[node name="Return_To_Menu" type="Button" parent="Panel/VBoxContainer" unique_id=940639103]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_5niqt")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_2q60e")
+theme_override_styles/hover = SubResource("StyleBoxFlat_xbdlx")
+text = "Return To Menu"
+
+[connection signal="pressed" from="Panel/VBoxContainer/Return" to="." method="_on_return_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/Return_To_Menu" to="." method="_on_return_to_menu_pressed"]

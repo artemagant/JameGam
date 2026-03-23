@@ -3,6 +3,8 @@ extends Node3D
 @onready var ui := $UI
 @onready var ui_stats := ui.get_child(2).get_child(0)
 @onready var stats_text = ui_stats.text
+@onready var menu_game: Node2D = $Menu_Game
+@onready var main: = get_parent()
 
 @onready var car = get_child(0)
 
@@ -36,3 +38,15 @@ func change_speed() -> void:
 	update_ui_stats()
 	await get_tree().create_timer(0.1).timeout
 	change_speed()
+
+func show_menu():
+	if menu_game.visible:
+		menu_game.visible = false
+		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	else:
+		menu_game.visible = true
+		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+
+func return_to_menu():
+	ui.visible = false
+	main.return_to_menu_2()
