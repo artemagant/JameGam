@@ -1,7 +1,22 @@
 [gd_scene format=3 uid="uid://3e6yndw1osex"]
 
+[ext_resource type="Texture2D" uid="uid://baxybk8x45tje" path="res://icon.svg" id="1_5ntg7"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rkyvi"]
 bg_color = Color(0.15487596, 0.154876, 0.1548759, 0.19215687)
+
+[sub_resource type="LabelSettings" id="LabelSettings_5ntg7"]
+font_size = 12
+outline_size = 8
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_aa8u4"]
+font_size = 12
+outline_size = 8
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aa8u4"]
+size = Vector2(120, 120)
 
 [node name="UI" type="CanvasGroup" unique_id=1013923296]
 
@@ -19,10 +34,13 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_rkyvi")
 metadata/_edit_group_ = true
 
 [node name="Info" type="Label" parent="Panel" unique_id=91596802]
-modulate = Color(0.97881764, 0.97881764, 0.97881764, 0.34901962)
+modulate = Color(1, 1, 1, 0.34901962)
 layout_mode = 0
 offset_right = 206.0
 offset_bottom = 309.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 text = "Controls:
 arrow up - Gas
 arrow down - break
@@ -35,9 +53,69 @@ b - car belt
 <> - turn signals
 h - honk
 esc - menu"
+label_settings = SubResource("LabelSettings_5ntg7")
+
+[node name="Panel2" type="Panel" parent="." unique_id=1769679220]
+offset_left = 2.0
+offset_top = 26.0
+offset_right = 213.0
+offset_bottom = 337.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_rkyvi")
+metadata/_edit_group_ = true
+
+[node name="Stats" type="Label" parent="Panel2" unique_id=1863517531]
+modulate = Color(1, 1, 1, 0.34901962)
+layout_mode = 0
+offset_right = 206.0
+offset_bottom = 309.0
+text = "Info:
+Speed - 
+Coordinates -
+Max Speed -"
+label_settings = SubResource("LabelSettings_aa8u4")
 
 [node name="Menu" type="Control" parent="." unique_id=1198609646]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+
+[node name="Node" type="Node2D" parent="." unique_id=1395394327]
+position = Vector2(-1, -30)
+metadata/_edit_group_ = true
+
+[node name="Up" type="TouchScreenButton" parent="Node" unique_id=2121372585]
+position = Vector2(803, 420)
+scale = Vector2(0.7, 0.7)
+texture_normal = ExtResource("1_5ntg7")
+shape = SubResource("RectangleShape2D_aa8u4")
+passby_press = true
+action = "up"
+visibility_mode = 1
+
+[node name="Down" type="TouchScreenButton" parent="Node" unique_id=966324063]
+position = Vector2(694, 422.00003)
+scale = Vector2(0.7, 0.7)
+texture_normal = ExtResource("1_5ntg7")
+shape = SubResource("RectangleShape2D_aa8u4")
+passby_press = true
+action = "down"
+visibility_mode = 1
+
+[node name="Left" type="TouchScreenButton" parent="Node" unique_id=511179016]
+position = Vector2(70, 438)
+scale = Vector2(0.7, 0.7)
+texture_normal = ExtResource("1_5ntg7")
+shape = SubResource("RectangleShape2D_aa8u4")
+passby_press = true
+action = "left"
+visibility_mode = 1
+
+[node name="Right" type="TouchScreenButton" parent="Node" unique_id=1371538749]
+position = Vector2(184, 431)
+scale = Vector2(0.7, 0.7)
+texture_normal = ExtResource("1_5ntg7")
+shape = SubResource("RectangleShape2D_aa8u4")
+passby_press = true
+action = "right"
+visibility_mode = 1

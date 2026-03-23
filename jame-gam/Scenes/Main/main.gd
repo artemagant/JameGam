@@ -3,7 +3,7 @@ extends Node2D
 @onready var fade: ColorRect = $Fade
 @onready var menu: Node2D = $Menu
 @onready var settings_menu: Node2D = $Settings_Menu
-@export var game: = preload("res://Scenes/Game/game.tscn").instantiate()
+@export var game = preload("res://Scenes/Game/game.tscn")
 
 @onready var current_state: Node2D = menu
 
@@ -38,6 +38,9 @@ func settings():
 	await _fade()
 
 func start():
+	if game is Node3D:
+		return
+	game = game.instantiate()
 	await _fade(1.0)
 	current_state.visible = false
 	add_child(game)
@@ -55,7 +58,7 @@ func _return():
 	await _fade()
 
 func _input(event: InputEvent) -> void:
-	if game in get_children():
+	if game is Node3D and game in get_children():
 		var car = game.get_child(0)
 		if car is VehicleBody3D and event.is_action_pressed("fix"):
 	# 1. Подбрасываем (импульс)

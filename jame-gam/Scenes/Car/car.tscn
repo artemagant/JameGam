@@ -123,9 +123,11 @@ size = Vector3(1, 0.59069824, 1.3835449)
 [node name="Car" type="VehicleBody3D" unique_id=1676619421]
 mass = 500.0
 center_of_mass_mode = 1
-center_of_mass = Vector3(0, -0.13, 0)
+center_of_mass = Vector3(0, -0.1, 0.07)
 script = ExtResource("1_y6gko")
-max_torque = 200
+max_RPM = 1000
+max_torque = 1000
+turn_amount = 0.08
 
 [node name="body" type="MeshInstance3D" parent="." unique_id=1828985564]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, -2.8876456e-15)
@@ -167,7 +169,6 @@ surface_material_override/0 = SubResource("StandardMaterial3D_imavk")
 
 [node name="wheel_front_left" type="VehicleWheel3D" parent="." unique_id=726141367]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.45570582, 0.28904283, 0.7467271)
-use_as_traction = true
 use_as_steering = true
 wheel_roll_influence = 0.0
 wheel_radius = 0.3
@@ -182,7 +183,6 @@ surface_material_override/0 = SubResource("StandardMaterial3D_imavk")
 
 [node name="wheel_front_right" type="VehicleWheel3D" parent="." unique_id=254015025]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4400885, 0.28871483, 0.7533526)
-use_as_traction = true
 use_as_steering = true
 wheel_roll_influence = 0.0
 wheel_radius = 0.315

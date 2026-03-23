@@ -32,7 +32,7 @@ ambient_light_energy = 8.0
 script = ExtResource("1_i1e5p")
 
 [node name="Car" parent="." unique_id=1676619421 instance=ExtResource("3_qikps")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.2250214, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.8616495, 0)
 turn_amount = 0.6
 
 [node name="Floor" type="StaticBody3D" parent="." unique_id=879998053]
