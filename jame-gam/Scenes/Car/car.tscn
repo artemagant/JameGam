@@ -135,6 +135,74 @@ surface_material_override/0 = SubResource("StandardMaterial3D_ts3sh")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -1.0499997)
 mesh = SubResource("ArrayMesh_afscr")
 
+[node name="Lights_1" type="Node3D" parent="body" unique_id=585989909]
+visible = false
+
+[node name="Lights_1_1" type="SpotLight3D" parent="body/Lights_1" unique_id=1526480554]
+transform = Transform3D(-1, 0, 8.742278e-08, 3.3078503e-08, 0.9256528, 0.37837398, -8.092314e-08, 0.37837398, -0.9256528, 0.4361624, 0.53548455, 1.366122)
+light_color = Color(0.9564368, 0.9779274, 0.73423785, 1)
+light_energy = 10.0
+shadow_enabled = true
+distance_fade_enabled = true
+spot_range = 7.0
+
+[node name="Lights_1_2" type="SpotLight3D" parent="body/Lights_1" unique_id=1677047288]
+transform = Transform3D(-1, 1.7763568e-15, 8.7422784e-08, 2.3034659e-08, -0.9646633, 0.26348582, 8.433354e-08, 0.26348582, 0.9646633, 0.41303426, 0.45132142, 1.3175012)
+light_color = Color(0.9564368, 0.9779274, 0.73423785, 1)
+light_energy = 10.0
+spot_range = 0.12
+spot_angle = 90.0
+
+[node name="Lights_1_3" type="SpotLight3D" parent="body/Lights_1" unique_id=1566332662]
+transform = Transform3D(-1, 1.7763568e-15, 8.7422784e-08, 2.3034659e-08, -0.9646633, 0.26348582, 8.433354e-08, 0.26348582, 0.9646633, -0.4129141, 0.45224214, 1.3138562)
+light_color = Color(0.9564368, 0.9779274, 0.73423785, 1)
+light_energy = 10.0
+spot_range = 0.12
+spot_angle = 90.0
+
+[node name="Lights_1_4" type="SpotLight3D" parent="body/Lights_1" unique_id=462805386]
+transform = Transform3D(-1, 0, 8.742278e-08, 3.3078503e-08, 0.9256528, 0.37837398, -8.092314e-08, 0.37837398, -0.9256528, -0.499, 0.535, 1.337)
+light_color = Color(0.9564368, 0.9779274, 0.73423785, 1)
+light_energy = 10.0
+shadow_enabled = true
+distance_fade_enabled = true
+spot_range = 7.0
+
+[node name="Lights_2" type="Node3D" parent="body" unique_id=512088604]
+visible = false
+
+[node name="Lights_1_1" type="SpotLight3D" parent="body/Lights_2" unique_id=1090806333]
+transform = Transform3D(-1, 1.6681053e-08, -8.581657e-08, 0, 0.98162717, 0.190809, 8.742278e-08, 0.190809, -0.98162717, 0.4361624, 0.53548455, 1.366122)
+light_color = Color(1, 1, 0.5137255, 1)
+light_energy = 13.0
+light_size = 5.0
+shadow_enabled = true
+distance_fade_enabled = true
+spot_range = 13.0
+
+[node name="Lights_1_2" type="SpotLight3D" parent="body/Lights_2" unique_id=1283368891]
+transform = Transform3D(-1, 1.7763568e-15, 8.7422784e-08, 2.3034659e-08, -0.9646633, 0.26348582, 8.433354e-08, 0.26348582, 0.9646633, 0.41303426, 0.45132142, 1.3175012)
+light_color = Color(1, 1, 0.5137255, 1)
+light_energy = 13.0
+spot_range = 0.15
+spot_angle = 90.0
+
+[node name="Lights_1_3" type="SpotLight3D" parent="body/Lights_2" unique_id=380665864]
+transform = Transform3D(-1, 1.7763568e-15, 8.7422784e-08, 2.3034659e-08, -0.9646633, 0.26348582, 8.433354e-08, 0.26348582, 0.9646633, -0.4129141, 0.45224214, 1.3138562)
+light_color = Color(1, 1, 0.5137255, 1)
+light_energy = 13.0
+spot_range = 0.15
+spot_angle = 90.0
+
+[node name="Lights_1_4" type="SpotLight3D" parent="body/Lights_2" unique_id=790934911]
+transform = Transform3D(-1, 1.6681053e-08, -8.581657e-08, 0, 0.98162717, 0.190809, 8.742278e-08, 0.190809, -0.98162717, -0.499, 0.535, 1.337)
+light_color = Color(1, 1, 0.5137255, 1)
+light_energy = 13.0
+light_size = 5.0
+shadow_enabled = true
+distance_fade_enabled = true
+spot_range = 13.0
+
 [node name="wheel_back_left" type="VehicleWheel3D" parent="." unique_id=1539604403]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.43849683, 0.289, -0.57)
 use_as_traction = true

@@ -150,6 +150,15 @@ passby_press = true
 action = "clutch"
 visibility_mode = 1
 
+[node name="Clutch2" type="TouchScreenButton" parent="Phone_Buttons" unique_id=1064679502]
+position = Vector2(111.00001, 247)
+scale = Vector2(0.42968744, 0.36406276)
+texture_normal = ExtResource("1_5ntg7")
+shape = SubResource("RectangleShape2D_aa8u4")
+passby_press = true
+action = "handbrake"
+visibility_mode = 1
+
 [node name="Add_Gear" type="TouchScreenButton" parent="Phone_Buttons" unique_id=1505110472]
 position = Vector2(724, 164)
 scale = Vector2(0.42968744, 0.36406276)

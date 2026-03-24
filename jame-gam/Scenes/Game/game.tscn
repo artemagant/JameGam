@@ -19,15 +19,22 @@ roughness_texture_channel = 1
 
 [sub_resource type="BoxMesh" id="BoxMesh_vifcx"]
 material = SubResource("StandardMaterial3D_qikps")
+size = Vector3(2000, 100, 2000)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_qxfds"]
-size = Vector3(434.67813, 132.05763, 1597.6786)
+size = Vector3(2000, 100, 2000)
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_flgk0"]
+ground_curve = 1.4545816
+
+[sub_resource type="Sky" id="Sky_vifcx"]
+sky_material = SubResource("ProceduralSkyMaterial_flgk0")
 
 [sub_resource type="Environment" id="Environment_mv0hc"]
+background_mode = 2
+background_energy_multiplier = 0.7
+sky = SubResource("Sky_vifcx")
 ambient_light_source = 3
-ambient_light_color = Color(0.7953939, 0.79539394, 0.7953939, 1)
-ambient_light_sky_contribution = 0.1
-ambient_light_energy = 8.0
 
 [node name="Game" type="Node3D" unique_id=613764105]
 script = ExtResource("1_i1e5p")
@@ -54,7 +61,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6820865, -3.974947, 0)
 physics_material_override = SubResource("PhysicsMaterial_ev4jc")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Floor" unique_id=1501619973]
-transform = Transform3D(19259.922, 0, 0, 0, 2.5270913, 0, 0, 0, 3231.72, 0, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.76453, -63.62037, -75.71051)
 mesh = SubResource("BoxMesh_vifcx")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Floor" unique_id=725954734]
