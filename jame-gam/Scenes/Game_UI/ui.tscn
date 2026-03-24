@@ -73,6 +73,7 @@ Coordinates -
 Max Speed -
 Belt -
 Signals -
+RPM -
 ..."
 label_settings = SubResource("LabelSettings_aa8u4")
 
@@ -140,6 +141,33 @@ passby_press = true
 action = "belt"
 visibility_mode = 1
 
+[node name="Clutch" type="TouchScreenButton" parent="Phone_Buttons" unique_id=1171344887]
+position = Vector2(120.00001, 177)
+scale = Vector2(0.42968744, 0.36406276)
+texture_normal = ExtResource("1_5ntg7")
+shape = SubResource("RectangleShape2D_aa8u4")
+passby_press = true
+action = "clutch"
+visibility_mode = 1
+
+[node name="Add_Gear" type="TouchScreenButton" parent="Phone_Buttons" unique_id=1505110472]
+position = Vector2(724, 164)
+scale = Vector2(0.42968744, 0.36406276)
+texture_normal = ExtResource("1_5ntg7")
+shape = SubResource("RectangleShape2D_aa8u4")
+passby_press = true
+action = "add_gear"
+visibility_mode = 1
+
+[node name="Minus_Gear2" type="TouchScreenButton" parent="Phone_Buttons" unique_id=783846755]
+position = Vector2(730, 213)
+scale = Vector2(0.42968744, 0.36406276)
+texture_normal = ExtResource("1_5ntg7")
+shape = SubResource("RectangleShape2D_aa8u4")
+passby_press = true
+action = "minus_gear"
+visibility_mode = 1
+
 [node name="Lights" type="TouchScreenButton" parent="Phone_Buttons" unique_id=1718566869]
 position = Vector2(112, 324)
 scale = Vector2(0.42968744, 0.36406276)
@@ -183,4 +211,13 @@ texture_normal = ExtResource("1_5ntg7")
 shape = SubResource("RectangleShape2D_aa8u4")
 passby_press = true
 action = "emergency_lights"
+visibility_mode = 1
+
+[node name="Engine" type="TouchScreenButton" parent="Phone_Buttons" unique_id=1879090133]
+position = Vector2(905, 269.00003)
+scale = Vector2(0.3874995, 0.41875008)
+texture_normal = ExtResource("1_5ntg7")
+shape = SubResource("RectangleShape2D_aa8u4")
+passby_press = true
+action = "engine"
 visibility_mode = 1

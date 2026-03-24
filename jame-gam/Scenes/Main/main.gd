@@ -111,6 +111,10 @@ func _input(event: InputEvent) -> void:
 			game.add_gear()
 		if event.is_action_pressed("minus_gear"):
 			game.minus_gear()
+		if event.is_action_pressed("down"):
+			game.breake()
+		if event.is_action_released("down"):
+			game.breake(false)
 
 func start_engine():
 	if is_engine_started:

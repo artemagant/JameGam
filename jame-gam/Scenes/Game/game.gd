@@ -19,12 +19,15 @@ var gear: = 1
 
 func _ready() -> void:
 	update_ui_stats()
+	car.add_gear()
 
 func _process(_delta: float) -> void:
 	var current_velocity = car.linear_velocity.length() 
-	speed = current_velocity
+	speed = current_velocity -0.01
 	if speed > max_speed:
 		max_speed = speed
+	if gear > 3 and speed < 0.05:
+		engine = false
 
 
 func update_ui_stats() -> void:
@@ -39,7 +42,8 @@ func update_ui_stats() -> void:
 		Belt - %d
 		Signals - (%d, %d)
 		Lights - %d
-		..." %[int(engine), speed, int(clutch), gear-1, _position.x, _position.y, _position.z, max_speed, int(belt), turn_signals.x, turn_signals.y, lights]
+		RPM - %.2f
+		..." %[int(engine), abs(speed), int(clutch), gear-1, _position.x, _position.y, _position.z, max_speed, int(belt), turn_signals.x, turn_signals.y, lights, car.RPM]
 
 func show_menu():
 	if menu_game.visible:
@@ -93,6 +97,11 @@ func _on_ui_update_timer_timeout() -> void:
 func add_gear():
 	if clutch and gear < 7:
 		gear += 1
+		car.add_gear()
 func minus_gear():
 	if clutch and gear > 0:
 		gear -= 1
+		car.minus_gear()
+
+func breake(iss: bool = true):
+	car.breake = iss
