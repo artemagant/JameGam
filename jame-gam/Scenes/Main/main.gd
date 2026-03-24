@@ -73,7 +73,6 @@ func return_to_menu_2():
 	is_engine_started = false
 	e_pressed = false
 	await _fade()
-	
 
 func _input(event: InputEvent) -> void:
 	if game and game is Node3D and game in get_children():
@@ -104,6 +103,14 @@ func _input(event: InputEvent) -> void:
 		if event.is_action_released("engine"):
 			e_pressed = false
 			engine_timer.stop()
+		if event.is_action_pressed("clutch"):
+			game.clutch = true
+		if event.is_action_released("clutch"):
+			game.clutch = not true
+		if event.is_action_pressed("add_gear"):
+			game.add_gear()
+		if event.is_action_pressed("minus_gear"):
+			game.minus_gear()
 
 func start_engine():
 	if is_engine_started:

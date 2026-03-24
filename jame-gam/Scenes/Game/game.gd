@@ -14,6 +14,8 @@ var belt: bool = false
 var turn_signals: = Vector2.ZERO
 var lights: int = 0
 var engine: = false
+var clutch: = false
+var gear: = 1
 
 func _ready() -> void:
 	update_ui_stats()
@@ -30,12 +32,14 @@ func update_ui_stats() -> void:
 	ui_stats.text = "Info: Car Real
 		Engine - %d
 		Speed - %.2f mps
+		Clutch - %d
+		Gear - %d
 		Coordinates - (%.1f, %.1f, %.1f)
 		Max Speed - %.2f mps
 		Belt - %d
 		Signals - (%d, %d)
 		Lights - %d
-		..." %[int(engine), speed, _position.x, _position.y, _position.z, max_speed, int(belt), turn_signals.x, turn_signals.y, lights]
+		..." %[int(engine), speed, int(clutch), gear-1, _position.x, _position.y, _position.z, max_speed, int(belt), turn_signals.x, turn_signals.y, lights]
 
 func show_menu():
 	if menu_game.visible:
@@ -83,6 +87,12 @@ func start_engine():
 func stop_engine():
 	engine = false
 
-
 func _on_ui_update_timer_timeout() -> void:
 	update_ui_stats()
+
+func add_gear():
+	if clutch and gear < 7:
+		gear += 1
+func minus_gear():
+	if clutch and gear > 0:
+		gear -= 1
