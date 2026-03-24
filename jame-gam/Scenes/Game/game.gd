@@ -1,8 +1,7 @@
 extends Node3D
 
 @onready var ui := $UI
-@onready var ui_stats := ui.get_child(2).get_child(0)
-@onready var stats_text = ui_stats.text
+@onready var ui_stats := ui.get_child(1).get_child(0)
 @onready var menu_game: Node2D = $Menu_Game
 @onready var main: = get_parent()
 
@@ -10,40 +9,33 @@ extends Node3D
 
 var speed: float
 @onready var _position = car.position
-@onready var previous_position = _position
 var max_speed: float
 var belt: bool = false
 var turn_signals: = Vector2.ZERO
 var lights: int = 0
+var engine: = false
 
 func _ready() -> void:
 	update_ui_stats()
-	change_speed()
 
 func _process(_delta: float) -> void:
-	if _position != car.position:
-		_position = car.position
-		update_ui_stats()
+	var current_velocity = car.linear_velocity.length() 
+	speed = current_velocity
+	if speed > max_speed:
+		max_speed = speed
+
 
 func update_ui_stats() -> void:
-	ui_stats.text = "Info:
+	_position = car.position
+	ui_stats.text = "Info: Car Real
+		Engine - %d
 		Speed - %.2f mps
 		Coordinates - (%.1f, %.1f, %.1f)
 		Max Speed - %.2f mps
 		Belt - %d
 		Signals - (%d, %d)
 		Lights - %d
-		..." %[speed, _position.x, _position.y, _position.z, max_speed, int(belt), turn_signals.x, turn_signals.y, lights]
-
-func change_speed() -> void:
-	var dist = _position.distance_to(previous_position)
-	speed = dist / 0.1
-	if speed > max_speed:
-		max_speed = speed
-	previous_position = _position
-	update_ui_stats()
-	await get_tree().create_timer(0.1).timeout
-	change_speed()
+		..." %[int(engine), speed, _position.x, _position.y, _position.z, max_speed, int(belt), turn_signals.x, turn_signals.y, lights]
 
 func show_menu():
 	if menu_game.visible:
@@ -85,3 +77,12 @@ func lights_connect():
 		lights = 0
 		return
 	lights += 1
+
+func start_engine():
+	engine = true
+func stop_engine():
+	engine = false
+
+
+func _on_ui_update_timer_timeout() -> void:
+	update_ui_stats()

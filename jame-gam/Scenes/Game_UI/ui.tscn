@@ -20,13 +20,6 @@ size = Vector2(120, 120)
 
 [node name="UI" type="CanvasGroup" unique_id=1013923296]
 
-[node name="Game" type="Label" parent="." unique_id=430361927]
-offset_left = 36.0
-offset_top = -2.0
-offset_right = 104.0
-offset_bottom = 21.0
-text = "car drive"
-
 [node name="Panel" type="Panel" parent="." unique_id=1757160726]
 offset_left = 790.0
 offset_top = 2.0
@@ -53,6 +46,7 @@ e - turn on engine
 l - light
 b - car belt
 <> (, .) - turn signals
+m - emergency signals
 h - honk
 esc - menu"
 label_settings = SubResource("LabelSettings_5ntg7")
@@ -65,11 +59,13 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_rkyvi")
 metadata/_edit_group_ = true
 
 [node name="Stats" type="Label" parent="Panel2" unique_id=1863517531]
+unique_name_in_owner = true
 modulate = Color(1, 1, 1, 0.34901962)
 layout_mode = 0
 offset_right = 206.0
 offset_bottom = 309.0
-text = "Info:
+text = "Info: Car Real
+Engine -
 Speed - 
 Coordinates -
 Max Speed -

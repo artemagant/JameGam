@@ -6,6 +6,7 @@
 
 [node name="Main" type="Node2D" unique_id=1072729622]
 script = ExtResource("1_1r6ip")
+engine_start_wait_time = 1.0
 
 [node name="Menu" parent="." unique_id=882106152 instance=ExtResource("2_lixft")]
 

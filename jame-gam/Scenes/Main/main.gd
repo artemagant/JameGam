@@ -10,6 +10,11 @@ extends Node2D
 
 @onready var past_scene: Node = menu
 
+@onready var engine_timer: Timer
+@export var engine_start_wait_time := 2.0
+var e_pressed := false
+var is_engine_started := false
+
 func _ready() -> void:
 	# Connect signals
 	menu.connect("quit", quit)
@@ -46,6 +51,7 @@ func start():
 	current_state.visible = false
 	current_state = game
 	add_child(game)
+	engine_timer = game.get_child(3)
 	await _fade()
 
 func return_to_menu():
@@ -64,6 +70,8 @@ func return_to_menu_2():
 	game.queue_free()
 	change_state(menu)
 	game = preload("res://Scenes/Game/game.tscn")
+	is_engine_started = false
+	e_pressed = false
 	await _fade()
 	
 
@@ -71,9 +79,9 @@ func _input(event: InputEvent) -> void:
 	if game and game is Node3D and game in get_children():
 		if event.is_action_pressed("fix"):
 			var car = game.get_child(0)
-			if not car.global_transform.basis.y.dot(Vector3.UP) >= 0.5: 
+			if car.global_transform.basis.y.dot(Vector3.UP) >= 0.5: 
 				return
-			car.apply_central_impulse(Vector3(0, 10000, 0))
+			car.apply_central_impulse(Vector3(0, 1000, 0))
 			car.global_transform.basis = Basis()
 		if event.is_action_pressed("exit"):
 			game.show_menu()
@@ -90,3 +98,22 @@ func _input(event: InputEvent) -> void:
 			game.signal_right()
 		if event.is_action_pressed("lights"):
 			game.lights_connect()
+		if event.is_action_pressed("engine"):
+			e_pressed = true
+			start_engine()
+		if event.is_action_released("engine"):
+			e_pressed = false
+			engine_timer.stop()
+
+func start_engine():
+	if is_engine_started:
+		is_engine_started = false
+		e_pressed = false
+		game.stop_engine()
+		return
+	engine_timer.start(engine_start_wait_time)
+	await engine_timer.timeout
+	if e_pressed:
+		game.start_engine()
+	e_pressed = false
+	is_engine_started = true

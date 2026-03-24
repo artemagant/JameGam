@@ -41,6 +41,14 @@ turn_amount = 0.6
 [node name="Menu_Game" parent="." unique_id=190589895 instance=ExtResource("4_flgk0")]
 visible = false
 
+[node name="Engine_Timer" type="Timer" parent="." unique_id=698116639]
+wait_time = 2.0
+one_shot = true
+
+[node name="UI_Update_Timer" type="Timer" parent="." unique_id=262575133]
+wait_time = 0.2
+autostart = true
+
 [node name="Floor" type="StaticBody3D" parent="." unique_id=879998053]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6820865, -3.974947, 0)
 physics_material_override = SubResource("PhysicsMaterial_ev4jc")
@@ -55,3 +63,5 @@ shape = SubResource("BoxShape3D_qxfds")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1688672493]
 environment = SubResource("Environment_mv0hc")
+
+[connection signal="timeout" from="UI_Update_Timer" to="." method="_on_ui_update_timer_timeout"]
