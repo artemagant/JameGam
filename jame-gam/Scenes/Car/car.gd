@@ -14,7 +14,7 @@ extends VehicleBody3D
 # Arrays, that describe values of car's characteristics
 @onready var  max_RPM_gears := [200, 2000, 200, 300, 500, 800, 1200, 1500]
 @onready var max_torque_gears := [150, 1, 150, 200, 400, 600, 700, 1200]
-@onready var turn_speed_gears := [3.0, 4.0, 4.0, 3.0, 2.0, 1.5, 1.0, 0.4]
+@onready var turn_speed_gears := [3.0, 4.0, 4.0, 3.0, 2.0, 1.2, 0.8, 0.4]
 @onready var min_RPM_gears := [0, 0, 0, 50, 100, 150, 200, 400]
 
 # From scene

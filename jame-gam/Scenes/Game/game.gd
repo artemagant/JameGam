@@ -30,8 +30,10 @@ func _process(_delta: float) -> void:
 	if speed > max_speed:
 		max_speed = speed
 	if gear > 1 and speed < 0.05 and not clutch: # if speed is 0, engine is off
-		engine = false
-		main.is_engine_started = false
+		await get_tree().create_timer(0.7).timeout
+		if gear > 1 and speed < 0.05 and not clutch:
+			engine = false
+			main.is_engine_started = false
 
 
 func update_ui_stats() -> void:

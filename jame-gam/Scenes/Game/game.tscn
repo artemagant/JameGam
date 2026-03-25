@@ -32,9 +32,11 @@ sky_material = SubResource("ProceduralSkyMaterial_flgk0")
 
 [sub_resource type="Environment" id="Environment_mv0hc"]
 background_mode = 2
-background_energy_multiplier = 0.7
 sky = SubResource("Sky_vifcx")
 ambient_light_source = 3
+ambient_light_color = Color(0.3870834, 0.85155255, 0.8536684, 1)
+ambient_light_energy = 9.72
+reflected_light_source = 2
 glow_enabled = true
 glow_hdr_threshold = 0.5
 
@@ -42,7 +44,6 @@ glow_hdr_threshold = 0.5
 script = ExtResource("1_i1e5p")
 
 [node name="Car" parent="." unique_id=1676619421 instance=ExtResource("3_qikps")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.8616495, 0)
 turn_amount = 0.6
 
 [node name="UI" parent="." unique_id=1013923296 instance=ExtResource("5_ciybh")]
@@ -59,7 +60,6 @@ wait_time = 0.2
 autostart = true
 
 [node name="Floor" type="StaticBody3D" parent="." unique_id=879998053]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6820865, -3.974947, 0)
 physics_material_override = SubResource("PhysicsMaterial_ev4jc")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Floor" unique_id=1501619973]
