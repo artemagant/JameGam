@@ -26,6 +26,10 @@ extends VehicleBody3D
 @onready var game: Node3D = $".."
 @onready var lights_1: Node3D = $body/Lights_1
 @onready var lights_2: Node3D = $body/Lights_2
+@onready var signal_left: MeshInstance3D = $body/Signal_Left
+@onready var signal_right: MeshInstance3D = $body/Signal_Right
+@onready var signals_timer: Timer = $Signals_Timer
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
 
 # Brake
 var breake: = false
@@ -38,6 +42,23 @@ var breake: = false
 var minus_rpm: float
 # Minus everything if clutch is holding
 var clutch_mult: = 1.0
+func _process(_delta: float) -> void:
+	if game.turn_signals == Vector2(0, 0):
+		signal_right.visible = false
+		signal_left.visible = false
+		animation_player.stop()
+	if game.turn_signals == Vector2(1, 0):
+		animation_player.play("left_blink")
+		signal_right.visible = false
+		signal_left.visible = true
+	if game.turn_signals == Vector2(0, 1):
+		animation_player.play("right_blink")
+		signal_right.visible = true
+		signal_left.visible = false
+	if game.turn_signals == Vector2(1, 1):
+		animation_player.play("emerjency_signal")
+		signal_left.visible = true
+		signal_right.visible = true
 
 func _physics_process(delta: float) -> void:
 	# check if clutch

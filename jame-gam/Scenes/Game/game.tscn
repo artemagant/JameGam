@@ -35,6 +35,8 @@ background_mode = 2
 background_energy_multiplier = 0.7
 sky = SubResource("Sky_vifcx")
 ambient_light_source = 3
+glow_enabled = true
+glow_hdr_threshold = 0.5
 
 [node name="Game" type="Node3D" unique_id=613764105]
 script = ExtResource("1_i1e5p")

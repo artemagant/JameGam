@@ -46,6 +46,16 @@ shadow_mesh = SubResource("ArrayMesh_gd6k4")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ts3sh"]
 albedo_texture = ExtResource("1_e7e8e")
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_afscr"]
+albedo_color = Color(1, 0.16862746, 0, 1)
+emission_enabled = true
+emission = Color(1, 0, 0, 1)
+emission_energy_multiplier = 2.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_nkh8f"]
+material = SubResource("StandardMaterial3D_afscr")
+size = Vector3(0.053, 0.4, 0.1)
+
 [sub_resource type="ArrayMesh" id="ArrayMesh_bkddi"]
 _surfaces = [{
 "aabb": AABB(-0.30000007, -0.3, -0.30000022, 0.60000014, 0.6, 0.35000026),
@@ -120,6 +130,88 @@ albedo_texture = ExtResource("1_e7e8e")
 [sub_resource type="BoxShape3D" id="BoxShape3D_s58m0"]
 size = Vector3(1, 0.59069824, 1.3835449)
 
+[sub_resource type="Animation" id="Animation_ts3sh"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("body/Signal_Left:mesh:material:emission_energy_multiplier")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [2.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("body/Signal_Right:mesh:material:emission_energy_multiplier")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [2.0]
+}
+
+[sub_resource type="Animation" id="Animation_imavk"]
+resource_name = "emerjency_signal"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("body/Signal_Left:mesh:material:emission_energy_multiplier")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2667, 0.5667),
+"transitions": PackedFloat32Array(1, 2.378413, 1.0352647),
+"update": 0,
+"values": [0.0, 2.0, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_afscr"]
+resource_name = "left_blink"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("body/Signal_Left:mesh:material:emission_energy_multiplier")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2667, 0.5667),
+"transitions": PackedFloat32Array(1, 2.3784144, 1),
+"update": 0,
+"values": [0.0, 2.0, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_nkh8f"]
+resource_name = "right_blink"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("body/Signal_Right:mesh:material:emission_energy_multiplier")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2667, 0.5667),
+"transitions": PackedFloat32Array(1, 2.3784144, 1.0717733),
+"update": 0,
+"values": [0.0, 2.0, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_imavk"]
+_data = {
+&"RESET": SubResource("Animation_ts3sh"),
+&"emerjency_signal": SubResource("Animation_imavk"),
+&"left_blink": SubResource("Animation_afscr"),
+&"right_blink": SubResource("Animation_nkh8f")
+}
+
 [node name="Car" type="VehicleBody3D" unique_id=1676619421]
 mass = 500.0
 center_of_mass_mode = 1
@@ -130,6 +222,14 @@ script = ExtResource("1_y6gko")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, -2.8876456e-15)
 mesh = SubResource("ArrayMesh_y6gko")
 surface_material_override/0 = SubResource("StandardMaterial3D_ts3sh")
+
+[node name="Signal_Left" type="MeshInstance3D" parent="body" unique_id=41518152]
+transform = Transform3D(1.8860936, 0, 0, 0, 0.49265355, 0, 0, 0, 1, 0.499, 0.4, -1.107)
+mesh = SubResource("BoxMesh_nkh8f")
+
+[node name="Signal_Right" type="MeshInstance3D" parent="body" unique_id=1659927788]
+transform = Transform3D(1.8860936, 0, 0, 0, 0.49265355, 0, 0, 0, 1, -0.49967766, 0.40000004, -1.107)
+mesh = SubResource("BoxMesh_nkh8f")
 
 [node name="wheel-back" type="MeshInstance3D" parent="body" unique_id=1325686741]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -1.0499997)
@@ -269,9 +369,18 @@ shape = SubResource("BoxShape3D_s58m0")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.49851823, 0.5653391)
 shape = SubResource("BoxShape3D_s58m0")
 
-[node name="CamArm" type="SpringArm3D" parent="." unique_id=166972503]
+[node name="CamArm" type="SpringArm3D" parent="." unique_id=166972503 node_paths=PackedStringArray("car_node")]
+transform = Transform3D(-0.9994827, -4.5461443e-10, -0.032160845, -0.015320668, 0.8792415, 0.47612998, 0.02827716, 0.4763763, -0.87878686, 0, 4.9037952, -6.688711)
 collision_mask = 0
 spring_length = 5.0
 script = ExtResource("3_ts3sh")
+car_node = NodePath("..")
 
 [node name="Camera3D" type="Camera3D" parent="CamArm" unique_id=1435662683]
+
+[node name="Signals_Timer" type="Timer" parent="." unique_id=31131429]
+wait_time = 0.25
+one_shot = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1047590110]
+libraries/ = SubResource("AnimationLibrary_imavk")
