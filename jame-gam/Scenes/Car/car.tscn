@@ -130,6 +130,8 @@ albedo_texture = ExtResource("1_e7e8e")
 [sub_resource type="BoxShape3D" id="BoxShape3D_s58m0"]
 size = Vector3(1, 0.59069824, 1.3835449)
 
+[sub_resource type="SphereShape3D" id="SphereShape3D_ts3sh"]
+
 [sub_resource type="Animation" id="Animation_ts3sh"]
 length = 0.001
 tracks/0/type = "value"
@@ -213,6 +215,8 @@ _data = {
 }
 
 [node name="Car" type="VehicleBody3D" unique_id=1676619421]
+collision_layer = 2
+collision_mask = 5
 mass = 500.0
 center_of_mass_mode = 1
 center_of_mass = Vector3(0, -0.1, 0.07)
@@ -334,6 +338,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_imavk")
 
 [node name="wheel_front_left" type="VehicleWheel3D" parent="." unique_id=726141367]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.45570582, 0.28904283, 0.7467271)
+use_as_traction = true
 use_as_steering = true
 wheel_roll_influence = 0.0
 wheel_radius = 0.3
@@ -348,6 +353,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_imavk")
 
 [node name="wheel_front_right" type="VehicleWheel3D" parent="." unique_id=254015025]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.4400885, 0.28871483, 0.7533526)
+use_as_traction = true
 use_as_steering = true
 wheel_roll_influence = 0.0
 wheel_radius = 0.315
@@ -371,8 +377,8 @@ shape = SubResource("BoxShape3D_s58m0")
 
 [node name="CamArm" type="SpringArm3D" parent="." unique_id=166972503 node_paths=PackedStringArray("car_node")]
 transform = Transform3D(-0.9994827, -4.5461443e-10, -0.032160845, -0.015320668, 0.8792415, 0.47612998, 0.02827716, 0.4763763, -0.87878686, 0, 4.9037952, -6.688711)
-collision_mask = 0
-spring_length = 5.0
+shape = SubResource("SphereShape3D_ts3sh")
+spring_length = 4.0
 script = ExtResource("3_ts3sh")
 car_node = NodePath("..")
 

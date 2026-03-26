@@ -74,14 +74,17 @@ func return_to_menu_2(): # return to menu from menu in game
 	e_pressed = false
 	await _fade()
 
+var impuls := false
 func _input(event: InputEvent) -> void: # connect every input
 	if game and game is Node3D and game in get_children(): # check if in-game
 		if event.is_action_pressed("fix"): #r  fix - apply impuls to the car
-			var car = game.get_child(0)
-			if not car.global_transform.basis.y.dot(Vector3.UP) >= 0.5: 
-				return
-			car.apply_central_impulse(Vector3(0, 1000, 0))
-			car.global_transform.basis = Basis()
+			if not impuls:
+				impuls = true
+				var car = game.get_child(0)
+				car.apply_central_impulse(Vector3(100, 3000, 100))
+				car.global_transform.basis = Basis()
+				await get_tree().create_timer(3.0).timeout
+				impuls = false
 		if event.is_action_pressed("exit"): #esc ESC - opens game menu
 			game.show_menu()
 			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE

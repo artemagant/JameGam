@@ -48,7 +48,8 @@ b - car belt
 <> (, .) - turn signals
 m - emergency signals
 h - honk
-esc - menu"
+esc - menu
+r - toss up"
 label_settings = SubResource("LabelSettings_5ntg7")
 
 [node name="Panel2" type="Panel" parent="." unique_id=1769679220]

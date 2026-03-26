@@ -13,7 +13,7 @@ func _ready() -> void:
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion:
-		idle_timer = 0.0 # Сброс таймера при движении мыши
+		idle_timer = 0.0
 		
 		rotation_degrees.x -= event.relative.y * MouseSensitivity
 		rotation_degrees.x = clamp(rotation_degrees.x, -90.0, 0.0)
@@ -22,20 +22,16 @@ func _input(event: InputEvent) -> void:
 		rotation_degrees.y = wrapf(rotation_degrees.y, 0.0, 360.0)
 
 func _process(delta: float) -> void:
-	# 1. Всегда следуем за позицией машины (так как set_as_top_level = true)
 	if car_node:
 		global_position = car_node.global_position
 		
 		idle_timer += delta
 		
-		# 2. Если камеру не трогают, плавно подворачиваем её за машиной
 		if idle_timer >= IdleTime:
-			# Целевой угол Y — это текущий поворот машины
+
 			var target_rad_y = car_node.global_transform.basis.get_euler().y - PI if car_node.game.gear != 0 else car_node.global_transform.basis.get_euler().y
 			var current_rad_y = deg_to_rad(rotation_degrees.y)
-			
-			# Плавно поворачиваем Y к направлению машины
+
 			rotation_degrees.y = rad_to_deg(lerp_angle(current_rad_y, target_rad_y, ReturnSpeed * delta * 0.20))
-			
-			# Плавно возвращаем наклон X к дефолтному (например, -20 градусов)
-			rotation_degrees.x = lerp(rotation_degrees.x, -30.0, ReturnSpeed * delta)
+
+			rotation_degrees.x = lerp(rotation_degrees.x, -20.0, ReturnSpeed * delta)
