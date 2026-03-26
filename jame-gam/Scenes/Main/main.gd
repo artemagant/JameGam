@@ -78,7 +78,7 @@ func _input(event: InputEvent) -> void: # connect every input
 	if game and game is Node3D and game in get_children(): # check if in-game
 		if event.is_action_pressed("fix"): #r  fix - apply impuls to the car
 			var car = game.get_child(0)
-			if car.global_transform.basis.y.dot(Vector3.UP) >= 0.5: 
+			if not car.global_transform.basis.y.dot(Vector3.UP) >= 0.5: 
 				return
 			car.apply_central_impulse(Vector3(0, 1000, 0))
 			car.global_transform.basis = Basis()

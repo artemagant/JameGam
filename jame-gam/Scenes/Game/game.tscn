@@ -1,24 +1,20 @@
 [gd_scene format=3 uid="uid://c0er2n5oh36t"]
 
 [ext_resource type="Script" uid="uid://b58desau1ovn3" path="res://Scenes/Game/game.gd" id="1_i1e5p"]
-[ext_resource type="Texture2D" uid="uid://cuf402qw2hhyj" path="res://Sprites/vaz_2107.jpg" id="3_i1e5p"]
 [ext_resource type="PackedScene" uid="uid://cnh6ljnidsr7w" path="res://Scenes/Car/car.tscn" id="3_qikps"]
 [ext_resource type="PackedScene" uid="uid://bmh46qhptl0qk" path="res://Scenes/Menu_Game/menu_game.tscn" id="4_flgk0"]
 [ext_resource type="PackedScene" uid="uid://3e6yndw1osex" path="res://Scenes/Game_UI/ui.tscn" id="5_ciybh"]
-[ext_resource type="Texture2D" uid="uid://c7s5y6vn8b6bj" path="res://Sprites/colormap.png" id="5_flgk0"]
+[ext_resource type="PackedScene" uid="uid://dwvwm5upmv62w" path="res://Scenes/Buildings/City/main_building.tscn" id="7_vifcx"]
+[ext_resource type="PackedScene" uid="uid://c2jp5s0h156v3" path="res://Scenes/Buildings/City/city_building_1.tscn" id="8_xfil1"]
+[ext_resource type="PackedScene" uid="uid://dgka716rk6oij" path="res://Scenes/Buildings/City/city_biulding_2.tscn" id="9_huoen"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ev4jc"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qikps"]
-albedo_texture = ExtResource("5_flgk0")
-metallic = 1.0
-metallic_texture = ExtResource("3_i1e5p")
-metallic_texture_channel = 1
-roughness_texture = ExtResource("3_i1e5p")
-roughness_texture_channel = 1
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vifcx"]
+albedo_color = Color(0.6609557, 0.9774514, 0.6332054, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_vifcx"]
-material = SubResource("StandardMaterial3D_qikps")
+material = SubResource("StandardMaterial3D_vifcx")
 size = Vector3(2000, 100, 2000)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_qxfds"]
@@ -40,10 +36,26 @@ reflected_light_source = 2
 glow_enabled = true
 glow_hdr_threshold = 0.5
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_vifcx"]
+size = Vector3(2.4978638, 1, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xfil1"]
+size = Vector3(2.360962, 1, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_huoen"]
+size = Vector3(2.5766907, 1, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7jvlm"]
+size = Vector3(2.4677734, 1, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_xfil1"]
+size = Vector3(2.5, 1, 1)
+
 [node name="Game" type="Node3D" unique_id=613764105]
 script = ExtResource("1_i1e5p")
 
 [node name="Car" parent="." unique_id=1676619421 instance=ExtResource("3_qikps")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.831779, -13.754881, -7.268697)
 turn_amount = 0.6
 
 [node name="UI" parent="." unique_id=1013923296 instance=ExtResource("5_ciybh")]
@@ -72,5 +84,70 @@ shape = SubResource("BoxShape3D_qxfds")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1688672493]
 environment = SubResource("Environment_mv0hc")
+
+[node name="Place" type="Node3D" parent="." unique_id=382709293]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, -7.1690445, 0)
+
+[node name="Main_Building" parent="Place" unique_id=415342694 instance=ExtResource("7_vifcx")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, -14.00528, 0)
+
+[node name="City_Building_1" parent="Place" unique_id=212964110 instance=ExtResource("8_xfil1")]
+transform = Transform3D(0.7812809, 0, 0.62417966, 0, 1, 0, -0.62417966, 0, 0.7812809, -111.1122, -12.381821, 0)
+
+[node name="City_Building_2" parent="Place" unique_id=1937627436 instance=ExtResource("8_xfil1")]
+transform = Transform3D(-0.46224403, 0, 0.88675284, 0, 1, 0, -0.88675284, 0, -0.46224403, -75.67364, -12.381821, 83.54588)
+
+[node name="City_Building_3" parent="Place" unique_id=1939228813 instance=ExtResource("8_xfil1")]
+transform = Transform3D(-0.99877787, 0, -0.049425095, 0, 1, 0, 0.049425095, 0, -0.99877787, 21.51342, -12.381821, -67.33678)
+
+[node name="City_Building_4" parent="Place" unique_id=1213136255 instance=ExtResource("8_xfil1")]
+transform = Transform3D(0.09098013, 0, 0.99585265, 0, 1, 0, -0.99585265, 0, 0.09098013, 102.58428, -12.381821, 74.74245)
+
+[node name="City_Biulding_2" parent="Place" unique_id=782482118 instance=ExtResource("9_huoen")]
+transform = Transform3D(0.7863747, 0, -0.6177498, 0, 1, 0, 0.6177498, 0, 0.7863747, -65.5, -19.306347, -87.5)
+
+[node name="City_Biulding_3" parent="Place" unique_id=65334150 instance=ExtResource("9_huoen")]
+transform = Transform3D(0.8276785, 0, 0.5612025, 0, 1, 0, -0.5612025, 0, 0.8276785, 129.08463, -19.306347, -45.70015)
+
+[node name="City_Biulding_4" parent="Place" unique_id=1735165141 instance=ExtResource("9_huoen")]
+transform = Transform3D(0.6828022, 0, 0.7306035, 0, 1, 0, -0.7306035, 0, 0.6828022, 42.265656, -19.306347, 148.85295)
+
+[node name="City_Biulding_5" parent="Place" unique_id=1198050822 instance=ExtResource("9_huoen")]
+transform = Transform3D(-0.010541618, 0, -0.99994457, 0, 1, 0, 0.99994457, 0, -0.010541618, -160.11856, -19.306347, 59.11557)
+
+[node name="Road" type="StaticBody3D" parent="." unique_id=638211598]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.14723778, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Road" unique_id=154749901]
+transform = Transform3D(31.23878, 0, 0, 0, 1, 0, 0, 0, 3.5256438, -14.052905, -13.8749895, 0)
+shape = SubResource("BoxShape3D_vifcx")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Road" unique_id=273848204]
+transform = Transform3D(36.417385, 0, 0, 0, 1, 0, 0, 0, 3.5257063, 16.640713, -13.8749895, -20.032354)
+shape = SubResource("BoxShape3D_xfil1")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Road" unique_id=1158643428]
+transform = Transform3D(-2.1042058e-06, 0, 3.5257072, 0, 1, 0, -48.13862, 0, -1.5411356e-07, -28.157658, -13.8749895, 21.20625)
+shape = SubResource("BoxShape3D_huoen")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="Road" unique_id=562059498]
+transform = Transform3D(-1.6422316e-06, 0, 3.5257072, 0, 1, 0, -37.56988, 0, -1.5411356e-07, 26.560902, -13.8749895, 25.634865)
+shape = SubResource("BoxShape3D_7jvlm")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Road" unique_id=1321218498]
+transform = Transform3D(31.23878, 0, 0, 0, 1, 0, 0, 0, 3.5257063, -14.355112, -13.8749895, 0)
+mesh = SubResource("BoxMesh_xfil1")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Road" unique_id=1731227722]
+transform = Transform3D(36.417393, 0, 0, 0, 1, 0, 0, 0, 3.5257063, 16.585146, -13.8749895, -20.032354)
+mesh = SubResource("BoxMesh_xfil1")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Road" unique_id=888514091]
+transform = Transform3D(-2.1042058e-06, 0, 3.5257072, 0, 1, 0, -48.13862, 0, -1.5411356e-07, -28.157658, -13.8749895, 17.670921)
+mesh = SubResource("BoxMesh_xfil1")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Road" unique_id=224339884]
+transform = Transform3D(-1.6422316e-06, 0, 3.5257072, 0, 1, 0, -37.56988, 0, -1.5411356e-07, 26.560902, -13.8749895, 27.19416)
+mesh = SubResource("BoxMesh_xfil1")
 
 [connection signal="timeout" from="UI_Update_Timer" to="." method="_on_ui_update_timer_timeout"]

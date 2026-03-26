@@ -1,0 +1,76 @@
+[gd_scene format=3 uid="uid://c2jp5s0h156v3"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ax8fr"]
+albedo_color = Color(0.32024392, 0.32024422, 0.32024413, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_usan7"]
+material = SubResource("StandardMaterial3D_ax8fr")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_usan7"]
+albedo_color = Color(0.5803922, 1, 1, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_cnkaw"]
+material = SubResource("StandardMaterial3D_usan7")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mlosq"]
+size = Vector3(14.674452, 55.865433, 19.308784)
+
+[node name="City_Building_1" type="StaticBody3D" unique_id=212964110]
+
+[node name="Main" type="MeshInstance3D" parent="." unique_id=1144561765]
+transform = Transform3D(14.309028, 0, 0, 0, 56.103928, 0, 0, 0, 19.315113, 0, 24.27902, 0)
+mesh = SubResource("BoxMesh_usan7")
+
+[node name="Windows" type="Node3D" parent="." unique_id=1392186035]
+
+[node name="Window" type="MeshInstance3D" parent="Windows" unique_id=1624593928]
+transform = Transform3D(1.0757695, 0, 0, 0, 8.182463, 0, 0, 0, 4.774446, 6.952, 14, -4.861189)
+mesh = SubResource("BoxMesh_cnkaw")
+
+[node name="Window2" type="MeshInstance3D" parent="Windows" unique_id=326028889]
+transform = Transform3D(1.0757695, 0, 0, 0, 8.182463, 0, 0, 0, 4.774446, 6.952, 14, 4.808811)
+mesh = SubResource("BoxMesh_cnkaw")
+
+[node name="Window3" type="MeshInstance3D" parent="Windows" unique_id=92119078]
+transform = Transform3D(1.0757695, 0, 0, 0, 8.182463, 0, 0, 0, 4.774446, 6.952, 28, -4.861189)
+mesh = SubResource("BoxMesh_cnkaw")
+
+[node name="Window4" type="MeshInstance3D" parent="Windows" unique_id=907643947]
+transform = Transform3D(1.0757695, 0, 0, 0, 8.182463, 0, 0, 0, 4.774446, 6.952, 28, 4.808811)
+mesh = SubResource("BoxMesh_cnkaw")
+
+[node name="Window5" type="MeshInstance3D" parent="Windows" unique_id=486510741]
+transform = Transform3D(1.0757695, 0, 0, 0, 8.182463, 0, 0, 0, 4.774446, 6.952, 42, -4.861189)
+mesh = SubResource("BoxMesh_cnkaw")
+
+[node name="Window6" type="MeshInstance3D" parent="Windows" unique_id=2039103996]
+transform = Transform3D(1.0757695, 0, 0, 0, 8.182463, 0, 0, 0, 4.774446, 6.952, 42, 4.808811)
+mesh = SubResource("BoxMesh_cnkaw")
+
+[node name="Window7" type="MeshInstance3D" parent="Windows" unique_id=1425047515]
+transform = Transform3D(1.0757695, 0, 0, 0, 8.182463, 0, 0, 0, 4.774446, -6.851199, 14, -4.861189)
+mesh = SubResource("BoxMesh_cnkaw")
+
+[node name="Window8" type="MeshInstance3D" parent="Windows" unique_id=1062223118]
+transform = Transform3D(1.0757695, 0, 0, 0, 8.182463, 0, 0, 0, 4.774446, -6.851199, 14, 4.808811)
+mesh = SubResource("BoxMesh_cnkaw")
+
+[node name="Window9" type="MeshInstance3D" parent="Windows" unique_id=1939388411]
+transform = Transform3D(1.0757695, 0, 0, 0, 8.182463, 0, 0, 0, 4.774446, -6.851199, 28, -4.861189)
+mesh = SubResource("BoxMesh_cnkaw")
+
+[node name="Window10" type="MeshInstance3D" parent="Windows" unique_id=878278483]
+transform = Transform3D(1.0757695, 0, 0, 0, 8.182463, 0, 0, 0, 4.774446, -6.851199, 28, 4.808811)
+mesh = SubResource("BoxMesh_cnkaw")
+
+[node name="Window11" type="MeshInstance3D" parent="Windows" unique_id=429281574]
+transform = Transform3D(1.0757695, 0, 0, 0, 8.182463, 0, 0, 0, 4.774446, -6.851199, 42, -4.861189)
+mesh = SubResource("BoxMesh_cnkaw")
+
+[node name="Window12" type="MeshInstance3D" parent="Windows" unique_id=1245611648]
+transform = Transform3D(1.0757695, 0, 0, 0, 8.182463, 0, 0, 0, 4.774446, -6.851199, 42, 4.808811)
+mesh = SubResource("BoxMesh_cnkaw")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=733221138]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.051797867, 24.184425, 0.002600193)
+shape = SubResource("BoxShape3D_mlosq")
