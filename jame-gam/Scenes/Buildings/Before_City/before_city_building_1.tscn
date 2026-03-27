@@ -1,10 +1,12 @@
 [gd_scene format=3 uid="uid://ct7e7h26gnjdq"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6pdst"]
+[ext_resource type="Script" uid="uid://bnagm1un21r8o" path="res://Scenes/Buildings/Before_City/before_city_building_1.gd" id="1_kgy8r"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_aa22l"]
 albedo_color = Color(0.4251193, 0.28558013, 0.19213799, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_6pdst"]
-material = SubResource("StandardMaterial3D_6pdst")
+material = SubResource("StandardMaterial3D_aa22l")
 size = Vector3(10, 10, 10)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kgy8r"]
@@ -13,6 +15,16 @@ albedo_color = Color(0.42352942, 0.28627452, 0.19215687, 1)
 [sub_resource type="PrismMesh" id="PrismMesh_kgy8r"]
 material = SubResource("StandardMaterial3D_kgy8r")
 size = Vector3(10, 3, 10)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_77mf1"]
+albedo_color = Color(0.4251193, 0.28558013, 0.19213799, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_rkyhl"]
+material = SubResource("StandardMaterial3D_77mf1")
+size = Vector3(12.5, 1, 8)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6pdst"]
+albedo_color = Color(0.4251193, 0.28558013, 0.19213799, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_jbjd5"]
 material = SubResource("StandardMaterial3D_6pdst")
@@ -56,6 +68,8 @@ size = Vector3(12.39163, 1, 7.947876)
 size = Vector3(5.2560425, 1.9589081, 10.118774)
 
 [node name="Before_City_Building_1" type="StaticBody3D" unique_id=1474267773]
+script = ExtResource("1_kgy8r")
+color_door = Color(0.19848809, 0.15765664, 0.07357501, 1)
 
 [node name="Main" type="MeshInstance3D" parent="." unique_id=71019085]
 mesh = SubResource("BoxMesh_6pdst")
@@ -69,7 +83,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.8313828, 6.441973)
 
 [node name="Roof" type="MeshInstance3D" parent="Node3D" unique_id=521010130]
 transform = Transform3D(1, 0, 0, 0, 0.8263736, 0.56312233, 0, -0.56312233, 0.8263736, 0, 11.133478, -9.199398)
-mesh = SubResource("BoxMesh_jbjd5")
+mesh = SubResource("BoxMesh_rkyhl")
 
 [node name="Roof2" type="MeshInstance3D" parent="Node3D" unique_id=1836258396]
 transform = Transform3D(-1, 4.922972e-08, -7.224387e-08, 0, 0.8263736, 0.56312233, 8.742278e-08, 0.56312233, -0.8263736, 0, 11.133478, -3.1778994)

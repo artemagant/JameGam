@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://caiyr543op5q7"]
 
+[ext_resource type="Script" uid="uid://b80b754ux00pg" path="res://Scenes/Buildings/Before_City/before_city_building_2.gd" id="1_e3c0v"]
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ax8fr"]
 albedo_color = Color(0.4251193, 0.28558013, 0.19213799, 1)
 
@@ -56,6 +58,7 @@ size = Vector3(15.198753, 1.9174423, 10.118774)
 size = Vector3(12.516982, 1, 14.934402)
 
 [node name="Before_City_Building_2" type="StaticBody3D" unique_id=319557662]
+script = ExtResource("1_e3c0v")
 
 [node name="Main" type="MeshInstance3D" parent="." unique_id=2065630027]
 mesh = SubResource("BoxMesh_v7nt6")

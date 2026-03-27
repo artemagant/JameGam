@@ -378,7 +378,7 @@ shape = SubResource("BoxShape3D_s58m0")
 [node name="CamArm" type="SpringArm3D" parent="." unique_id=166972503 node_paths=PackedStringArray("car_node")]
 transform = Transform3D(-0.9994827, -4.5461443e-10, -0.032160845, -0.015320668, 0.8792415, 0.47612998, 0.02827716, 0.4763763, -0.87878686, 0, 4.9037952, -6.688711)
 shape = SubResource("SphereShape3D_ts3sh")
-spring_length = 4.0
+spring_length = 6.0
 script = ExtResource("3_ts3sh")
 car_node = NodePath("..")
 

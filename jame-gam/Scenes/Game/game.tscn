@@ -5,7 +5,9 @@
 [ext_resource type="PackedScene" uid="uid://bmh46qhptl0qk" path="res://Scenes/Menu_Game/menu_game.tscn" id="4_flgk0"]
 [ext_resource type="PackedScene" uid="uid://3e6yndw1osex" path="res://Scenes/Game_UI/ui.tscn" id="5_ciybh"]
 [ext_resource type="PackedScene" uid="uid://dwvwm5upmv62w" path="res://Scenes/Buildings/City/main_building.tscn" id="7_vifcx"]
+[ext_resource type="PackedScene" uid="uid://ct7e7h26gnjdq" path="res://Scenes/Buildings/Before_City/before_city_building_1.tscn" id="8_huoen"]
 [ext_resource type="PackedScene" uid="uid://c2jp5s0h156v3" path="res://Scenes/Buildings/City/city_building_1.tscn" id="8_xfil1"]
+[ext_resource type="PackedScene" uid="uid://caiyr543op5q7" path="res://Scenes/Buildings/Before_City/before_city_building_2.tscn" id="9_7jvlm"]
 [ext_resource type="PackedScene" uid="uid://dgka716rk6oij" path="res://Scenes/Buildings/City/city_biulding_2.tscn" id="9_huoen"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ev4jc"]
@@ -18,7 +20,7 @@ material = SubResource("StandardMaterial3D_vifcx")
 size = Vector3(5000, 10, 5000)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_qtymf"]
-size = Vector3(5000, 10, 5000)
+size = Vector3(5000, 9.808624, 5000)
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_flgk0"]
 sky_top_color = Color(0.38938937, 0.67637825, 0.91469646, 1)
@@ -50,20 +52,32 @@ size = Vector3(2.360962, 1, 1)
 size = Vector3(2.5766907, 1, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7jvlm"]
-size = Vector3(2.4677734, 1, 1)
+size = Vector3(13.947815, 1, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ypmwd"]
-size = Vector3(2.467041, 1, 1)
+size = Vector3(5.25354, 1, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_oejk7"]
+size = Vector3(2.430432, 1, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_upfqs"]
+size = Vector3(2.4628663, 1, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8e3kh"]
+size = Vector3(2.4986084, 1, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_56qi8"]
+size = Vector3(2.4922242, 1, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_xfil1"]
 size = Vector3(2.5, 1, 1)
 
 [node name="Game" type="Node3D" unique_id=613764105]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 219.91647, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 219.91647, -1558.883)
 script = ExtResource("1_i1e5p")
 
 [node name="Car" parent="." unique_id=1676619421 instance=ExtResource("3_qikps")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 28.70148, -58.39824, -78.71052)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 51.904327, -58.39824, -78.38916)
 rotation_order = 0
 turn_amount = 0.6
 
@@ -84,11 +98,11 @@ autostart = true
 physics_material_override = SubResource("PhysicsMaterial_ev4jc")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Floor" unique_id=1501619973]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.76453, -63.62037, -75.71051)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.592503, -63.789505, -76.888794)
 mesh = SubResource("BoxMesh_vifcx")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Floor" unique_id=589862684]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.76453, -63.62037, -75.71051)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.76453, -63.71605, -75.71045)
 shape = SubResource("BoxShape3D_qtymf")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1688672493]
@@ -129,8 +143,134 @@ transform = Transform3D(-0.010541618, 0, -0.99994457, 0, 1, 0, 0.99994457, 0, -0
 
 [node name="Vilage" type="Node3D" parent="Environment" unique_id=117471049]
 
+[node name="Before_City_Building_1" parent="Environment/Vilage" unique_id=1474267773 instance=ExtResource("8_huoen")]
+transform = Transform3D(-0.70710677, 0, -0.70710677, 0, 1, 0, 0.70710677, 0, -0.70710677, 268.2746, -9.399994, 0)
+color_main = Color(0.6797387, 0.5004429, 0.5023811, 1)
+color_roof = Color(0.4210701, 0.24162906, 0.44588202, 1)
+color_door = Color(0.1561692, 0.120368116, 0.052336983, 1)
+
+[node name="Before_City_Building_2" parent="Environment/Vilage" unique_id=1705388494 instance=ExtResource("8_huoen")]
+transform = Transform3D(-0.61483586, 0, 0.7886549, 0, 1, 0, -0.7886549, 0, -0.61483586, 367.27936, -9.399994, -10.142212)
+color_main = Color(0.7267008, 0.44403547, 0.64537555, 1)
+color_roof = Color(0.17350236, 0.3567349, 0.3577919, 1)
+color_door = Color(0.1561692, 0.120368116, 0.052336983, 1)
+
+[node name="Before_City_Building_3" parent="Environment/Vilage" unique_id=1108513444 instance=ExtResource("8_huoen")]
+transform = Transform3D(-0.9811611, 0, -0.19318987, 0, 1, 0, 0.19318987, 0, -0.9811611, 380.37457, -9.399994, -102.378555)
+color_main = Color(0.65535146, 0.4662302, 0.7441678, 1)
+color_roof = Color(0.1761254, 0.34415707, 0.43114862, 1)
+color_door = Color(0.1561692, 0.120368116, 0.052336983, 1)
+
+[node name="Before_City_Building_9" parent="Environment/Vilage" unique_id=743912347 instance=ExtResource("8_huoen")]
+transform = Transform3D(-0.15358934, 0, -0.9881346, 0, 1, 0, 0.9881346, 0, -0.15358934, 346.26636, -9.399994, -140.5014)
+color_main = Color(0.54621845, 0.38160944, 0.46367943, 1)
+color_roof = Color(0.15795368, 0.35619533, 0.3789608, 1)
+color_door = Color(0.1561692, 0.120368116, 0.052336983, 1)
+
+[node name="Before_City_Building_4" parent="Environment/Vilage" unique_id=1927880808 instance=ExtResource("8_huoen")]
+transform = Transform3D(-0.99666, 0, 0.08166027, 0, 1, 0, -0.08166027, 0, -0.99666, 305.9497, -9.399994, -52.74936)
+color_main = Color(0.2899142, 0.6315065, 0.4657632, 1)
+color_door = Color(0.1561692, 0.120368116, 0.052336983, 1)
+
+[node name="Before_City_Building_8" parent="Environment/Vilage" unique_id=950584999 instance=ExtResource("8_huoen")]
+transform = Transform3D(-0.9780384, 0, 0.20842388, 0, 1, 0, -0.20842388, 0, -0.9780384, 363.45923, -9.399994, -52.74936)
+color_main = Color(0.4965135, 0.28670824, 0.45718598, 1)
+color_roof = Color(0.64555484, 0.93578756, 0.89302754, 1)
+color_door = Color(0.1561692, 0.120368116, 0.052336983, 1)
+
+[node name="Before_City_Building_10" parent="Environment/Vilage" unique_id=2004038879 instance=ExtResource("8_huoen")]
+transform = Transform3D(-0.9981865, 0, -0.06019479, 0, 1, 0, 0.06019479, 0, -0.9981865, 405.89185, -9.399994, -32.698853)
+color_main = Color(0.27336276, 0.62608767, 0.53952295, 1)
+color_roof = Color(0.09848293, 0.3347255, 0.52685946, 1)
+color_door = Color(0.1561692, 0.120368116, 0.052336983, 1)
+
+[node name="Before_City_Building_7" parent="Environment/Vilage" unique_id=622009080 instance=ExtResource("9_7jvlm")]
+transform = Transform3D(0.62993044, 0, -0.7766515, 0, 1, 0, 0.7766515, 0, 0.62993044, 287.26898, -9.602295, -109.65204)
+color_main = Color(0.7622889, 0.55336654, 0.8345252, 1)
+color_roof = Color(0.59408295, 0.74556994, 0.59939, 1)
+color_door = Color(0.1561692, 0.120368116, 0.052336983, 1)
+
+[node name="Before_City_Building_5" parent="Environment/Vilage" unique_id=319557662 instance=ExtResource("9_7jvlm")]
+transform = Transform3D(0.98633164, 0, 0.16477215, 0, 1, 0, -0.16477215, 0, 0.98633164, 272.6867, -9.602295, -39.996864)
+color_main = Color(0.39499167, 0.35847214, 0.17249623, 1)
+color_roof = Color(0.34329498, 0.32739252, 0.18352076, 1)
+color_door = Color(0.1561692, 0.120368116, 0.052336983, 1)
+
+[node name="Before_City_Building_6" parent="Environment/Vilage" unique_id=1625112264 instance=ExtResource("9_7jvlm")]
+transform = Transform3D(-0.49800342, 0, 0.867175, 0, 1, 0, -0.867175, 0, -0.49800342, 343.95178, -9.602295, 30.273804)
+color_main = Color(0.6842255, 0.4892884, 0.55686706, 1)
+color_roof = Color(0.18683365, 0.36404434, 0.2786236, 1)
+color_door = Color(0.1561692, 0.120368116, 0.052336983, 1)
+
+[node name="Vilage_2" type="Node3D" parent="Environment" unique_id=872010223]
+
+[node name="Before_City_Building_1" parent="Environment/Vilage_2" unique_id=722211131 instance=ExtResource("8_huoen")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 42.653595, -9.358307, -218.59998)
+color_main = Color(0.6837046, 0.36556447, 0.57119834, 1)
+color_roof = Color(0.32234728, 0.50875646, 0.40504393, 1)
+
+[node name="Before_City_Building_2" parent="Environment/Vilage_2" unique_id=23311868 instance=ExtResource("8_huoen")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 42.653595, -9.358307, -248.37573)
+color_main = Color(0.61864156, 0.43536332, 0.44018462, 1)
+color_roof = Color(0.41247246, 0.4426746, 0.6540681, 1)
+
+[node name="Before_City_Building_3" parent="Environment/Vilage_2" unique_id=923614516 instance=ExtResource("8_huoen")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 42.653595, -9.358307, -280.7804)
+color_main = Color(0.5741934, 0.42610303, 0.62734705, 1)
+color_roof = Color(0.37996987, 0.49483275, 0.40855983, 1)
+
+[node name="Before_City_Building_4" parent="Environment/Vilage_2" unique_id=1835061639 instance=ExtResource("8_huoen")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 3.1717834, -9.358307, -280.7804)
+color_main = Color(0.40126795, 0.49723274, 0.6362793, 1)
+color_roof = Color(0.2899077, 0.4725451, 0.6758016, 1)
+
+[node name="Before_City_Building_5" parent="Environment/Vilage_2" unique_id=1636149733 instance=ExtResource("9_7jvlm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -9.358307, -230.90332)
+color_main = Color(0.3682779, 0.32295316, 0.4706744, 1)
+color_roof = Color(0.17718646, 0.35625193, 0.35659993, 1)
+
+[node name="Before_City_Building_6" parent="Environment/Vilage_2" unique_id=944006608 instance=ExtResource("8_huoen")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 42.653595, -9.358307, -354.88806)
+color_main = Color(0.41669908, 0.45876503, 0.7745692, 1)
+color_roof = Color(0.7606381, 0.27520046, 0.24323776, 1)
+
+[node name="Before_City_Building_7" parent="Environment/Vilage_2" unique_id=1046850100 instance=ExtResource("8_huoen")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 42.653595, -9.358307, -384.66382)
+color_main = Color(0.17937964, 0.5441418, 0.61673355, 1)
+color_roof = Color(0.7450389, 0.2248376, 0.5389405, 1)
+
+[node name="Before_City_Building_8" parent="Environment/Vilage_2" unique_id=214554072 instance=ExtResource("8_huoen")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 42.653595, -9.358307, -417.06848)
+color_main = Color(0.81663215, 0.66334265, 0.44990063, 1)
+color_roof = Color(0.35183775, 0.1667059, 0.16098863, 1)
+
+[node name="Before_City_Building_9" parent="Environment/Vilage_2" unique_id=1555932756 instance=ExtResource("8_huoen")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, 3.1717834, -9.358307, -417.06848)
+color_main = Color(0.68463224, 0.24469909, 0.8549933, 1)
+color_roof = Color(0.4737941, 0.46899527, 0.32426628, 1)
+
+[node name="Before_City_Building_11" parent="Environment/Vilage_2" unique_id=214438305 instance=ExtResource("8_huoen")]
+transform = Transform3D(1, 0, 1.7484555e-07, 0, 1, 0, -1.7484555e-07, 0, 1, -79.08714, -9.358307, -312.0254)
+color_main = Color(0.404524, 0.5399127, 0.28909248, 1)
+color_roof = Color(0.6824146, 0.17145005, 0.7877788, 1)
+
+[node name="Before_City_Building_10" parent="Environment/Vilage_2" unique_id=947945000 instance=ExtResource("9_7jvlm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -9.358307, -367.1914)
+color_main = Color(0.060442694, 0.397358, 0.43482056, 1)
+color_roof = Color(0.25570908, 0.2539493, 0.65986526, 1)
+
+[node name="Before_City_Building_12" parent="Environment/Vilage_2" unique_id=1343664472 instance=ExtResource("9_7jvlm")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 129.53278, -9.358307, -313.08667)
+color_main = Color(0.29900333, 0.37669417, 0.28636283, 1)
+color_roof = Color(0.33548647, 0.25395963, 0.5712053, 1)
+
+[node name="Before_City_Building_13" parent="Environment/Vilage_2" unique_id=1108959293 instance=ExtResource("9_7jvlm")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 26.388695, -9.358307, -471.7843)
+color_main = Color(0.45274436, 0.27576485, 0.4593714, 1)
+color_roof = Color(0.64233434, 0.76633924, 0.5250274, 1)
+
 [node name="Road_City" type="StaticBody3D" parent="Environment" unique_id=638211598]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.14723778, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.4, 0)
 collision_layer = 4
 collision_mask = 0
 
@@ -147,15 +287,31 @@ transform = Transform3D(-2.1042058e-06, 0, 3.5257072, 0, 1, 0, -48.13862, 0, -1.
 shape = SubResource("BoxShape3D_huoen")
 
 [node name="CollisionShape3D4" type="CollisionShape3D" parent="Environment/Road_City" unique_id=562059498]
-transform = Transform3D(-1.6422316e-06, 0, 3.5257072, 0, 1, 0, -37.56988, 0, -1.5411356e-07, 26.560902, -13.8749895, 25.634865)
+transform = Transform3D(-1.6422316e-06, 0, 3.5257072, 0, 1, 0, -37.56988, 0, -1.5411356e-07, 26.56089, -13.874985, -190.01697)
 shape = SubResource("BoxShape3D_7jvlm")
 
 [node name="CollisionShape3D5" type="CollisionShape3D" parent="Environment/Road_City" unique_id=78160247]
-transform = Transform3D(55.60342, 0, 0, 0, 1, 0, 0, 0, 3.5257072, 97.08717, -13.874985, 27.19416)
+transform = Transform3D(55.60342, 0, 0, 0, 1, 0, 0, 0, 3.5257072, 174.55661, -13.874985, 27.194214)
 shape = SubResource("BoxShape3D_ypmwd")
 
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="Environment/Road_City" unique_id=61012424]
+transform = Transform3D(-2.0627147e-06, 0, 3.5257072, 0, 1, 0, -47.18941, 0, -1.5411355e-07, 290.70496, -13.874985, -32.07776)
+shape = SubResource("BoxShape3D_oejk7")
+
+[node name="CollisionShape3D7" type="CollisionShape3D" parent="Environment/Road_City" unique_id=1362547932]
+transform = Transform3D(41.171074, 0, -1.4210849e-14, 0, 1, 0, 0, 0, 3.5257041, 343.13135, -13.874985, -30.550415)
+shape = SubResource("BoxShape3D_upfqs")
+
+[node name="CollisionShape3D8" type="CollisionShape3D" parent="Environment/Road_City" unique_id=1511389506]
+transform = Transform3D(-22.584217, 0, -3.08227e-07, 0, 1, 0, 1.9743748e-06, 0, -3.525706, 335.9267, -13.874985, -101.18616)
+shape = SubResource("BoxShape3D_8e3kh")
+
+[node name="CollisionShape3D9" type="CollisionShape3D" parent="Environment/Road_City" unique_id=1794843146]
+transform = Transform3D(-70.33324, 0, -3.082271e-07, 0, 0.9999987, 0, 6.148729e-06, 0, -3.525707, 26.552742, -13.874985, -310.94177)
+shape = SubResource("BoxShape3D_56qi8")
+
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Road_City" unique_id=1321218498]
-transform = Transform3D(31.23878, 0, 0, 0, 1, 0, 0, 0, 3.5257063, -14.355112, -13.8749895, 0)
+transform = Transform3D(31.23878, 0, 0, 0, 1, 0, 0, 0, 3.5257063, -13.884302, -13.874985, 0)
 mesh = SubResource("BoxMesh_xfil1")
 
 [node name="MeshInstance3D3" type="MeshInstance3D" parent="Environment/Road_City" unique_id=1731227722]
@@ -170,8 +326,28 @@ mesh = SubResource("BoxMesh_xfil1")
 transform = Transform3D(-9.196497e-06, 0, 3.5257082, 0, 1, 0, -210.39133, 0, -1.5411361e-07, 26.560898, -13.874985, -190.60585)
 mesh = SubResource("BoxMesh_xfil1")
 
+[node name="MeshInstance3D10" type="MeshInstance3D" parent="Environment/Road_City" unique_id=1950912051]
+transform = Transform3D(-70.333275, 0, -3.0822716e-07, 0, 1, 0, 6.1487303e-06, 0, -3.525708, 26.560898, -13.874985, -310.94177)
+mesh = SubResource("BoxMesh_xfil1")
+
 [node name="MeshInstance3D5" type="MeshInstance3D" parent="Environment/Road_City" unique_id=2145766412]
-transform = Transform3D(55.60342, 0, 0, 0, 1, 0, 0, 0, 3.5257072, 96.3609, -13.874985, 27.19416)
+transform = Transform3D(117.876564, 0, 0, 0, 1, 0, 0, 0, 3.5257072, 175.06348, -13.874985, 27.194214)
+mesh = SubResource("BoxMesh_xfil1")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="Environment/Road_City" unique_id=533901123]
+transform = Transform3D(-2.0627147e-06, 0, 3.5257072, 0, 1, 0, -47.18941, 0, -1.5411355e-07, 290.70496, -13.874985, -30.5504)
+mesh = SubResource("BoxMesh_xfil1")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="Environment/Road_City" unique_id=1858104038]
+transform = Transform3D(41.171078, 0, -1.4210855e-14, 0, 1, 0, 0, 0, 3.5257068, 342.37604, -13.874985, -30.5504)
+mesh = SubResource("BoxMesh_xfil1")
+
+[node name="MeshInstance3D8" type="MeshInstance3D" parent="Environment/Road_City" unique_id=889816364]
+transform = Transform3D(-2.2532324e-06, 0, 3.5257065, 0, 1, 0, -51.547947, 0, -1.5411351e-07, 342.37604, -13.874985, -55.432297)
+mesh = SubResource("BoxMesh_xfil1")
+
+[node name="MeshInstance3D9" type="MeshInstance3D" parent="Environment/Road_City" unique_id=1027808350]
+transform = Transform3D(-22.584217, 0, -3.08227e-07, 0, 1, 0, 1.9743748e-06, 0, -3.525706, 335.96838, -13.874985, -101.18622)
 mesh = SubResource("BoxMesh_xfil1")
 
 [connection signal="timeout" from="UI_Update_Timer" to="." method="_on_ui_update_timer_timeout"]

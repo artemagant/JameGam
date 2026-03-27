@@ -32,6 +32,6 @@ func _process(delta: float) -> void:
 			var target_rad_y = car_node.global_transform.basis.get_euler().y - PI if car_node.game.gear != 0 else car_node.global_transform.basis.get_euler().y
 			var current_rad_y = deg_to_rad(rotation_degrees.y)
 
-			rotation_degrees.y = rad_to_deg(lerp_angle(current_rad_y, target_rad_y, ReturnSpeed * delta * 0.20))
+			rotation_degrees.y = rad_to_deg(lerp_angle(current_rad_y, target_rad_y, ReturnSpeed * delta * 0.50))
 
-			rotation_degrees.x = lerp(rotation_degrees.x, -20.0, ReturnSpeed * delta)
+			rotation_degrees.x = lerp(rotation_degrees.x, -30.0, ReturnSpeed * delta)
