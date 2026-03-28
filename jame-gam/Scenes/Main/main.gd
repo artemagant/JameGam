@@ -123,6 +123,8 @@ func _input(event: InputEvent) -> void: # connect every input
 				game.handbrake = false
 			else:
 				game.handbrake = true
+		if event.is_action_pressed("phone"):
+			game.phone()
 
 func start_engine(): # start engine
 	if is_engine_started: # if started, turn it off

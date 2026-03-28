@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://3e6yndw1osex"]
 
 [ext_resource type="Texture2D" uid="uid://baxybk8x45tje" path="res://icon.svg" id="1_5ntg7"]
+[ext_resource type="Script" uid="uid://kp8v2wpyac7m" path="res://Scenes/Game_UI/ui.gd" id="1_aa8u4"]
+[ext_resource type="Texture2D" uid="uid://cecitu2p557t4" path="res://Sprites/Снимок экрана 2026-03-28 111345.png" id="2_2cpot"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rkyvi"]
 bg_color = Color(0.15487596, 0.154876, 0.1548759, 0.19215687)
@@ -15,10 +17,320 @@ font_size = 12
 outline_size = 8
 outline_color = Color(0, 0, 0, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aa8u4"]
+bg_color = Color(0, 0, 0, 0.36078432)
+border_width_left = 8
+border_width_top = 7
+border_width_right = 8
+border_width_bottom = 7
+border_color = Color(0, 0, 0, 0.7529412)
+corner_radius_top_left = 7
+corner_radius_top_right = 7
+corner_radius_bottom_right = 7
+corner_radius_bottom_left = 7
+shadow_color = Color(0, 0, 0, 0.30588236)
+shadow_size = 2
+shadow_offset = Vector2(3, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2cpot"]
+bg_color = Color(0.56090575, 0.57879734, 0.8013707, 1)
+border_width_left = 8
+border_width_top = 7
+border_width_right = 8
+border_width_bottom = 7
+border_color = Color(0.8, 0.8, 0.8, 0)
+corner_radius_top_left = 7
+corner_radius_top_right = 7
+corner_radius_bottom_right = 7
+corner_radius_bottom_left = 7
+shadow_color = Color(0, 0, 0, 0)
+shadow_size = 2
+shadow_offset = Vector2(3, 1)
+
+[sub_resource type="FontFile" id="FontFile_aa8u4"]
+cache/0/variation_coordinates = {}
+cache/0/face_index = 0
+cache/0/embolden = 0.0
+cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
+cache/0/spacing_top = 0
+cache/0/spacing_bottom = 0
+cache/0/spacing_space = 0
+cache/0/spacing_glyph = 0
+cache/0/baseline_offset = 0.0
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/10/0/ascent = 0.0
+cache/0/10/0/descent = 0.0
+cache/0/10/0/underline_position = 0.0
+cache/0/10/0/underline_thickness = 0.0
+cache/0/10/0/scale = 1.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gvjwk"]
+bg_color = Color(0.42903072, 0.7306034, 0.80768603, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.8439369, 0.74627143, 1, 0.98039216)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xhq5x"]
+bg_color = Color(0.14901961, 0.33333334, 0.3764706, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.8439369, 0.74627143, 1, 0.98039216)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j7656"]
+bg_color = Color(0.27058825, 0.5372549, 0.6039216, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.8439369, 0.74627143, 1, 0.98039216)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d1xol"]
+bg_color = Color(0.50568247, 0.744984, 0.5523445, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.5513058, 0.88022715, 0.73970675, 0.98039216)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r5wyf"]
+bg_color = Color(0.25239202, 0.42004564, 0.28778654, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.5513058, 0.88022715, 0.73970675, 0.98039216)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ml2xb"]
+bg_color = Color(0.32483837, 0.5242103, 0.36644804, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.5513058, 0.88022715, 0.73970675, 0.98039216)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ndrgk"]
+bg_color = Color(0.46942186, 0.41279933, 0.25115708, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.20319918, 0.19313192, 0.10276065, 0.98039216)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0iiak"]
+bg_color = Color(0.2493079, 0.21564409, 0.11949485, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.20319918, 0.19313192, 0.10276065, 0.98039216)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1qxji"]
+bg_color = Color(0.33747253, 0.29316244, 0.1701749, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.20319918, 0.19313192, 0.10276065, 0.98039216)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_no80t"]
+bg_color = Color(0.78158545, 0.9192439, 0.8961572, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 0.69803923)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lxuqx"]
+bg_color = Color(0.3254978, 0.53754, 0.5107829, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 0.69803923)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5657v"]
+bg_color = Color(0.3895721, 0.6219038, 0.5919353, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 0.69803923)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_abubn"]
+bg_color = Color(0.7824135, 0.5838095, 0.6240566, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.7222591, 0.60396945, 0.3330219, 0.69803923)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_524vd"]
+bg_color = Color(0.564191, 0.36332768, 0.40611687, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.72156864, 0.6039216, 0.33333334, 0.69803923)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hvgcf"]
+bg_color = Color(0.6910193, 0.4714294, 0.516829, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.72156864, 0.6039216, 0.33333334, 0.69803923)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_20fwi"]
+bg_color = Color(0.11147123, 0.11632026, 0.22136134, 1)
+border_width_left = 8
+border_width_top = 7
+border_width_right = 8
+border_width_bottom = 7
+border_color = Color(0.8, 0.8, 0.8, 0)
+corner_radius_top_left = 7
+corner_radius_top_right = 7
+corner_radius_bottom_right = 7
+corner_radius_bottom_left = 7
+shadow_color = Color(0, 0, 0, 0)
+shadow_size = 2
+shadow_offset = Vector2(3, 1)
+
+[sub_resource type="FontFile" id="FontFile_2cpot"]
+cache/0/variation_coordinates = {}
+cache/0/face_index = 0
+cache/0/embolden = 0.0
+cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
+cache/0/spacing_top = 0
+cache/0/spacing_bottom = 0
+cache/0/spacing_space = 0
+cache/0/spacing_glyph = 0
+cache/0/baseline_offset = 0.0
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/10/0/ascent = 0.0
+cache/0/10/0/descent = 0.0
+cache/0/10/0/underline_position = 0.0
+cache/0/10/0/underline_thickness = 0.0
+cache/0/10/0/scale = 1.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_gvjwk"]
+font = SubResource("FontFile_2cpot")
+font_size = 10
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_noyia"]
+bg_color = Color(0, 0, 0, 0.14901961)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 0.54509807)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hasax"]
+bg_color = Color(0, 0, 0, 0.44705883)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.5513578, 0.55135787, 0.5513578, 0.54509807)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uu0mk"]
+bg_color = Color(0, 0, 0, 0.33333334)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.7380309, 0.73803085, 0.7380308, 0.54509807)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aa8u4"]
 size = Vector2(120, 120)
 
 [node name="UI" type="CanvasGroup" unique_id=1013923296]
+script = ExtResource("1_aa8u4")
 
 [node name="Panel" type="Panel" parent="." unique_id=1757160726]
 offset_left = 790.0
@@ -46,8 +358,9 @@ e - turn on engine
 l - light
 b - car belt
 <> (, .) - turn signals
-m - emergency signals
+g - emergency signals
 h - honk
+p - phone
 esc - menu
 r - toss up"
 label_settings = SubResource("LabelSettings_5ntg7")
@@ -77,6 +390,236 @@ Signals -
 RPM -
 ..."
 label_settings = SubResource("LabelSettings_aa8u4")
+
+[node name="Phone" type="Panel" parent="." unique_id=1301255787]
+offset_left = 274.0
+offset_top = 191.0
+offset_right = 414.0
+offset_bottom = 427.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_aa8u4")
+
+[node name="Main" type="Panel" parent="Phone" unique_id=1301693549]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_2cpot")
+
+[node name="Tutorial_App" type="Button" parent="Phone/Main" unique_id=381399339]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 20.0
+offset_right = 67.0
+offset_bottom = 70.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = SubResource("FontFile_aa8u4")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_gvjwk")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_xhq5x")
+theme_override_styles/hover = SubResource("StyleBoxFlat_j7656")
+text = "Tuto-
+rial"
+
+[node name="Map_App" type="Button" parent="Phone/Main" unique_id=277685489]
+layout_mode = 0
+offset_left = 72.0
+offset_top = 20.0
+offset_right = 122.0
+offset_bottom = 70.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = SubResource("FontFile_aa8u4")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_d1xol")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_r5wyf")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ml2xb")
+text = "Map"
+
+[node name="Work_App" type="Button" parent="Phone/Main" unique_id=288961312]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 75.0
+offset_right = 67.0
+offset_bottom = 125.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = SubResource("FontFile_aa8u4")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_ndrgk")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_0iiak")
+theme_override_styles/hover = SubResource("StyleBoxFlat_1qxji")
+text = "Work"
+
+[node name="Notes_App" type="Button" parent="Phone/Main" unique_id=921551013]
+layout_mode = 0
+offset_left = 72.0
+offset_top = 75.0
+offset_right = 122.0
+offset_bottom = 125.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = SubResource("FontFile_aa8u4")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_no80t")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_lxuqx")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5657v")
+text = "Notes"
+
+[node name="Sms_App" type="Button" parent="Phone/Main" unique_id=1698657779]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 130.0
+offset_right = 67.0
+offset_bottom = 180.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = SubResource("FontFile_aa8u4")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_abubn")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_524vd")
+theme_override_styles/hover = SubResource("StyleBoxFlat_hvgcf")
+text = "SMS"
+
+[node name="Settings_App" type="Button" parent="Phone/Main" unique_id=862108939]
+layout_mode = 0
+offset_left = 72.0
+offset_top = 130.0
+offset_right = 122.0
+offset_bottom = 180.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = SubResource("FontFile_aa8u4")
+theme_override_font_sizes/font_size = 16
+theme_override_styles/normal = SubResource("StyleBoxFlat_no80t")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_lxuqx")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5657v")
+text = "Set-
+tings"
+
+[node name="Tutorial_App" type="Panel" parent="Phone" unique_id=1726127569]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_20fwi")
+
+[node name="Map_App" type="Panel" parent="Phone" unique_id=1663241556]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_20fwi")
+
+[node name="TextureRect" type="TextureRect" parent="Phone/Map_App" unique_id=244591521]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 9.0
+offset_top = 8.0
+offset_right = -9.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_2cpot")
+expand_mode = 5
+flip_h = true
+
+[node name="Label" type="Label" parent="Phone/Map_App" unique_id=1102555682]
+modulate = Color(1, 1, 1, 0.44313726)
+layout_mode = 0
+offset_left = 32.0
+offset_top = 144.0
+offset_right = 76.0
+offset_bottom = 167.0
+text = "c.Medium"
+label_settings = SubResource("LabelSettings_gvjwk")
+
+[node name="Label2" type="Label" parent="Phone/Map_App" unique_id=578267183]
+modulate = Color(1, 1, 1, 0.44313726)
+layout_mode = 0
+offset_left = 80.0
+offset_top = 135.0
+offset_right = 120.0
+offset_bottom = 158.0
+text = "v.Big"
+label_settings = SubResource("LabelSettings_gvjwk")
+
+[node name="Label3" type="Label" parent="Phone/Map_App" unique_id=1438433350]
+modulate = Color(1, 1, 1, 0.44313726)
+layout_mode = 0
+offset_left = 45.0
+offset_top = 60.0
+offset_right = 85.0
+offset_bottom = 83.0
+text = "v.Small"
+label_settings = SubResource("LabelSettings_gvjwk")
+
+[node name="Work_App" type="Panel" parent="Phone" unique_id=321368451]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_20fwi")
+
+[node name="Notes_App" type="Panel" parent="Phone" unique_id=950334206]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_20fwi")
+
+[node name="Sms_App" type="Panel" parent="Phone" unique_id=169316686]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_20fwi")
+
+[node name="Settings_App" type="Panel" parent="Phone" unique_id=1393904210]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_20fwi")
+
+[node name="Navigation" type="Panel" parent="Phone" unique_id=229495568]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 215.0
+offset_right = 133.0
+offset_bottom = 230.0
+
+[node name="Close_Apps" type="Button" parent="Phone/Navigation" unique_id=1031034262]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 1.0
+offset_right = 75.0
+offset_bottom = 13.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_noyia")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_hasax")
+theme_override_styles/hover = SubResource("StyleBoxFlat_uu0mk")
 
 [node name="Menu" type="Control" parent="." unique_id=1198609646]
 layout_mode = 3

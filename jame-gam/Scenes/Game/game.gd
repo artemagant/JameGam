@@ -115,3 +115,6 @@ func minus_gear(): # minus gear
 
 func breake(iss: bool = true): # brake
 	car.breake = iss
+
+func phone():
+	ui.phone()
