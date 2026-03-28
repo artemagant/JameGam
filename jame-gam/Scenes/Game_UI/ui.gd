@@ -1,5 +1,7 @@
 extends CanvasGroup
 
+@onready var new_sms_pop_up: Panel = $New_SMS_PopUp
+
 @onready var phone_panel: Panel = $Phone
 
 @onready var main_app: Panel = $Phone/Main
@@ -13,7 +15,14 @@ extends CanvasGroup
 
 @onready var current_app: Panel = main_app
 
-
+var ones_shifts_apps := {
+	"Tutorial_App": 1,
+	"Map_App": 1,
+	"Work_App": 1,
+	"Notes_App": 1,
+	"Sms_App": 1,
+	"Settings_App": 1,
+}
 # Settings
 @onready var music_level: Label = $Phone/Settings_App/Buttons/HBoxContainer/Control/CenterContainer/Music_Level
 @onready var sfx_level: Label = $Phone/Settings_App/Buttons/HBoxContainer2/Control/CenterContainer/SFX_Level
@@ -24,8 +33,10 @@ var bus_music: = AudioServer.get_bus_index("Music")
 var bus_sfx: = AudioServer.get_bus_index("SFX")
 
 var _phone: = false
+
 func _ready() -> void:
 	change_text()
+	notification_popup()
 	phone_panel.visible = false
 	$Phone/Navigation/Close_Apps.pressed.connect(change_app.bind(main_app, true))
 	$Phone/Main/Tutorial_App.pressed.connect(change_app.bind(tutorial_app))
@@ -34,7 +45,12 @@ func _ready() -> void:
 	$Phone/Main/Notes_App.pressed.connect(change_app.bind(notes_app))
 	$Phone/Main/Sms_App.pressed.connect(change_app.bind(sms_app))
 	$Phone/Main/Settings_App.pressed.connect(change_app.bind(settings_app))
-	
+
+func notification_popup():
+	if _phone:
+		return
+	new_sms_pop_up.visible = true
+
 func phone():
 	_phone = !_phone
 	tutorial_app.visible = false
@@ -59,7 +75,19 @@ func change_app(app: Panel, close := false):
 		current_app.visible = false
 		app.visible = true
 		current_app = app
-
+		if app.name != "Main":
+			one_shift_notification(app.name, false)
+			var values = ones_shifts_apps.values()
+			if values == [0, 0, 0, 0, 0, 0]:
+				new_sms_pop_up.visible = false
+			else:
+				new_sms_pop_up.visible = true 
+func one_shift_notification(_name: String, state: bool):
+	main_app.get_node(_name).get_child(0).visible = state
+	ones_shifts_apps[_name] = int(state)
+	var values = ones_shifts_apps.values()
+	if values == [0, 0, 0, 0, 0, 0]:
+		print(1)
 #region Settings
 func change_text():
 	music_level.text = str(music_volum)
@@ -106,4 +134,7 @@ func _on_fs_toggled(toggled_on: bool) -> void:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
 func _on_extra_ui_toggled(toggled_on: bool) -> void:
 	extra_ui.visible = toggled_on
+#endregion
+#region SMS
+
 #endregion
