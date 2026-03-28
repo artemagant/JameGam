@@ -41,7 +41,7 @@ func update_ui_stats() -> void:
 	# update text
 	var min_RPM
 	if gear < 7:
-		min_RPM = str(car.min_RPM_gears[gear+1])
+		min_RPM = "Min " + str(car.min_RPM_gears[gear+1]) + " RPM"
 	else:
 		min_RPM = "MAX"
 	ui_stats.text = "Info: Car Real

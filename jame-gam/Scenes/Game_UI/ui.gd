@@ -33,8 +33,32 @@ var bus_music: = AudioServer.get_bus_index("Music")
 var bus_sfx: = AudioServer.get_bus_index("SFX")
 
 var _phone: = false
-
+# Sms
+@onready var smses := $Phone/Sms_App/Smses.get_children()
 func _ready() -> void:
+	Data.load_data()
+	$Phone/Settings_App/Buttons/Control2/Extra_UI.button_pressed = Data.data["extra_ui"]
+	$Phone/Settings_App/Buttons/Control/FS.button_pressed = Data.data["fs"]
+	extra_ui.visible = Data.data["extra_ui"]
+	if Data.data["fs"]:
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
+	else:
+		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
+	music_volum = Data.data["music_volum"]
+	sfx_volum = Data.data["sfx_volum"]
+	if music_volum <= 1:
+		AudioServer.set_bus_volume_db(bus_music, false)
+		AudioServer.set_bus_volume_db(bus_music, linear_to_db(music_volum))
+	else:
+		music_volum = 1
+		AudioServer.set_bus_volume_db(bus_music, false)
+		AudioServer.set_bus_volume_db(bus_music, linear_to_db(music_volum))
+	if sfx_volum > 1:
+		sfx_volum = 1
+	AudioServer.set_bus_volume_db(bus_sfx, false)
+	AudioServer.set_bus_volume_db(bus_sfx, linear_to_db(sfx_volum))
+	change_text()
+	send_new_sms(false)
 	change_text()
 	notification_popup()
 	phone_panel.visible = false
@@ -94,6 +118,7 @@ func change_text():
 	sfx_level.text = str(sfx_volum)
 func _on_music_plus_pressed() -> void:
 	music_volum += 0.1
+	Data.data["music_volum"] = music_volum
 	if music_volum <= 1:
 		AudioServer.set_bus_volume_db(bus_music, false)
 		AudioServer.set_bus_volume_db(bus_music, linear_to_db(music_volum))
@@ -102,8 +127,10 @@ func _on_music_plus_pressed() -> void:
 		AudioServer.set_bus_volume_db(bus_music, false)
 		AudioServer.set_bus_volume_db(bus_music, linear_to_db(music_volum))
 	change_text()
+	Data.save()
 func _on_music_minus_pressed() -> void:
 	music_volum -= 0.1
+	Data.data["music_volum"] = music_volum
 	if music_volum > 0:
 		AudioServer.set_bus_volume_db(bus_music, false)
 		AudioServer.set_bus_volume_db(bus_music, linear_to_db(music_volum))
@@ -111,15 +138,19 @@ func _on_music_minus_pressed() -> void:
 		music_volum = 0
 		AudioServer.set_bus_volume_db(bus_music, true)
 	change_text()
+	Data.save()
 func _on_sfx_plus_pressed() -> void:
 	sfx_volum += 0.1
+	Data.data["sfx_volum"] = sfx_volum
 	if sfx_volum > 1:
 		sfx_volum = 1
 	AudioServer.set_bus_volume_db(bus_sfx, false)
 	AudioServer.set_bus_volume_db(bus_sfx, linear_to_db(sfx_volum))
 	change_text()
+	Data.save()
 func _on_sfx_minus_pressed() -> void:
 	sfx_volum -= 0.1
+	Data.data["sfx_volum"] = sfx_volum
 	if sfx_volum > 0:
 		AudioServer.set_bus_volume_db(bus_sfx, false)
 		AudioServer.set_bus_volume_db(bus_sfx, linear_to_db(sfx_volum))
@@ -127,14 +158,27 @@ func _on_sfx_minus_pressed() -> void:
 		sfx_volum = 0
 		AudioServer.set_bus_volume_db(bus_sfx, true)
 	change_text()
+	Data.save()
 func _on_fs_toggled(toggled_on: bool) -> void:
+	Data.data["fs"] = toggled_on
 	if toggled_on:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_FULLSCREEN)
 	else:
 		DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
+	Data.save()
 func _on_extra_ui_toggled(toggled_on: bool) -> void:
+	Data.data["extra_ui"] = toggled_on
 	extra_ui.visible = toggled_on
+	Data.save()
 #endregion
 #region SMS
-
+func send_new_sms(increment: bool = false):
+	if increment:
+		Data.data["sms_level"] += 1
+	for i in Data.data["sms_level"]:
+		if i < 6:
+			smses[i].visible = true
+		else:
+			i = 5
+			break
 #endregion

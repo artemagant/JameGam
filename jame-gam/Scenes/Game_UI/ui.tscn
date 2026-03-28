@@ -1,6 +1,5 @@
 [gd_scene format=3 uid="uid://3e6yndw1osex"]
 
-[ext_resource type="Texture2D" uid="uid://baxybk8x45tje" path="res://icon.svg" id="1_5ntg7"]
 [ext_resource type="Script" uid="uid://kp8v2wpyac7m" path="res://Scenes/Game_UI/ui.gd" id="1_aa8u4"]
 [ext_resource type="Texture2D" uid="uid://pdw845rhjgkr" path="res://Sprites/Снимок экрана 2026-03-28 161526.png" id="2_2cpot"]
 
@@ -444,6 +443,84 @@ outline_color = Color(0, 0, 0, 1)
 shadow_size = 3
 shadow_color = Color(0, 0, 0, 0.3019608)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lmr3m"]
+bg_color = Color(0, 0, 0, 0.68235296)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 0.74509805)
+corner_radius_top_left = 5
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 5
+expand_margin_left = 3.0
+expand_margin_top = 2.0
+
+[sub_resource type="FontFile" id="FontFile_hasax"]
+cache/0/variation_coordinates = {}
+cache/0/face_index = 0
+cache/0/embolden = 0.0
+cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
+cache/0/spacing_top = 0
+cache/0/spacing_bottom = 0
+cache/0/spacing_space = 0
+cache/0/spacing_glyph = 0
+cache/0/baseline_offset = 0.0
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/10/0/ascent = 0.0
+cache/0/10/0/descent = 0.0
+cache/0/10/0/underline_position = 0.0
+cache/0/10/0/underline_thickness = 0.0
+cache/0/10/0/scale = 1.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_1qxji"]
+font = SubResource("FontFile_hasax")
+font_size = 10
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2d1qe"]
+bg_color = Color(0, 0, 0, 0.60784316)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3fc6o"]
+bg_color = Color(0, 0, 0, 0.2627451)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="FontFile" id="FontFile_2pujl"]
+cache/0/variation_coordinates = {}
+cache/0/face_index = 0
+cache/0/embolden = 0.0
+cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
+cache/0/spacing_top = 0
+cache/0/spacing_bottom = 0
+cache/0/spacing_space = 0
+cache/0/spacing_glyph = 0
+cache/0/baseline_offset = 0.0
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/10/0/ascent = 0.0
+cache/0/10/0/descent = 0.0
+cache/0/10/0/underline_position = 0.0
+cache/0/10/0/underline_thickness = 0.0
+cache/0/10/0/scale = 1.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_8eldu"]
+font = SubResource("FontFile_2pujl")
+font_size = 10
+
 [sub_resource type="LabelSettings" id="LabelSettings_xhq5x"]
 font_size = 10
 
@@ -679,6 +756,113 @@ shadow_color = Color(0, 0, 0, 0.61960787)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aa8u4"]
 size = Vector2(120, 120)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ncvp2"]
+bg_color = Color(0, 0, 0, 0.37254903)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 0.45490196)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="FontFile" id="FontFile_lmr3m"]
+cache/0/variation_coordinates = {}
+cache/0/face_index = 0
+cache/0/embolden = 0.0
+cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
+cache/0/spacing_top = 0
+cache/0/spacing_bottom = 0
+cache/0/spacing_space = 0
+cache/0/spacing_glyph = 0
+cache/0/baseline_offset = 0.0
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/50/0/ascent = 0.0
+cache/0/50/0/descent = 0.0
+cache/0/50/0/underline_position = 0.0
+cache/0/50/0/underline_thickness = 0.0
+cache/0/50/0/scale = 1.0
+cache/0/75/0/ascent = 0.0
+cache/0/75/0/descent = 0.0
+cache/0/75/0/underline_position = 0.0
+cache/0/75/0/underline_thickness = 0.0
+cache/0/75/0/scale = 1.0
+cache/0/100/0/ascent = 0.0
+cache/0/100/0/descent = 0.0
+cache/0/100/0/underline_position = 0.0
+cache/0/100/0/underline_thickness = 0.0
+cache/0/100/0/scale = 1.0
+cache/0/150/0/ascent = 0.0
+cache/0/150/0/descent = 0.0
+cache/0/150/0/underline_position = 0.0
+cache/0/150/0/underline_thickness = 0.0
+cache/0/150/0/scale = 1.0
+cache/0/60/0/ascent = 0.0
+cache/0/60/0/descent = 0.0
+cache/0/60/0/underline_position = 0.0
+cache/0/60/0/underline_thickness = 0.0
+cache/0/60/0/scale = 1.0
+cache/0/56/0/ascent = 0.0
+cache/0/56/0/descent = 0.0
+cache/0/56/0/underline_position = 0.0
+cache/0/56/0/underline_thickness = 0.0
+cache/0/56/0/scale = 1.0
+cache/0/40/0/ascent = 0.0
+cache/0/40/0/descent = 0.0
+cache/0/40/0/underline_position = 0.0
+cache/0/40/0/underline_thickness = 0.0
+cache/0/40/0/scale = 1.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_2d1qe"]
+font = SubResource("FontFile_lmr3m")
+font_size = 150
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2cpot"]
+size = Vector2(120, 120)
+
+[sub_resource type="LabelSettings" id="LabelSettings_r5wyf"]
+font = SubResource("FontFile_lmr3m")
+font_size = 60
+
+[sub_resource type="LabelSettings" id="LabelSettings_ml2xb"]
+font = SubResource("FontFile_lmr3m")
+font_size = 100
+
+[sub_resource type="FontFile" id="FontFile_noyia"]
+cache/0/variation_coordinates = {}
+cache/0/face_index = 0
+cache/0/embolden = 0.0
+cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
+cache/0/spacing_top = 0
+cache/0/spacing_bottom = 0
+cache/0/spacing_space = 0
+cache/0/spacing_glyph = 0
+cache/0/baseline_offset = 0.0
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/100/0/ascent = 0.0
+cache/0/100/0/descent = 0.0
+cache/0/100/0/underline_position = 0.0
+cache/0/100/0/underline_thickness = 0.0
+cache/0/100/0/scale = 1.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_ndrgk"]
+font = SubResource("FontFile_noyia")
+font_size = 100
+
+[sub_resource type="LabelSettings" id="LabelSettings_0iiak"]
+font = SubResource("FontFile_lmr3m")
+font_size = 40
+
 [node name="UI" type="CanvasGroup" unique_id=1013923296]
 script = ExtResource("1_aa8u4")
 
@@ -689,10 +873,11 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="Panel" type="Panel" parent="Extra_UI" unique_id=1757160726]
+top_level = true
 layout_mode = 0
-offset_left = 790.0
+offset_left = 792.0
 offset_top = 2.0
-offset_right = 957.0
+offset_right = 959.0
 offset_bottom = 313.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_rkyvi")
 metadata/_edit_group_ = true
@@ -713,6 +898,7 @@ w, s - transmissions
 t - clutch
 e - turn on engine
 l - light
+space - handbrake
 b - car belt
 <> (, .) - turn signals
 g - emergency signals
@@ -750,10 +936,11 @@ RPM -
 label_settings = SubResource("LabelSettings_aa8u4")
 
 [node name="Phone" type="Panel" parent="." unique_id=1301255787]
-offset_left = 274.0
-offset_top = 191.0
-offset_right = 414.0
-offset_bottom = 427.0
+offset_left = 213.00002
+offset_top = 128.0
+offset_right = 353.0
+offset_bottom = 364.0
+scale = Vector2(1.15, 1.15)
 theme_override_styles/panel = SubResource("StyleBoxFlat_aa8u4")
 
 [node name="Main" type="Panel" parent="Phone" unique_id=1301693549]
@@ -1067,18 +1254,119 @@ offset_bottom = 23.0
 text = "BOSSS  +***********"
 label_settings = SubResource("LabelSettings_d1xol")
 
-[node name="Under_Development_Label" type="Label" parent="Phone/Sms_App" unique_id=529821490]
-modulate = Color(1, 1, 1, 0.5568628)
+[node name="Smses" type="Control" parent="Phone/Sms_App" unique_id=593345458]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Sms_1" type="Panel" parent="Phone/Sms_App/Smses" unique_id=475642840]
+visible = false
 layout_mode = 0
-offset_left = 5.0
-offset_top = 60.0
-offset_right = 131.0
-offset_bottom = 161.0
-text = "   This application 
-          is under 
-     development
-                :("
-label_settings = SubResource("LabelSettings_2cpot")
+offset_left = 11.304335
+offset_top = 31.304348
+offset_right = 111.30435
+offset_bottom = 63.478252
+theme_override_styles/panel = SubResource("StyleBoxFlat_lmr3m")
+
+[node name="Text" type="Label" parent="Phone/Sms_App/Smses/Sms_1" unique_id=42471192]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Hello! I am your boss. 
+Work please."
+label_settings = SubResource("LabelSettings_1qxji")
+
+[node name="Sms_2" type="Panel" parent="Phone/Sms_App/Smses" unique_id=1236639897]
+visible = false
+layout_mode = 0
+offset_left = 11.304335
+offset_top = 66.08696
+offset_right = 107.82608
+offset_bottom = 98.260864
+theme_override_styles/panel = SubResource("StyleBoxFlat_lmr3m")
+
+[node name="Text" type="Label" parent="Phone/Sms_App/Smses/Sms_2" unique_id=1982068616]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Complite the tutorial 
+and make your work)"
+label_settings = SubResource("LabelSettings_1qxji")
+
+[node name="Sms_3" type="Panel" parent="Phone/Sms_App/Smses" unique_id=1127921639]
+visible = false
+layout_mode = 0
+offset_left = 11.304335
+offset_top = 100.86957
+offset_right = 115.65216
+offset_bottom = 133.04347
+theme_override_styles/panel = SubResource("StyleBoxFlat_lmr3m")
+
+[node name="Text" type="Label" parent="Phone/Sms_App/Smses/Sms_3" unique_id=2050851846]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "How are you doing
+with your assignment?"
+label_settings = SubResource("LabelSettings_1qxji")
+
+[node name="Sms_4" type="Panel" parent="Phone/Sms_App/Smses" unique_id=303628902]
+visible = false
+layout_mode = 0
+offset_left = 11.304335
+offset_top = 135.65218
+offset_right = 122.6087
+offset_bottom = 152.17392
+theme_override_styles/panel = SubResource("StyleBoxFlat_lmr3m")
+
+[node name="Text" type="Label" parent="Phone/Sms_App/Smses/Sms_4" unique_id=534273064]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Don't break traffic rules!"
+label_settings = SubResource("LabelSettings_1qxji")
+
+[node name="Sms_5" type="Panel" parent="Phone/Sms_App/Smses" unique_id=1999378954]
+visible = false
+layout_mode = 0
+offset_left = 11.304
+offset_top = 155.0
+offset_right = 101.739136
+offset_bottom = 187.1739
+theme_override_styles/panel = SubResource("StyleBoxFlat_lmr3m")
+
+[node name="Text" type="Label" parent="Phone/Sms_App/Smses/Sms_5" unique_id=775122551]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "I would have 
+done it differently("
+label_settings = SubResource("LabelSettings_1qxji")
+
+[node name="Write" type="Panel" parent="Phone/Sms_App" unique_id=307219556]
+layout_mode = 0
+offset_left = 6.956506
+offset_top = 192.17392
+offset_right = 132.95651
+offset_bottom = 230.43492
+theme_override_styles/panel = SubResource("StyleBoxFlat_2d1qe")
+
+[node name="Write2" type="Panel" parent="Phone/Sms_App/Write" unique_id=39332574]
+layout_mode = 0
+offset_left = 5.217392
+offset_top = 4.3478394
+offset_right = 122.6087
+offset_bottom = 20.869568
+theme_override_styles/panel = SubResource("StyleBoxFlat_3fc6o")
+
+[node name="Label" type="Label" parent="Phone/Sms_App/Write/Write2" unique_id=677262195]
+layout_mode = 0
+offset_left = 3.478261
+offset_top = 1.7391305
+offset_right = 90.478264
+offset_bottom = 14.73913
+text = "You can't write here..."
+label_settings = SubResource("LabelSettings_8eldu")
 
 [node name="Settings_App" type="Panel" parent="Phone" unique_id=1393904210]
 visible = false
@@ -1307,148 +1595,421 @@ position = Vector2(-1, -30)
 metadata/_edit_group_ = true
 
 [node name="Up" type="TouchScreenButton" parent="Phone_Buttons" unique_id=2121372585]
-position = Vector2(803, 420)
+position = Vector2(851, 464.99997)
 scale = Vector2(0.7, 0.7)
-texture_normal = ExtResource("1_5ntg7")
 shape = SubResource("RectangleShape2D_aa8u4")
 passby_press = true
 action = "up"
 visibility_mode = 1
 
+[node name="Panel" type="Panel" parent="Phone_Buttons/Up" unique_id=1795458811]
+offset_left = -58.57141
+offset_top = -58.571407
+offset_right = 60.138412
+offset_bottom = 60.831547
+theme_override_styles/panel = SubResource("StyleBoxFlat_ncvp2")
+
+[node name="Label" type="Label" parent="Phone_Buttons/Up" unique_id=6512824]
+offset_left = -39.999996
+offset_top = -101.42852
+offset_right = 35.000004
+offset_bottom = 75.57148
+text = "↑"
+label_settings = SubResource("LabelSettings_2d1qe")
+
 [node name="Down" type="TouchScreenButton" parent="Phone_Buttons" unique_id=966324063]
-position = Vector2(694, 422.00003)
+position = Vector2(725, 465)
 scale = Vector2(0.7, 0.7)
-texture_normal = ExtResource("1_5ntg7")
-shape = SubResource("RectangleShape2D_aa8u4")
+shape = SubResource("RectangleShape2D_2cpot")
 passby_press = true
 action = "down"
 visibility_mode = 1
 
+[node name="Panel" type="Panel" parent="Phone_Buttons/Down" unique_id=1436834047]
+offset_left = -59.99998
+offset_top = -58.571453
+offset_right = 58.709843
+offset_bottom = 60.8315
+theme_override_styles/panel = SubResource("StyleBoxFlat_ncvp2")
+
+[node name="Label" type="Label" parent="Phone_Buttons/Down" unique_id=1653481457]
+offset_left = 37.142853
+offset_top = 100.0
+offset_right = 112.14285
+offset_bottom = 277.0
+rotation = 3.1415927
+text = "↑"
+label_settings = SubResource("LabelSettings_2d1qe")
+
 [node name="Left" type="TouchScreenButton" parent="Phone_Buttons" unique_id=511179016]
-position = Vector2(70, 438)
+position = Vector2(90, 476)
 scale = Vector2(0.7, 0.7)
-texture_normal = ExtResource("1_5ntg7")
 shape = SubResource("RectangleShape2D_aa8u4")
 passby_press = true
 action = "left"
 visibility_mode = 1
 
+[node name="Panel" type="Panel" parent="Phone_Buttons/Left" unique_id=531231641]
+offset_left = -58.571423
+offset_top = -58.57141
+offset_right = 60.1384
+offset_bottom = 60.831543
+theme_override_styles/panel = SubResource("StyleBoxFlat_ncvp2")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Phone_Buttons/Left" unique_id=1108722487]
+offset_left = -74.28571
+offset_top = -112.85713
+offset_right = 75.71429
+offset_bottom = 64.14287
+text = "←"
+label_settings = SubResource("LabelSettings_2d1qe")
+metadata/_edit_use_anchors_ = true
+
 [node name="Right" type="TouchScreenButton" parent="Phone_Buttons" unique_id=1371538749]
-position = Vector2(184, 431)
+position = Vector2(216, 476)
 scale = Vector2(0.7, 0.7)
-texture_normal = ExtResource("1_5ntg7")
 shape = SubResource("RectangleShape2D_aa8u4")
 passby_press = true
 action = "right"
 visibility_mode = 1
 
+[node name="Panel" type="Panel" parent="Phone_Buttons/Right" unique_id=1710988738]
+offset_left = -57.142857
+offset_top = -59.999985
+offset_right = 61.566967
+offset_bottom = 59.40297
+theme_override_styles/panel = SubResource("StyleBoxFlat_ncvp2")
+
+[node name="Label" type="Label" parent="Phone_Buttons/Right" unique_id=934551850]
+offset_left = -69.999985
+offset_top = -114.285706
+offset_right = 80.000015
+offset_bottom = 62.714294
+text = "→"
+label_settings = SubResource("LabelSettings_2d1qe")
+
 [node name="ESC" type="TouchScreenButton" parent="Phone_Buttons" unique_id=1614046851]
-position = Vector2(910, 35)
+position = Vector2(933, 58)
 scale = Vector2(0.35937402, 0.36718738)
-texture_normal = ExtResource("1_5ntg7")
 shape = SubResource("RectangleShape2D_aa8u4")
 passby_press = true
 action = "exit"
 visibility_mode = 1
 
+[node name="Panel" type="Panel" parent="Phone_Buttons/ESC" unique_id=1478702097]
+offset_left = -58.434998
+offset_top = -57.19151
+offset_right = 60.274826
+offset_bottom = 62.211445
+theme_override_styles/panel = SubResource("StyleBoxFlat_ncvp2")
+
+[node name="Label" type="Label" parent="Phone_Buttons/ESC" unique_id=38605897]
+offset_left = -47.304398
+offset_top = -40.851078
+offset_right = 70.6956
+offset_bottom = 136.14893
+text = "esc"
+label_settings = SubResource("LabelSettings_r5wyf")
+
 [node name="Belt" type="TouchScreenButton" parent="Phone_Buttons" unique_id=1458653585]
-position = Vector2(24, 294)
-scale = Vector2(0.42968744, 0.36406276)
-texture_normal = ExtResource("1_5ntg7")
+position = Vector2(854, 209)
+scale = Vector2(0.5, 0.5)
 shape = SubResource("RectangleShape2D_aa8u4")
 passby_press = true
 action = "belt"
 visibility_mode = 1
 
+[node name="Panel" type="Panel" parent="Phone_Buttons/Belt" unique_id=1664088299]
+offset_left = -60.0
+offset_top = -57.999992
+offset_right = 58.709824
+offset_bottom = 61.40296
+theme_override_styles/panel = SubResource("StyleBoxFlat_ncvp2")
+
+[node name="Label" type="Label" parent="Phone_Buttons/Belt" unique_id=809170456]
+offset_left = -31.999998
+offset_top = -53.999985
+offset_right = 31.000002
+offset_bottom = 123.000015
+text = "b"
+label_settings = SubResource("LabelSettings_ml2xb")
+
 [node name="Clutch" type="TouchScreenButton" parent="Phone_Buttons" unique_id=1171344887]
-position = Vector2(120.00001, 177)
-scale = Vector2(0.42968744, 0.36406276)
-texture_normal = ExtResource("1_5ntg7")
+position = Vector2(164, 192)
+scale = Vector2(0.5, 0.5)
 shape = SubResource("RectangleShape2D_aa8u4")
 passby_press = true
 action = "clutch"
 visibility_mode = 1
 
-[node name="Clutch2" type="TouchScreenButton" parent="Phone_Buttons" unique_id=1064679502]
-position = Vector2(111.00001, 247)
-scale = Vector2(0.42968744, 0.36406276)
-texture_normal = ExtResource("1_5ntg7")
+[node name="Panel" type="Panel" parent="Phone_Buttons/Clutch" unique_id=691940212]
+offset_left = -62.836388
+offset_top = -60.429142
+offset_right = 55.873436
+offset_bottom = 58.973812
+theme_override_styles/panel = SubResource("StyleBoxFlat_ncvp2")
+
+[node name="Label" type="Label" parent="Phone_Buttons/Clutch" unique_id=820900320]
+offset_left = -17.999998
+offset_top = -58.0
+offset_right = 15.000002
+offset_bottom = 60.0
+text = "t"
+label_settings = SubResource("LabelSettings_ndrgk")
+
+[node name="Handbrake" type="TouchScreenButton" parent="Phone_Buttons" unique_id=1064679502]
+position = Vector2(668, 248)
+scale = Vector2(0.5, 0.5)
 shape = SubResource("RectangleShape2D_aa8u4")
 passby_press = true
 action = "handbrake"
 visibility_mode = 1
 
+[node name="Panel" type="Panel" parent="Phone_Buttons/Handbrake" unique_id=344816299]
+offset_left = -58.00001
+offset_top = -59.999992
+offset_right = 60.709812
+offset_bottom = 59.40296
+theme_override_styles/panel = SubResource("StyleBoxFlat_ncvp2")
+
+[node name="Label" type="Label" parent="Phone_Buttons/Handbrake" unique_id=1000110435]
+offset_left = -54.0
+offset_top = -26.0
+offset_right = 80.0
+offset_bottom = 92.0
+text = "space"
+label_settings = SubResource("LabelSettings_0iiak")
+
 [node name="Add_Gear" type="TouchScreenButton" parent="Phone_Buttons" unique_id=1505110472]
-position = Vector2(724, 164)
-scale = Vector2(0.42968744, 0.36406276)
-texture_normal = ExtResource("1_5ntg7")
+position = Vector2(758, 176)
+scale = Vector2(0.5, 0.5)
 shape = SubResource("RectangleShape2D_aa8u4")
 passby_press = true
 action = "add_gear"
 visibility_mode = 1
 
+[node name="Panel" type="Panel" parent="Phone_Buttons/Add_Gear" unique_id=208567468]
+offset_left = -57.999992
+offset_top = -60.0
+offset_right = 60.70983
+offset_bottom = 59.402954
+theme_override_styles/panel = SubResource("StyleBoxFlat_ncvp2")
+
+[node name="Label" type="Label" parent="Phone_Buttons/Add_Gear" unique_id=1177098790]
+offset_left = -36.0
+offset_top = -58.0
+offset_right = 39.0
+offset_bottom = 60.0
+text = "w"
+label_settings = SubResource("LabelSettings_ndrgk")
+
 [node name="Minus_Gear2" type="TouchScreenButton" parent="Phone_Buttons" unique_id=783846755]
-position = Vector2(730, 213)
-scale = Vector2(0.42968744, 0.36406276)
-texture_normal = ExtResource("1_5ntg7")
+position = Vector2(757, 238)
+scale = Vector2(0.5, 0.5)
 shape = SubResource("RectangleShape2D_aa8u4")
 passby_press = true
 action = "minus_gear"
 visibility_mode = 1
 
+[node name="Panel" type="Panel" parent="Phone_Buttons/Minus_Gear2" unique_id=586372243]
+offset_left = -58.181824
+offset_top = -60.42916
+offset_right = 60.528
+offset_bottom = 58.973793
+theme_override_styles/panel = SubResource("StyleBoxFlat_ncvp2")
+
+[node name="Label" type="Label" parent="Phone_Buttons/Minus_Gear2" unique_id=752000279]
+offset_left = -23.999998
+offset_top = -58.0
+offset_right = 28.000002
+offset_bottom = 60.0
+text = "s"
+label_settings = SubResource("LabelSettings_ndrgk")
+
 [node name="Lights" type="TouchScreenButton" parent="Phone_Buttons" unique_id=1718566869]
-position = Vector2(112, 324)
-scale = Vector2(0.42968744, 0.36406276)
-texture_normal = ExtResource("1_5ntg7")
+position = Vector2(184, 293)
+scale = Vector2(0.5, 0.5)
 shape = SubResource("RectangleShape2D_aa8u4")
 passby_press = true
 action = "lights"
 visibility_mode = 1
 
+[node name="Panel" type="Panel" parent="Phone_Buttons/Lights" unique_id=2091025053]
+offset_left = -58.181824
+offset_top = -57.682384
+offset_right = 60.528
+offset_bottom = 61.72057
+theme_override_styles/panel = SubResource("StyleBoxFlat_ncvp2")
+
+[node name="Label" type="Label" parent="Phone_Buttons/Lights" unique_id=1566595617]
+offset_left = -19.999998
+offset_top = -56.0
+offset_right = 34.0
+offset_bottom = 62.0
+text = "L"
+label_settings = SubResource("LabelSettings_ndrgk")
+
 [node name="Honk" type="TouchScreenButton" parent="Phone_Buttons" unique_id=1689636599]
-position = Vector2(847, 293.00003)
-scale = Vector2(0.3874995, 0.41875008)
-texture_normal = ExtResource("1_5ntg7")
+position = Vector2(118, 270)
+scale = Vector2(0.5, 0.5)
 shape = SubResource("RectangleShape2D_aa8u4")
 passby_press = true
 action = "honk"
 visibility_mode = 1
 
+[node name="Panel" type="Panel" parent="Phone_Buttons/Honk" unique_id=1145458452]
+offset_left = -61.93564
+offset_top = -59.701553
+offset_right = 56.774185
+offset_bottom = 59.7014
+theme_override_styles/panel = SubResource("StyleBoxFlat_ncvp2")
+
+[node name="Label" type="Label" parent="Phone_Buttons/Honk" unique_id=539744104]
+offset_left = -25.999998
+offset_top = -58.0
+offset_right = 29.000002
+offset_bottom = 60.0
+text = "h"
+label_settings = SubResource("LabelSettings_ndrgk")
+
 [node name="Turn_Left" type="TouchScreenButton" parent="Phone_Buttons" unique_id=125241084]
-position = Vector2(724, 342.00003)
-scale = Vector2(0.3874995, 0.41875008)
-texture_normal = ExtResource("1_5ntg7")
+position = Vector2(116, 374)
+scale = Vector2(0.5, 0.5)
 shape = SubResource("RectangleShape2D_aa8u4")
 passby_press = true
 action = "turn_left"
 visibility_mode = 1
 
+[node name="Panel" type="Panel" parent="Phone_Buttons/Turn_Left" unique_id=890307551]
+offset_left = -59.99997
+offset_top = -58.00007
+offset_right = 58.709854
+offset_bottom = 61.402885
+theme_override_styles/panel = SubResource("StyleBoxFlat_ncvp2")
+
+[node name="Label" type="Label" parent="Phone_Buttons/Turn_Left" unique_id=1819815115]
+offset_left = -28.0
+offset_top = -58.0
+offset_right = 26.0
+offset_bottom = 60.0
+text = "<"
+label_settings = SubResource("LabelSettings_ndrgk")
+
 [node name="Turn_Right" type="TouchScreenButton" parent="Phone_Buttons" unique_id=1113148505]
-position = Vector2(793, 341)
-scale = Vector2(0.3874995, 0.41875008)
-texture_normal = ExtResource("1_5ntg7")
+position = Vector2(184, 374)
+scale = Vector2(0.5, 0.5)
 shape = SubResource("RectangleShape2D_aa8u4")
 passby_press = true
 action = "turn_right"
 visibility_mode = 1
 
+[node name="Panel" type="Panel" parent="Phone_Buttons/Turn_Right" unique_id=1624771369]
+offset_left = -59.354916
+offset_top = -59.701477
+offset_right = 59.354908
+offset_bottom = 59.701477
+theme_override_styles/panel = SubResource("StyleBoxFlat_ncvp2")
+
+[node name="Label" type="Label" parent="Phone_Buttons/Turn_Right" unique_id=1152602602]
+offset_left = -21.999998
+offset_top = -60.0
+offset_right = 32.0
+offset_bottom = 58.0
+text = ">"
+label_settings = SubResource("LabelSettings_ndrgk")
+
 [node name="Emergency_Lights" type="TouchScreenButton" parent="Phone_Buttons" unique_id=1001401609]
-position = Vector2(897.00006, 355)
-scale = Vector2(0.3874995, 0.41875008)
-texture_normal = ExtResource("1_5ntg7")
+position = Vector2(42, 386)
+scale = Vector2(0.5, 0.5)
 shape = SubResource("RectangleShape2D_aa8u4")
 passby_press = true
 action = "emergency_lights"
 visibility_mode = 1
 
+[node name="Panel" type="Panel" parent="Phone_Buttons/Emergency_Lights" unique_id=843692653]
+offset_left = -59.354916
+offset_top = -57.313488
+offset_right = 59.354908
+offset_bottom = 62.089466
+theme_override_styles/panel = SubResource("StyleBoxFlat_ncvp2")
+
+[node name="Label" type="Label" parent="Phone_Buttons/Emergency_Lights" unique_id=1253457793]
+offset_left = -27.999998
+offset_top = -72.0
+offset_right = 28.000002
+offset_bottom = 46.0
+text = "g"
+label_settings = SubResource("LabelSettings_ndrgk")
+
 [node name="Engine" type="TouchScreenButton" parent="Phone_Buttons" unique_id=1879090133]
-position = Vector2(905, 269.00003)
-scale = Vector2(0.3874995, 0.41875008)
-texture_normal = ExtResource("1_5ntg7")
+position = Vector2(917, 263)
+scale = Vector2(0.5, 0.5)
 shape = SubResource("RectangleShape2D_aa8u4")
 passby_press = true
 action = "engine"
 visibility_mode = 1
+
+[node name="Panel" type="Panel" parent="Phone_Buttons/Engine" unique_id=1769011840]
+offset_left = -59.354836
+offset_top = -57.31349
+offset_right = 59.35499
+offset_bottom = 62.089462
+theme_override_styles/panel = SubResource("StyleBoxFlat_ncvp2")
+
+[node name="Label" type="Label" parent="Phone_Buttons/Engine" unique_id=293256544]
+offset_left = -23.999998
+offset_top = -58.0
+offset_right = 30.000002
+offset_bottom = 60.0
+text = "e"
+label_settings = SubResource("LabelSettings_ndrgk")
+
+[node name="Phone" type="TouchScreenButton" parent="Phone_Buttons" unique_id=1645464022]
+position = Vector2(47, 300.00003)
+scale = Vector2(0.5, 0.541)
+shape = SubResource("RectangleShape2D_aa8u4")
+passby_press = true
+action = "phone"
+visibility_mode = 1
+
+[node name="Panel" type="Panel" parent="Phone_Buttons/Phone" unique_id=1760109112]
+offset_left = -59.354836
+offset_top = -59.701477
+offset_right = 59.35499
+offset_bottom = 59.701477
+theme_override_styles/panel = SubResource("StyleBoxFlat_ncvp2")
+
+[node name="Label" type="Label" parent="Phone_Buttons/Phone" unique_id=251296424]
+offset_left = -25.999998
+offset_top = -68.391945
+offset_right = 30.000002
+offset_bottom = 49.608055
+text = "p"
+label_settings = SubResource("LabelSettings_ndrgk")
+
+[node name="Toss_Up" type="TouchScreenButton" parent="Phone_Buttons" unique_id=1793401199]
+position = Vector2(927, 180.00002)
+scale = Vector2(0.5, 0.541)
+shape = SubResource("RectangleShape2D_aa8u4")
+passby_press = true
+action = "fix"
+visibility_mode = 1
+
+[node name="Panel" type="Panel" parent="Phone_Buttons/Toss_Up" unique_id=1415378541]
+offset_left = -59.354836
+offset_top = -59.701477
+offset_right = 59.35499
+offset_bottom = 59.701477
+theme_override_styles/panel = SubResource("StyleBoxFlat_ncvp2")
+
+[node name="Label" type="Label" parent="Phone_Buttons/Toss_Up" unique_id=1431489761]
+offset_left = -21.999998
+offset_top = -66.54346
+offset_right = 34.0
+offset_bottom = 51.456543
+text = "r"
+label_settings = SubResource("LabelSettings_ndrgk")
 
 [connection signal="pressed" from="Phone/Settings_App/Buttons/HBoxContainer/Music_Minus" to="." method="_on_music_minus_pressed"]
 [connection signal="pressed" from="Phone/Settings_App/Buttons/HBoxContainer/Music_Plus" to="." method="_on_music_plus_pressed"]

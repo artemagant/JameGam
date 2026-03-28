@@ -12,10 +12,10 @@ extends VehicleBody3D
 @export var turn_amount: = 0.05
 
 # Arrays, that describe values of car's characteristics
-@onready var  max_RPM_gears := [200, 2000, 200, 300, 500, 800, 1200, 1500]
-@onready var max_torque_gears := [150, 1, 150, 200, 400, 600, 700, 1200]
-@onready var turn_speed_gears := [3.0, 4.0, 4.0, 3.0, 2.0, 1.2, 0.8, 0.4]
-@onready var min_RPM_gears := [0, 0, 0, 50, 100, 150, 200, 400]
+@onready var  max_RPM_gears := [200, 2000, 200, 300, 500, 800, 1200, 1300]
+@onready var max_torque_gears := [150, 1, 150, 200, 400, 600, 700, 900]
+@onready var turn_speed_gears := [3.0, 4.0, 4.0, 3.0, 2.0, 1.2, 0.8, 0.6]
+@onready var min_RPM_gears := [0, 0, 0, 100, 150, 300, 450, 650]
 
 # From scene
 @onready var cam_arm: SpringArm3D = $CamArm
@@ -63,7 +63,7 @@ func _process(_delta: float) -> void:
 func _physics_process(delta: float) -> void:
 	# check if clutch
 	if game.clutch:
-		clutch_mult = 0.5
+		clutch_mult = 0.8
 	else:
 		clutch_mult = 1.0
 	# check if minus rpm
@@ -104,7 +104,7 @@ func _physics_process(delta: float) -> void:
 
 func add_gear(): # Add gear
 	# Check if rpm is alright
-	if RPM < min_RPM_gears[game.gear] - 10:
+	if RPM < min_RPM_gears[game.gear] - 25:
 		game.minus_gear()
 		return
 	# Minus then new
