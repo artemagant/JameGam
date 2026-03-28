@@ -2,7 +2,7 @@ extends Node3D
 
 # From scene
 @onready var ui := $UI
-@onready var ui_stats := ui.get_child(1).get_child(0)
+@onready var ui_stats := ui.get_child(0).get_child(1).get_child(0)
 @onready var menu_game: Node2D = $Menu_Game
 @onready var main: = get_parent()
 @onready var car = get_child(0)
@@ -39,11 +39,16 @@ func _process(_delta: float) -> void:
 func update_ui_stats() -> void:
 	_position = car.position # update position
 	# update text
+	var min_RPM
+	if gear < 7:
+		min_RPM = str(car.min_RPM_gears[gear+1])
+	else:
+		min_RPM = "MAX"
 	ui_stats.text = "Info: Car Real
 		Engine - %d
 		Speed - %.2f mps
 		Clutch - %d
-		Gear - %d
+		Gear - %d (%s)
 		Coordinates - (%.1f, %.1f, %.1f)
 		Max Speed - %.2f mps
 		Belt - %d
@@ -51,7 +56,7 @@ func update_ui_stats() -> void:
 		Lights - %d
 		RPM - %.2f
 		Handbrake - %d
-		..." %[int(engine), abs(speed), int(clutch), gear-1, _position.x, _position.y, _position.z, max_speed, int(belt), turn_signals.x, turn_signals.y, lights, car.RPM, int(handbrake)]
+		..." %[int(engine), abs(speed), int(clutch), gear-1, min_RPM, _position.x, _position.y, _position.z, max_speed, int(belt), turn_signals.x, turn_signals.y, lights, car.RPM, int(handbrake)]
 
 func show_menu(): # shows game menu
 	if menu_game.visible:

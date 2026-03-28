@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://baxybk8x45tje" path="res://icon.svg" id="1_5ntg7"]
 [ext_resource type="Script" uid="uid://kp8v2wpyac7m" path="res://Scenes/Game_UI/ui.gd" id="1_aa8u4"]
-[ext_resource type="Texture2D" uid="uid://cecitu2p557t4" path="res://Sprites/Снимок экрана 2026-03-28 111345.png" id="2_2cpot"]
+[ext_resource type="Texture2D" uid="uid://pdw845rhjgkr" path="res://Sprites/Снимок экрана 2026-03-28 161526.png" id="2_2cpot"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rkyvi"]
 bg_color = Color(0.15487596, 0.154876, 0.1548759, 0.19215687)
@@ -48,6 +48,9 @@ shadow_size = 2
 shadow_offset = Vector2(3, 1)
 
 [sub_resource type="FontFile" id="FontFile_aa8u4"]
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
 cache/0/variation_coordinates = {}
 cache/0/face_index = 0
 cache/0/embolden = 0.0
@@ -249,7 +252,7 @@ corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_20fwi"]
-bg_color = Color(0.11147123, 0.11632026, 0.22136134, 1)
+bg_color = Color(0.032402743, 0.073998146, 0.09859333, 1)
 border_width_left = 8
 border_width_top = 7
 border_width_right = 8
@@ -263,7 +266,15 @@ shadow_color = Color(0, 0, 0, 0)
 shadow_size = 2
 shadow_offset = Vector2(3, 1)
 
+[sub_resource type="LabelSettings" id="LabelSettings_2cpot"]
+font_size = 14
+outline_size = 7
+outline_color = Color(0, 0, 0, 1)
+
 [sub_resource type="FontFile" id="FontFile_2cpot"]
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
 cache/0/variation_coordinates = {}
 cache/0/face_index = 0
 cache/0/embolden = 0.0
@@ -289,6 +300,229 @@ font = SubResource("FontFile_2cpot")
 font_size = 10
 outline_size = 5
 outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d6fhe"]
+bg_color = Color(0.4054362, 0.5894557, 0.6905548, 1)
+border_width_left = 8
+border_width_top = 7
+border_width_right = 8
+border_width_bottom = 7
+border_color = Color(0.8, 0.8, 0.8, 0)
+corner_radius_top_left = 7
+corner_radius_top_right = 7
+corner_radius_bottom_right = 7
+corner_radius_bottom_left = 7
+shadow_color = Color(0, 0, 0, 0)
+shadow_size = 2
+shadow_offset = Vector2(3, 1)
+
+[sub_resource type="FontFile" id="FontFile_gvjwk"]
+cache/0/variation_coordinates = {}
+cache/0/face_index = 0
+cache/0/embolden = 0.0
+cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
+cache/0/spacing_top = 0
+cache/0/spacing_bottom = 0
+cache/0/spacing_space = 0
+cache/0/spacing_glyph = 0
+cache/0/baseline_offset = 0.0
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/14/0/ascent = 0.0
+cache/0/14/0/descent = 0.0
+cache/0/14/0/underline_position = 0.0
+cache/0/14/0/underline_thickness = 0.0
+cache/0/14/0/scale = 1.0
+cache/0/12/0/ascent = 0.0
+cache/0/12/0/descent = 0.0
+cache/0/12/0/underline_position = 0.0
+cache/0/12/0/underline_thickness = 0.0
+cache/0/12/0/scale = 1.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_hasax"]
+font = SubResource("FontFile_gvjwk")
+font_size = 12
+outline_size = 7
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_xhq5x"]
+font_size = 10
+
+[sub_resource type="LabelSettings" id="LabelSettings_j7656"]
+font_size = 10
+
+[sub_resource type="LabelSettings" id="LabelSettings_noyia"]
+font_size = 10
+
+[sub_resource type="FontVariation" id="FontVariation_hasax"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ac5jh"]
+bg_color = Color(0.2469503, 0.24695033, 0.24695021, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5782b"]
+bg_color = Color(0.627451, 0.627451, 0.627451, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jrkag"]
+bg_color = Color(0.21960784, 0.21960784, 0.21960784, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="FontVariation" id="FontVariation_ujbh4"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m54cp"]
+bg_color = Color(0.2469503, 0.24695033, 0.24695021, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ujbh4"]
+bg_color = Color(0.627451, 0.627451, 0.627451, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ikoyw"]
+bg_color = Color(0.21960784, 0.21960784, 0.21960784, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="LabelSettings" id="LabelSettings_lftv4"]
+font_size = 10
+
+[sub_resource type="FontVariation" id="FontVariation_riexu"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tnxix"]
+bg_color = Color(0.2469503, 0.24695033, 0.24695021, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lftv4"]
+bg_color = Color(0.627451, 0.627451, 0.627451, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_riexu"]
+bg_color = Color(0.21960784, 0.21960784, 0.21960784, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="FontVariation" id="FontVariation_d6fhe"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0lkbh"]
+bg_color = Color(0.2469503, 0.24695033, 0.24695021, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vvxu8"]
+bg_color = Color(0.627451, 0.627451, 0.627451, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nkyly"]
+bg_color = Color(0.21960784, 0.21960784, 0.21960784, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_noyia"]
 bg_color = Color(0, 0, 0, 0.14901961)
@@ -332,7 +566,14 @@ size = Vector2(120, 120)
 [node name="UI" type="CanvasGroup" unique_id=1013923296]
 script = ExtResource("1_aa8u4")
 
-[node name="Panel" type="Panel" parent="." unique_id=1757160726]
+[node name="Extra_UI" type="Control" parent="." unique_id=200164729]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Panel" type="Panel" parent="Extra_UI" unique_id=1757160726]
+layout_mode = 0
 offset_left = 790.0
 offset_top = 2.0
 offset_right = 957.0
@@ -340,7 +581,7 @@ offset_bottom = 313.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_rkyvi")
 metadata/_edit_group_ = true
 
-[node name="Info" type="Label" parent="Panel" unique_id=91596802]
+[node name="Info" type="Label" parent="Extra_UI/Panel" unique_id=91596802]
 modulate = Color(1, 1, 1, 0.34901962)
 layout_mode = 0
 offset_right = 206.0
@@ -365,14 +606,15 @@ esc - menu
 r - toss up"
 label_settings = SubResource("LabelSettings_5ntg7")
 
-[node name="Panel2" type="Panel" parent="." unique_id=1769679220]
+[node name="Panel2" type="Panel" parent="Extra_UI" unique_id=1769679220]
+layout_mode = 0
 offset_top = 3.0
 offset_right = 211.0
 offset_bottom = 314.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_rkyvi")
 metadata/_edit_group_ = true
 
-[node name="Stats" type="Label" parent="Panel2" unique_id=1863517531]
+[node name="Stats" type="Label" parent="Extra_UI/Panel2" unique_id=1863517531]
 unique_name_in_owner = true
 modulate = Color(1, 1, 1, 0.34901962)
 layout_mode = 0
@@ -414,7 +656,7 @@ offset_top = 20.0
 offset_right = 67.0
 offset_bottom = 70.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_constants/outline_size = 5
+theme_override_constants/outline_size = 7
 theme_override_fonts/font = SubResource("FontFile_aa8u4")
 theme_override_font_sizes/font_size = 16
 theme_override_styles/normal = SubResource("StyleBoxFlat_gvjwk")
@@ -430,7 +672,7 @@ offset_top = 20.0
 offset_right = 122.0
 offset_bottom = 70.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_constants/outline_size = 5
+theme_override_constants/outline_size = 7
 theme_override_fonts/font = SubResource("FontFile_aa8u4")
 theme_override_font_sizes/font_size = 16
 theme_override_styles/normal = SubResource("StyleBoxFlat_d1xol")
@@ -445,7 +687,7 @@ offset_top = 75.0
 offset_right = 67.0
 offset_bottom = 125.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_constants/outline_size = 5
+theme_override_constants/outline_size = 7
 theme_override_fonts/font = SubResource("FontFile_aa8u4")
 theme_override_font_sizes/font_size = 16
 theme_override_styles/normal = SubResource("StyleBoxFlat_ndrgk")
@@ -460,7 +702,7 @@ offset_top = 75.0
 offset_right = 122.0
 offset_bottom = 125.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_constants/outline_size = 5
+theme_override_constants/outline_size = 7
 theme_override_fonts/font = SubResource("FontFile_aa8u4")
 theme_override_font_sizes/font_size = 16
 theme_override_styles/normal = SubResource("StyleBoxFlat_no80t")
@@ -475,7 +717,7 @@ offset_top = 130.0
 offset_right = 67.0
 offset_bottom = 180.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_constants/outline_size = 5
+theme_override_constants/outline_size = 7
 theme_override_fonts/font = SubResource("FontFile_aa8u4")
 theme_override_font_sizes/font_size = 16
 theme_override_styles/normal = SubResource("StyleBoxFlat_abubn")
@@ -490,7 +732,7 @@ offset_top = 130.0
 offset_right = 122.0
 offset_bottom = 180.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_constants/outline_size = 5
+theme_override_constants/outline_size = 7
 theme_override_fonts/font = SubResource("FontFile_aa8u4")
 theme_override_font_sizes/font_size = 16
 theme_override_styles/normal = SubResource("StyleBoxFlat_no80t")
@@ -500,7 +742,6 @@ text = "Set-
 tings"
 
 [node name="Tutorial_App" type="Panel" parent="Phone" unique_id=1726127569]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -508,6 +749,19 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_20fwi")
+
+[node name="Under_Development_Label" type="Label" parent="Phone/Tutorial_App" unique_id=153154812]
+modulate = Color(1, 1, 1, 0.5568628)
+layout_mode = 0
+offset_left = 5.0
+offset_top = 60.0
+offset_right = 131.0
+offset_bottom = 161.0
+text = "   This application 
+          is under 
+     development
+                :("
+label_settings = SubResource("LabelSettings_2cpot")
 
 [node name="Map_App" type="Panel" parent="Phone" unique_id=1663241556]
 visible = false
@@ -532,34 +786,34 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_2cpot")
 expand_mode = 5
-flip_h = true
+flip_v = true
 
 [node name="Label" type="Label" parent="Phone/Map_App" unique_id=1102555682]
 modulate = Color(1, 1, 1, 0.44313726)
 layout_mode = 0
-offset_left = 32.0
-offset_top = 144.0
-offset_right = 76.0
-offset_bottom = 167.0
+offset_left = 23.0
+offset_top = 37.0
+offset_right = 67.0
+offset_bottom = 60.0
 text = "c.Medium"
 label_settings = SubResource("LabelSettings_gvjwk")
 
 [node name="Label2" type="Label" parent="Phone/Map_App" unique_id=578267183]
 modulate = Color(1, 1, 1, 0.44313726)
 layout_mode = 0
-offset_left = 80.0
-offset_top = 135.0
-offset_right = 120.0
-offset_bottom = 158.0
+offset_left = 36.0
+offset_top = 151.0
+offset_right = 76.0
+offset_bottom = 174.0
 text = "v.Big"
 label_settings = SubResource("LabelSettings_gvjwk")
 
 [node name="Label3" type="Label" parent="Phone/Map_App" unique_id=1438433350]
 modulate = Color(1, 1, 1, 0.44313726)
 layout_mode = 0
-offset_left = 45.0
+offset_left = 92.0
 offset_top = 60.0
-offset_right = 85.0
+offset_right = 132.0
 offset_bottom = 83.0
 text = "v.Small"
 label_settings = SubResource("LabelSettings_gvjwk")
@@ -574,6 +828,19 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_20fwi")
 
+[node name="Under_Development_Label" type="Label" parent="Phone/Work_App" unique_id=1011677720]
+modulate = Color(1, 1, 1, 0.5568628)
+layout_mode = 0
+offset_left = 5.0
+offset_top = 60.0
+offset_right = 131.0
+offset_bottom = 161.0
+text = "   This application 
+          is under 
+     development
+                :("
+label_settings = SubResource("LabelSettings_2cpot")
+
 [node name="Notes_App" type="Panel" parent="Phone" unique_id=950334206]
 visible = false
 layout_mode = 1
@@ -582,7 +849,21 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_20fwi")
+theme_override_styles/panel = SubResource("StyleBoxFlat_d6fhe")
+
+[node name="Motivationg_Text" type="Label" parent="Phone/Notes_App" unique_id=586303534]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 131.0
+offset_bottom = 228.0
+text = "I'm tired of this place, 
+this job, this boss...
+I only have a little 
+money left to save up...
+Finally, I'll be leaving 
+here soon."
+label_settings = SubResource("LabelSettings_hasax")
 
 [node name="Sms_App" type="Panel" parent="Phone" unique_id=169316686]
 visible = false
@@ -594,6 +875,19 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_20fwi")
 
+[node name="Under_Development_Label" type="Label" parent="Phone/Sms_App" unique_id=529821490]
+modulate = Color(1, 1, 1, 0.5568628)
+layout_mode = 0
+offset_left = 5.0
+offset_top = 60.0
+offset_right = 131.0
+offset_bottom = 161.0
+text = "   This application 
+          is under 
+     development
+                :("
+label_settings = SubResource("LabelSettings_2cpot")
+
 [node name="Settings_App" type="Panel" parent="Phone" unique_id=1393904210]
 visible = false
 layout_mode = 1
@@ -603,6 +897,177 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_20fwi")
+
+[node name="Labels" type="VBoxContainer" parent="Phone/Settings_App" unique_id=824938545]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 12.0
+offset_right = 64.0
+offset_bottom = 70.0
+theme_override_constants/separation = 8
+
+[node name="Music" type="Label" parent="Phone/Settings_App/Labels" unique_id=1595455476]
+layout_mode = 2
+size_flags_vertical = 6
+text = "Music:"
+label_settings = SubResource("LabelSettings_xhq5x")
+horizontal_alignment = 1
+
+[node name="SFX" type="Label" parent="Phone/Settings_App/Labels" unique_id=254977142]
+layout_mode = 2
+size_flags_vertical = 6
+text = "SFX:"
+label_settings = SubResource("LabelSettings_j7656")
+horizontal_alignment = 1
+
+[node name="FS" type="Label" parent="Phone/Settings_App/Labels" unique_id=932867771]
+layout_mode = 2
+size_flags_vertical = 6
+text = "FullScreen:"
+label_settings = SubResource("LabelSettings_noyia")
+horizontal_alignment = 1
+
+[node name="Extra_UI" type="Label" parent="Phone/Settings_App/Labels" unique_id=376872644]
+layout_mode = 2
+size_flags_vertical = 6
+text = "Extra UI:"
+label_settings = SubResource("LabelSettings_noyia")
+horizontal_alignment = 1
+
+[node name="Buttons" type="VBoxContainer" parent="Phone/Settings_App" unique_id=2024910871]
+layout_mode = 0
+offset_left = 76.0
+offset_top = 10.0
+offset_right = 126.0
+offset_bottom = 96.0
+theme_override_constants/separation = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Phone/Settings_App/Buttons" unique_id=210650161]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Music_Minus" type="Button" parent="Phone/Settings_App/Buttons/HBoxContainer" unique_id=667972783]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_focus_color = Color(0.48235294, 0.48235294, 0.48235294, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.6313726, 0.6313726, 0.6313726, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.48235294, 0.48235294, 0.48235294, 1)
+theme_override_fonts/font = SubResource("FontVariation_hasax")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxFlat_ac5jh")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_5782b")
+theme_override_styles/hover = SubResource("StyleBoxFlat_jrkag")
+text = "-"
+
+[node name="Music_Plus" type="Button" parent="Phone/Settings_App/Buttons/HBoxContainer" unique_id=645338671]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_focus_color = Color(0.48235294, 0.48235294, 0.48235294, 1)
+theme_override_colors/font_pressed_color = Color(0.6313726, 0.6313726, 0.6313726, 1)
+theme_override_colors/font_hover_color = Color(0.48235294, 0.48235294, 0.48235294, 1)
+theme_override_fonts/font = SubResource("FontVariation_ujbh4")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxFlat_m54cp")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ujbh4")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ikoyw")
+text = "+"
+
+[node name="Control" type="Control" parent="Phone/Settings_App/Buttons/HBoxContainer" unique_id=1859105053]
+layout_mode = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="Phone/Settings_App/Buttons/HBoxContainer/Control" unique_id=435740454]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 10.0
+offset_right = -1.0
+offset_bottom = 30.0
+use_top_left = true
+
+[node name="Music_Level" type="Label" parent="Phone/Settings_App/Buttons/HBoxContainer/Control/CenterContainer" unique_id=1216762938]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "1.0"
+label_settings = SubResource("LabelSettings_lftv4")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Phone/Settings_App/Buttons" unique_id=621562871]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="SFX_Minus" type="Button" parent="Phone/Settings_App/Buttons/HBoxContainer2" unique_id=1749727096]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(0.48235294, 0.48235294, 0.48235294, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.6313726, 0.6313726, 0.6313726, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.48235294, 0.48235294, 0.48235294, 1)
+theme_override_fonts/font = SubResource("FontVariation_riexu")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxFlat_tnxix")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_lftv4")
+theme_override_styles/hover = SubResource("StyleBoxFlat_riexu")
+text = "-"
+
+[node name="SFX_Plus" type="Button" parent="Phone/Settings_App/Buttons/HBoxContainer2" unique_id=1664704089]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_focus_color = Color(0.48235294, 0.48235294, 0.48235294, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.6313726, 0.6313726, 0.6313726, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.48235294, 0.48235294, 0.48235294, 1)
+theme_override_fonts/font = SubResource("FontVariation_d6fhe")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxFlat_0lkbh")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_vvxu8")
+theme_override_styles/hover = SubResource("StyleBoxFlat_nkyly")
+text = "+"
+
+[node name="Control" type="Control" parent="Phone/Settings_App/Buttons/HBoxContainer2" unique_id=2106167219]
+layout_mode = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="Phone/Settings_App/Buttons/HBoxContainer2/Control" unique_id=626809886]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 10.0
+offset_right = -1.0
+offset_bottom = 30.0
+use_top_left = true
+
+[node name="SFX_Level" type="Label" parent="Phone/Settings_App/Buttons/HBoxContainer2/Control/CenterContainer" unique_id=212581348]
+layout_mode = 2
+text = "1.0"
+label_settings = SubResource("LabelSettings_lftv4")
+
+[node name="Control" type="Control" parent="Phone/Settings_App/Buttons" unique_id=312177998]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="FS" type="CheckBox" parent="Phone/Settings_App/Buttons/Control" unique_id=634550893]
+texture_filter = 2
+layout_mode = 0
+offset_left = 9.0
+offset_top = -1.0
+offset_right = 33.0
+offset_bottom = 23.0
+size_flags_vertical = 3
+button_pressed = true
+alignment = 1
+
+[node name="Control2" type="Control" parent="Phone/Settings_App/Buttons" unique_id=1210509328]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Extra_UI" type="CheckBox" parent="Phone/Settings_App/Buttons/Control2" unique_id=1203610286]
+texture_filter = 2
+layout_mode = 0
+offset_left = 9.0
+offset_top = -3.0
+offset_right = 33.0
+offset_bottom = 21.0
+size_flags_vertical = 3
+button_pressed = true
+alignment = 1
 
 [node name="Navigation" type="Panel" parent="Phone" unique_id=229495568]
 layout_mode = 0
@@ -774,3 +1239,10 @@ shape = SubResource("RectangleShape2D_aa8u4")
 passby_press = true
 action = "engine"
 visibility_mode = 1
+
+[connection signal="pressed" from="Phone/Settings_App/Buttons/HBoxContainer/Music_Minus" to="." method="_on_music_minus_pressed"]
+[connection signal="pressed" from="Phone/Settings_App/Buttons/HBoxContainer/Music_Plus" to="." method="_on_music_plus_pressed"]
+[connection signal="pressed" from="Phone/Settings_App/Buttons/HBoxContainer2/SFX_Minus" to="." method="_on_sfx_minus_pressed"]
+[connection signal="pressed" from="Phone/Settings_App/Buttons/HBoxContainer2/SFX_Plus" to="." method="_on_sfx_plus_pressed"]
+[connection signal="toggled" from="Phone/Settings_App/Buttons/Control/FS" to="." method="_on_fs_toggled"]
+[connection signal="toggled" from="Phone/Settings_App/Buttons/Control2/Extra_UI" to="." method="_on_extra_ui_toggled"]

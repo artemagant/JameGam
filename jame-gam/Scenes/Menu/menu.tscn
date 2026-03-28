@@ -67,21 +67,6 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_cqskg")
 theme_override_styles/hover = SubResource("StyleBoxFlat_3ymnh")
 text = "Start"
 
-[node name="Settings" type="Button" parent="HBoxContainer" unique_id=2114474116]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_focus_color = Color(0.4817894, 0.4817894, 0.48179042, 1)
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0.6321235, 0.6321235, 0.6321234, 1)
-theme_override_colors/font_hover_pressed_color = Color(0.5006195, 0.5006196, 0.5006196, 1)
-theme_override_fonts/font = SubResource("FontVariation_k4toc")
-theme_override_font_sizes/font_size = 50
-theme_override_styles/normal = SubResource("StyleBoxFlat_k4toc")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_cqskg")
-theme_override_styles/hover = SubResource("StyleBoxFlat_3ymnh")
-text = "Settings"
-
 [node name="Quit" type="Button" parent="HBoxContainer" unique_id=627165129]
 layout_mode = 2
 size_flags_vertical = 3
@@ -99,5 +84,4 @@ text = "Quit
 "
 
 [connection signal="pressed" from="HBoxContainer/Start" to="." method="_on_start_pressed"]
-[connection signal="pressed" from="HBoxContainer/Settings" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="HBoxContainer/Quit" to="." method="_on_quit_pressed"]
