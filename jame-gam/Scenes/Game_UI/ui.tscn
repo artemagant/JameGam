@@ -108,6 +108,9 @@ corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
 
 [sub_resource type="FontFile" id="FontFile_xhq5x"]
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
 cache/0/variation_coordinates = {}
 cache/0/face_index = 0
 cache/0/embolden = 0.0
@@ -404,6 +407,9 @@ corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
 
 [sub_resource type="FontFile" id="FontFile_j7656"]
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
 cache/0/variation_coordinates = {}
 cache/0/face_index = 0
 cache/0/embolden = 0.0

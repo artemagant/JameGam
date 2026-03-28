@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://dndwmapgbdtxj"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kh48e"]
+bg_color = Color(0, 0, 0, 0.6627451)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+corner_radius_top_left = 3
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 3
+
+[sub_resource type="GDScript" id="GDScript_kh48e"]
+script/source = "extends PanelContainer
+"
+
+[sub_resource type="FontFile" id="FontFile_kh48e"]
+cache/0/variation_coordinates = {}
+cache/0/face_index = 0
+cache/0/embolden = 0.0
+cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
+cache/0/spacing_top = 0
+cache/0/spacing_bottom = 0
+cache/0/spacing_space = 0
+cache/0/spacing_glyph = 0
+cache/0/baseline_offset = 0.0
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/10/0/ascent = 0.0
+cache/0/10/0/descent = 0.0
+cache/0/10/0/underline_position = 0.0
+cache/0/10/0/underline_thickness = 0.0
+cache/0/10/0/scale = 1.0
+cache/0/12/0/ascent = 0.0
+cache/0/12/0/descent = 0.0
+cache/0/12/0/underline_position = 0.0
+cache/0/12/0/underline_thickness = 0.0
+cache/0/12/0/scale = 1.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_we8iv"]
+
+[node name="Sms_Bubble" type="PanelContainer" unique_id=1016781717]
+offset_left = 6.0
+offset_top = 29.0
+offset_right = 117.0
+offset_bottom = 59.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_kh48e")
+script = SubResource("GDScript_kh48e")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=2133224616]
+layout_mode = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="MarginContainer" unique_id=1044852172]
+layout_mode = 2
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = SubResource("FontFile_kh48e")
+theme_override_font_sizes/font_size = 12
+text = "hhhhh"
+label_settings = SubResource("LabelSettings_we8iv")
+autowrap_mode = 2
+
+[node name="Label" type="Label" parent="." unique_id=1324366368]
+layout_mode = 2
+text = "|"

@@ -64,8 +64,11 @@ func _return(): # return to menu from settings
 	await _fade(1.0)
 	change_state(past_scene)
 	await _fade()
-
+var returning = false
 func return_to_menu_2(): # return to menu from menu in game
+	if returning:
+		return
+	returning = true
 	await _fade(1.0)
 	game.queue_free() # close game
 	change_state(menu)
@@ -73,6 +76,7 @@ func return_to_menu_2(): # return to menu from menu in game
 	is_engine_started = false
 	e_pressed = false
 	await _fade()
+	returning = false
 
 var impuls := false
 func _input(event: InputEvent) -> void: # connect every input

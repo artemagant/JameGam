@@ -87,7 +87,7 @@ func one_shift_notification(_name: String, state: bool):
 	ones_shifts_apps[_name] = int(state)
 	var values = ones_shifts_apps.values()
 	if values == [0, 0, 0, 0, 0, 0]:
-		print(1)
+		new_sms_pop_up.visible = false
 #region Settings
 func change_text():
 	music_level.text = str(music_volum)
