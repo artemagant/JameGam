@@ -6,6 +6,7 @@ const DEFAULT_DATA = {
 	"sms_level": 2,
 	"work_level": 1,
 	"money": 0,
+	"Completed": [1, 0, 0, 0, 0, 0, 0],
 	"fs": true,
 	"extra_ui": true
 }

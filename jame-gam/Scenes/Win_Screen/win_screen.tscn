@@ -1,0 +1,126 @@
+[gd_scene format=3 uid="uid://lui1i854p2et"]
+
+[ext_resource type="Script" uid="uid://ma2rpm8m4ywa" path="res://Scenes/Win_Screen/win_screen.gd" id="1_q635k"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lrgru"]
+bg_color = Color(0, 0, 0, 0.6509804)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 0.8156863)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+expand_margin_left = 15.0
+
+[sub_resource type="FontFile" id="FontFile_lrgru"]
+cache/0/variation_coordinates = {}
+cache/0/face_index = 0
+cache/0/embolden = 0.0
+cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
+cache/0/spacing_top = 0
+cache/0/spacing_bottom = 0
+cache/0/spacing_space = 0
+cache/0/spacing_glyph = 0
+cache/0/baseline_offset = 0.0
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/50/0/ascent = 0.0
+cache/0/50/0/descent = 0.0
+cache/0/50/0/underline_position = 0.0
+cache/0/50/0/underline_thickness = 0.0
+cache/0/50/0/scale = 1.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_q635k"]
+font = SubResource("FontFile_lrgru")
+font_size = 50
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 5
+shadow_color = Color(0, 0, 0, 0.5803922)
+
+[sub_resource type="FontVariation" id="FontVariation_lrgru"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q635k"]
+bg_color = Color(0.2469503, 0.24695033, 0.24695021, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qeqbg"]
+bg_color = Color(0.6255971, 0.6255971, 0.62559694, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3lkgi"]
+bg_color = Color(0.22094136, 0.22094145, 0.22094142, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="Win_Screen" type="Node2D" unique_id=1737438738]
+script = ExtResource("1_q635k")
+
+[node name="Panel" type="Panel" parent="." unique_id=1702659415]
+offset_left = 143.0
+offset_top = 44.0
+offset_right = 829.0
+offset_bottom = 265.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_lrgru")
+
+[node name="Label" type="Label" parent="Panel" unique_id=1209565523]
+layout_mode = 0
+offset_right = 676.0
+offset_bottom = 207.0
+text = "You WON!
+Finaly, you escaped your work!
+New live is beginning!"
+label_settings = SubResource("LabelSettings_q635k")
+horizontal_alignment = 1
+
+[node name="Restart" type="Button" parent="." unique_id=2054855422]
+offset_left = 349.0
+offset_top = 322.0
+offset_right = 646.0
+offset_bottom = 423.0
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(0.4817894, 0.4817894, 0.48179042, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.6321235, 0.6321235, 0.6321234, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.5006195, 0.5006196, 0.5006196, 1)
+theme_override_fonts/font = SubResource("FontVariation_lrgru")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_q635k")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_qeqbg")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3lkgi")
+text = "Restart"
+
+[connection signal="pressed" from="Restart" to="." method="_on_restart_pressed"]

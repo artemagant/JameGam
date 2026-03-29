@@ -1314,6 +1314,7 @@ text = "v.Small"
 label_settings = SubResource("LabelSettings_gvjwk")
 
 [node name="Work_App" type="Panel" parent="Phone" unique_id=321368451]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -1321,19 +1322,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_2pujl")
-
-[node name="Under_Development_Label" type="Label" parent="Phone/Work_App" unique_id=1011677720]
-modulate = Color(1, 1, 1, 0.5568628)
-layout_mode = 0
-offset_left = 5.0
-offset_top = 60.0
-offset_right = 131.0
-offset_bottom = 161.0
-text = "   This application 
-          is under 
-     development
-                :("
-label_settings = SubResource("LabelSettings_2cpot")
 
 [node name="Balance_Panel" type="Panel" parent="Phone/Work_App" unique_id=1095332215]
 layout_mode = 0
@@ -1345,14 +1333,14 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_8eldu")
 
 [node name="CenterContainer" type="CenterContainer" parent="Phone/Work_App/Balance_Panel" unique_id=1915176967]
 layout_mode = 0
-offset_left = 0.86956525
-offset_top = 2.6086998
-offset_right = 45.869564
-offset_bottom = 16.6087
+offset_left = -3.4782608
+offset_top = 3.478265
+offset_right = 41.52174
+offset_bottom = 17.478266
 
 [node name="Balance" type="Label" parent="Phone/Work_App/Balance_Panel/CenterContainer" unique_id=151997146]
 layout_mode = 2
-text = "Balance: 0"
+text = "Coins: 0"
 label_settings = SubResource("LabelSettings_0nb4j")
 
 [node name="Stert_Work_Button" type="Button" parent="Phone/Work_App" unique_id=1402421427]
@@ -1381,12 +1369,9 @@ offset_left = 2.608698
 offset_top = 17.391304
 offset_right = 96.608696
 offset_bottom = 116.391304
-text = "Name:
-To:
-From: Vasa Compony
-What: Paper
-Reward: 1 coin
-Time: 2m"
+text = "This is delivery app!
+Press Start Work to start
+Good Luck!"
 label_settings = SubResource("LabelSettings_no80t")
 
 [node name="Info" type="Label" parent="Phone/Work_App/Info_Panel" unique_id=1677982400]
@@ -1412,12 +1397,13 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_d6fhe")
 layout_mode = 0
 offset_left = 8.0
 offset_top = 8.0
-offset_right = 131.0
+offset_right = 185.0
 offset_bottom = 228.0
 text = "I'm tired of this place, 
 this job, this boss...
 I only have a little 
-money left to save up...
+money left to save up... 
+         ( 6 coins )
 Finally, I'll be leaving 
 here soon."
 label_settings = SubResource("LabelSettings_hasax")
@@ -2205,7 +2191,7 @@ offset_bottom = 51.456543
 text = "r"
 label_settings = SubResource("LabelSettings_ndrgk")
 
-[connection signal="pressed" from="Phone/Work_App/Stert_Work_Button" to="." method="new_work"]
+[connection signal="pressed" from="Phone/Work_App/Stert_Work_Button" to="." method="start_new_job"]
 [connection signal="pressed" from="Phone/Settings_App/Buttons/HBoxContainer/Music_Minus" to="." method="_on_music_minus_pressed"]
 [connection signal="pressed" from="Phone/Settings_App/Buttons/HBoxContainer/Music_Plus" to="." method="_on_music_plus_pressed"]
 [connection signal="pressed" from="Phone/Settings_App/Buttons/HBoxContainer2/SFX_Minus" to="." method="_on_sfx_minus_pressed"]

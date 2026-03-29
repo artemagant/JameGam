@@ -4,6 +4,7 @@ extends Node2D
 @onready var fade: ColorRect = $Fade
 @onready var menu: Node2D = $Menu
 @onready var settings_menu: Node2D = $Settings_Menu
+@onready var win_screen: Node2D = $Win_Screen
 @export var game = preload("res://Scenes/Game/game.tscn")
 # current node
 @onready var current_state: Node = menu
@@ -17,6 +18,7 @@ var is_engine_started := false # is engine sterted
 
 func _ready() -> void:
 	# Connect signals
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 	menu.connect("quit", quit)
 	menu.connect("settings", settings)
 	menu.connect("start", start)
@@ -51,6 +53,7 @@ func start(): # start 3d fame
 	current_state.visible = false
 	current_state = game
 	add_child(game)
+	game.name = "Game"
 	engine_timer = game.get_child(3)
 	await _fade()
 
@@ -145,3 +148,21 @@ func start_engine(): # start engine
 		return
 	e_pressed = false
 	is_engine_started = true
+
+func win():
+	await _fade(1.0)
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+	if game is Node3D:
+		game.queue_free() # close game
+	else:
+		game = get_node("Game")
+		game.queue_free()
+	change_state(win_screen)
+	game = preload("res://Scenes/Game/game.tscn")
+	is_engine_started = false
+	e_pressed = false
+	await _fade()
+
+func restart():
+	Data.reset()
+	start()

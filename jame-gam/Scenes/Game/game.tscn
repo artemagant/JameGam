@@ -93,14 +93,20 @@ height = 1000.0
 radius = 13.813139
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_7jvlm"]
-radius = 20.127895
+radius = 17.135212
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yox4t"]
+size = Vector3(5053.7456, 2951.817, 169.13174)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lemb1"]
+size = Vector3(370.46408, 3303.5654, 5333.8486)
 
 [node name="Game" type="Node3D" unique_id=613764105]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 219.91647, -1558.883)
 script = ExtResource("1_i1e5p")
 
 [node name="Car" parent="." unique_id=1676619421 instance=ExtResource("3_qikps")]
-transform = Transform3D(-0.042045664, 0.0011527173, 0.99911505, 0.0033089463, 0.99999416, -0.0010144815, -0.99911034, 0.0032633638, -0.04204923, 24.621002, -57, -93.76587)
+transform = Transform3D(-0.042045664, 0.0011527173, 0.99911505, 0.0033089463, 0.99999416, -0.0010144815, -0.99911034, 0.0032633638, -0.04204923, 40.32162, -35.835464, -77.86792)
 rotation_order = 0
 turn_amount = 0.6
 
@@ -394,6 +400,7 @@ shape = SubResource("SphereShape3D_huoen")
 debug_color = Color(0.98142856, 0, 0.37522224, 0.41960785)
 
 [node name="Area3D" type="Area3D" parent="Environment/Points/Points" unique_id=831992658]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 54.906227, 0, 97.533325)
 visible = false
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Points/Points/Area3D" unique_id=1825552739]
@@ -405,6 +412,93 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.821342, -15.519608, -33.0
 shape = SubResource("SphereShape3D_7jvlm")
 debug_color = Color(0.50387067, 0.58038294, 3.85046e-07, 0.41960785)
 
+[node name="Area3D2" type="Area3D" parent="Environment/Points/Points" unique_id=1624736864]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5221901, 0, -2.0794678)
+visible = false
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Points/Points/Area3D2" unique_id=940246190]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.418665, 34.538498, -31.464233)
+mesh = SubResource("CylinderMesh_7jvlm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Points/Points/Area3D2" unique_id=216874004]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.821342, -15.519608, -33.031982)
+shape = SubResource("SphereShape3D_7jvlm")
+debug_color = Color(0.50387067, 0.58038294, 3.85046e-07, 0.41960785)
+
+[node name="Area3D3" type="Area3D" parent="Environment/Points/Points" unique_id=395930814]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 311.1784, 0, -16.569458)
+visible = false
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Points/Points/Area3D3" unique_id=200116727]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.41867, 34.538498, -26.024292)
+mesh = SubResource("CylinderMesh_7jvlm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Points/Points/Area3D3" unique_id=1810137885]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.82135, -15.519608, -26.51416)
+shape = SubResource("SphereShape3D_7jvlm")
+debug_color = Color(0.50387067, 0.58038294, 3.85046e-07, 0.41960785)
+
+[node name="Area3D4" type="Area3D" parent="Environment/Points/Points" unique_id=1931490675]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 395.45782, 0, -70.28162)
+visible = false
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Points/Points/Area3D4" unique_id=371257619]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.418665, 34.538498, -31.464233)
+mesh = SubResource("CylinderMesh_7jvlm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Points/Points/Area3D4" unique_id=257576249]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.056763, -15.519608, -33.031982)
+shape = SubResource("SphereShape3D_7jvlm")
+debug_color = Color(0.50387067, 0.58038294, 3.85046e-07, 0.41960785)
+
+[node name="Area3D5" type="Area3D" parent="Environment/Points/Points" unique_id=1262304772]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -36.424103, 0, -279.82312)
+visible = false
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Points/Points/Area3D5" unique_id=801780246]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.418665, 34.538498, -31.464233)
+mesh = SubResource("CylinderMesh_7jvlm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Points/Points/Area3D5" unique_id=647467306]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.99483, -15.519608, -29.951782)
+shape = SubResource("SphereShape3D_7jvlm")
+debug_color = Color(0.50387067, 0.58038294, 3.85046e-07, 0.41960785)
+
+[node name="Area3D6" type="Area3D" parent="Environment/Points/Points" unique_id=1879451560]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60.83185, 0, -352.92163)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Points/Points/Area3D6" unique_id=1503090546]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.418665, 34.538498, -31.464233)
+mesh = SubResource("CylinderMesh_7jvlm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Points/Points/Area3D6" unique_id=960798749]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.639565, -15.519608, -31.350708)
+shape = SubResource("SphereShape3D_7jvlm")
+debug_color = Color(0.50387067, 0.58038294, 3.85046e-07, 0.41960785)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=1748709220]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1770138236]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.04663, 594.4929, 2411.2725)
+shape = SubResource("BoxShape3D_yox4t")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D" unique_id=851992729]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2554.4067, 418.61868, -171.08594)
+shape = SubResource("BoxShape3D_lemb1")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="StaticBody3D" unique_id=1836617116]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 69.7168, 594.4929, -2630.908)
+shape = SubResource("BoxShape3D_yox4t")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="StaticBody3D" unique_id=1177759021]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 2656.1704, 418.61868, -48.54956)
+shape = SubResource("BoxShape3D_lemb1")
+
 [connection signal="timeout" from="UI_Update_Timer" to="." method="_on_ui_update_timer_timeout"]
-[connection signal="area_entered" from="Environment/Points/Points/Start" to="." method="end_work"]
+[connection signal="area_entered" from="Environment/Points/Points/Start" to="." method="_2_end_work"]
 [connection signal="area_entered" from="Environment/Points/Points/Area3D" to="." method="end_work"]
+[connection signal="area_entered" from="Environment/Points/Points/Area3D2" to="." method="end_work"]
+[connection signal="area_entered" from="Environment/Points/Points/Area3D3" to="." method="end_work"]
+[connection signal="area_entered" from="Environment/Points/Points/Area3D4" to="." method="end_work"]
+[connection signal="area_entered" from="Environment/Points/Points/Area3D5" to="." method="end_work"]
+[connection signal="area_entered" from="Environment/Points/Points/Area3D6" to="." method="end_work"]

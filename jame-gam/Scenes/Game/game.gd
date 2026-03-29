@@ -129,4 +129,12 @@ func end_work(area):
 	if area.name != "Car":
 		print("Body not car")
 		return
-	ui.end_work()
+	ui._on_point_reached(1)
+func _2_end_work(area):
+	if area.name != "Car":
+		print("Body not car")
+		return
+	ui._on_point_reached(0)
+func win():
+	await get_tree().physics_frame
+	main.win()

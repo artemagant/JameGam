@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://dyagfeyiuk77m" path="res://Scenes/Main/main.gd" id="1_1r6ip"]
 [ext_resource type="PackedScene" uid="uid://bva2jwpnnsqy7" path="res://Scenes/Menu/menu.tscn" id="2_lixft"]
 [ext_resource type="PackedScene" uid="uid://edocv3oc4u13" path="res://Scenes/Settings_Menu/settings_menu.tscn" id="3_qw60k"]
+[ext_resource type="PackedScene" uid="uid://lui1i854p2et" path="res://Scenes/Win_Screen/win_screen.tscn" id="4_5yls4"]
 
 [node name="Main" type="Node2D" unique_id=1072729622]
 script = ExtResource("1_1r6ip")
@@ -18,3 +19,6 @@ offset_right = 2056.0
 offset_bottom = 1285.0
 mouse_filter = 2
 color = Color(0, 0, 0, 1)
+
+[node name="Win_Screen" parent="." unique_id=1737438738 instance=ExtResource("4_5yls4")]
+visible = false

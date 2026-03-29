@@ -1,5 +1,7 @@
 extends CanvasGroup
 
+@onready var game: Node3D = $".."
+
 @onready var new_sms_pop_up: Panel = $New_SMS_PopUp
 
 @onready var phone_panel: Panel = $Phone
@@ -41,8 +43,8 @@ var working := false
 @onready var points: Array = $"../Environment/Points/Points".get_children()
 @onready var info_full: Label = $Phone/Work_App/Info_Panel/Info_Full
 var point: int
-var adresses := ["","c.Medium School st. 1"]
-var names := ["Jeffry Lum", "Ronald Barr", "Marie Connor", "Kaily Pugh", "Fred Nerk", "Will Forbis"]
+var adresses := ["", "c.Medium School st. 1", "c.Medium Live st. 4", "v.Small Last st. 3", "v.Small Main st. 2", "v.Big Cross st. 1", "v.Big Road st. 8"]
+var names := ["", "Jeffry Lum", "Ronald Barr", "Marie Connor", "Kaily Pugh", "Fred Nerk", "Will Forbis"]
 var work_level := 0
 func _ready() -> void:
 	if not Data.load_data():
@@ -126,6 +128,7 @@ func one_shift_notification(_name: String, state: bool):
 		return
 	main_app.get_node(_name).get_child(0).visible = state
 	ones_shifts_apps[_name] = int(state)
+	new_sms_pop_up.visible = true
 	var values = ones_shifts_apps.values()
 	if values == [0, 0, 0, 0, 0, 0]:
 		new_sms_pop_up.visible = false
@@ -192,53 +195,60 @@ func _on_extra_ui_toggled(toggled_on: bool) -> void:
 func send_new_sms(increment: bool = false):
 	if increment:
 		Data.data["sms_level"] += 1
+		Data.save()
 	for i in Data.data["sms_level"]:
-		if i < 6:
+		if i < 5:
 			smses[i].visible = true
+			one_shift_notification("Sms_App", true)
 		else:
-			i = 5
+			i = 4
 			break
 #endregion
 #region Work
 func add_money(value: int = 1):
-	if not working:
-		return
 	Data.data["money"] += value
-	balance.text = "Balance: %d" % Data.data["money"]
-func new_work():
-	if working:
-		push_warning("Still working")
-		return
-	if work_level == 1 and not working:
-		work_level = 1
-		working = true
-		points[point].visible = true
-		points[0].visible = false
-		return
+	balance.text = "Coins: %d" % Data.data["money"]
+	if Data.data["Completed"] == [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0] or Data.data["money"] >= 6:
+		win()
+func start_new_job():
+	if working: return
 	working = true
-	point = randi_range(1, points.size()-1)
-	points[0].visible = true
-	info_full.text = "Name: %s
-		To: %s
-		From: Vasa Compony
-		What: Paper
-		Reward: 1 coin
-		Time: no time limit" %[names[point], adresses[point]]
-func end_work():
-	if not working:
-		return
-	if work_level == 0:
-		working = false
-		new_work()
 	work_level = 0
-	add_money()
+	point = randi_range(1, points.size() - 1)
+	while Data.data["Completed"][point] == 1:
+		if Data.data["Completed"] == [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0] or Data.data["money"] >= 6:
+			win()
+			break
+		point = randi_range(1, points.size() - 1)
+	for p in points: p.visible = false
+	points[0].visible = true 
+	info_full.text = "Job: Pickup Paper\nFrom: Company Vasa"
+
+func _on_point_reached(reached_index: int):
+	if not working: return
+	if work_level == 0 and reached_index == 0:
+		work_level = 1
+		points[0].visible = false
+		points[point].visible = true
+		one_shift_notification("Work_App", true)
+		info_full.text = "Name: %s\nTo: %s\nDeliver the package!" % [names[point], adresses[point]]
+
+	elif work_level == 1:
+		complete_delivery()
+
+func complete_delivery():
+	if randf() > 0.25:
+		send_new_sms(true)
+	add_money(1)
 	working = false
+	work_level = 0
+	Data.data["Completed"][point] = 1
+	if Data.data["Completed"] == [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0] or Data.data["money"] >= 6:
+		win()
 	points[point].visible = false
 	one_shift_notification("Work_App", true)
-	info_full.text = "Name: 
-		To: 
-		From:
-		What:
-		Reward:
-		Time:"
+	info_full.text = "Delivery Complete!\nYou get 1 coin\nTake new order!."
+	Data.save()
+func win():
+	game.win()
 #endregion
