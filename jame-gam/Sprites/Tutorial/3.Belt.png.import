@@ -2,22 +2,20 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c7s5y6vn8b6bj"
-path.s3tc="res://.godot/imported/colormap.png-e0ae431cd7c436d6221645e57841c42e.s3tc.ctex"
-path.etc2="res://.godot/imported/colormap.png-e0ae431cd7c436d6221645e57841c42e.etc2.ctex"
+uid="uid://dnr1605ff71ud"
+path="res://.godot/imported/3.Belt.png-8fd345f011023ea0e92a18c4c0b00195.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc", "etc2_astc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/colormap.png"
-dest_files=["res://.godot/imported/colormap.png-e0ae431cd7c436d6221645e57841c42e.s3tc.ctex", "res://.godot/imported/colormap.png-e0ae431cd7c436d6221645e57841c42e.etc2.ctex"]
+source_file="res://Sprites/Tutorial/3.Belt.png"
+dest_files=["res://.godot/imported/3.Belt.png-8fd345f011023ea0e92a18c4c0b00195.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
@@ -25,7 +23,7 @@ compress/rdo_quality_loss=0.0
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=true
+mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
@@ -39,4 +37,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=0
+detect_3d/compress_to=1

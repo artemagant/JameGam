@@ -47,8 +47,8 @@ var adresses := ["", "c.Medium School st. 1", "c.Medium Live st. 4", "v.Small La
 var names := ["", "Jeffry Lum", "Ronald Barr", "Marie Connor", "Kaily Pugh", "Fred Nerk", "Will Forbis"]
 var work_level := 0
 
-var pages := [
-	preload("uid://pdw845rhjgkr")
+@export var pages := [
+	
 ]
 @onready var texture_rect: TextureRect = $Phone/Tutorial_App/Picture/TextureRect
 
@@ -78,6 +78,7 @@ func _ready() -> void:
 	AudioServer.set_bus_volume_db(bus_sfx, linear_to_db(sfx_volum))
 	if not DisplayServer.is_touchscreen_available():
 		$Phone_Buttons.visible = false
+	change_page(0)
 	add_money(0)
 	change_text()
 	send_new_sms(false)
@@ -263,6 +264,8 @@ func win():
 #endregion
 func change_page(amount: = 1):
 	Data.data["page"] += amount
-	if Data.data["page"] >= pages.size() or Data.data["page"] < 0:
+	if Data.data["page"] >= pages.size():
 		Data.data["page"] = 0
+	if Data.data["page"] < 0:
+		Data.data["page"] = pages.size() - 1
 	texture_rect.texture = pages[Data.data["page"]]
