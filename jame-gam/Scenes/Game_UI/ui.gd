@@ -46,7 +46,14 @@ var point: int
 var adresses := ["", "c.Medium School st. 1", "c.Medium Live st. 4", "v.Small Last st. 3", "v.Small Main st. 2", "v.Big Cross st. 1", "v.Big Road st. 8"]
 var names := ["", "Jeffry Lum", "Ronald Barr", "Marie Connor", "Kaily Pugh", "Fred Nerk", "Will Forbis"]
 var work_level := 0
+
+var pages := [
+	preload("uid://pdw845rhjgkr")
+]
+@onready var texture_rect: TextureRect = $Phone/Tutorial_App/Picture/TextureRect
+
 func _ready() -> void:
+	Data.reset()
 	if not Data.load_data():
 		Data.reset()
 	$Phone/Settings_App/Buttons/Control2/Extra_UI.button_pressed = Data.data["extra_ui"]
@@ -84,7 +91,9 @@ func _ready() -> void:
 	$Phone/Main/Notes_App.pressed.connect(change_app.bind(notes_app))
 	$Phone/Main/Sms_App.pressed.connect(change_app.bind(sms_app))
 	$Phone/Main/Settings_App.pressed.connect(change_app.bind(settings_app))
-
+	$Phone/Tutorial_App/Panel/Button.pressed.connect(change_page.bind(-1))
+	$Phone/Tutorial_App/Panel/Button2.pressed.connect(change_page.bind(1))
+	
 func notification_popup():
 	if _phone:
 		return
@@ -252,3 +261,8 @@ func complete_delivery():
 func win():
 	game.win()
 #endregion
+func change_page(amount: = 1):
+	Data.data["page"] += amount
+	if Data.data["page"] >= pages.size() or Data.data["page"] < 0:
+		Data.data["page"] = 0
+	texture_rect.texture = pages[Data.data["page"]]

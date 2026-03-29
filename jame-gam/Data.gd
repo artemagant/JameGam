@@ -8,7 +8,8 @@ const DEFAULT_DATA = {
 	"money": 0,
 	"Completed": [1, 0, 0, 0, 0, 0, 0],
 	"fs": true,
-	"extra_ui": true
+	"extra_ui": true,
+	"page": 0
 }
 
 var data := DEFAULT_DATA.duplicate(true)
