@@ -214,6 +214,9 @@ _data = {
 &"right_blink": SubResource("Animation_nkh8f")
 }
 
+[sub_resource type="SphereShape3D" id="SphereShape3D_afscr"]
+radius = 1.8381448
+
 [node name="Car" type="VehicleBody3D" unique_id=1676619421]
 collision_layer = 2
 collision_mask = 5
@@ -390,3 +393,11 @@ one_shot = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1047590110]
 libraries/ = SubResource("AnimationLibrary_imavk")
+
+[node name="Car" type="Area3D" parent="." unique_id=695637834]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Car" unique_id=1594655658]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8893945, 0)
+shape = SubResource("SphereShape3D_afscr")
+
+[connection signal="area_entered" from="Car" to="." method="_on_car_area_entered"]

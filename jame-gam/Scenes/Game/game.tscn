@@ -75,12 +75,32 @@ size = Vector3(2.4945831, 1, 1.9968262)
 [sub_resource type="BoxMesh" id="BoxMesh_xfil1"]
 size = Vector3(2.5, 1, 2)
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_huoen"]
+transparency = 1
+albedo_color = Color(1, 1, 0, 0.44313726)
+emission_enabled = true
+emission = Color(1, 1, 0, 1)
+emission_energy_multiplier = 4.24
+grow_amount = 0.608
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_7jvlm"]
+material = SubResource("StandardMaterial3D_huoen")
+top_radius = 1.0
+bottom_radius = 1.0
+height = 1000.0
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_huoen"]
+radius = 13.813139
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_7jvlm"]
+radius = 20.127895
+
 [node name="Game" type="Node3D" unique_id=613764105]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 219.91647, -1558.883)
 script = ExtResource("1_i1e5p")
 
 [node name="Car" parent="." unique_id=1676619421 instance=ExtResource("3_qikps")]
-transform = Transform3D(-0.042045664, 0.0011527173, 0.99911505, 0.0033089463, 0.99999416, -0.0010144815, -0.99911034, 0.0032633638, -0.04204923, 80, -57, -78.069)
+transform = Transform3D(-0.042045664, 0.0011527173, 0.99911505, 0.0033089463, 0.99999416, -0.0010144815, -0.99911034, 0.0032633638, -0.04204923, 24.621002, -57, -93.76587)
 rotation_order = 0
 turn_amount = 0.6
 
@@ -357,4 +377,34 @@ mesh = SubResource("BoxMesh_xfil1")
 transform = Transform3D(-22.584217, 0, -3.08227e-07, 0, 1, 0, 1.9743748e-06, 0, -3.525706, 335.96838, -13.874985, -101.18622)
 mesh = SubResource("BoxMesh_xfil1")
 
+[node name="Points" type="Node3D" parent="Environment" unique_id=1136005325]
+
+[node name="Points" type="Node3D" parent="Environment/Points" unique_id=496034461]
+
+[node name="Start" type="Area3D" parent="Environment/Points/Points" unique_id=1705832801]
+visible = false
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Points/Points/Start" unique_id=661233931]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5551987, 34.538498, -0.53344727)
+mesh = SubResource("CylinderMesh_7jvlm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Points/Points/Start" unique_id=608744206]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.08557129, -10.722382, 1.2862549)
+shape = SubResource("SphereShape3D_huoen")
+debug_color = Color(0.98142856, 0, 0.37522224, 0.41960785)
+
+[node name="Area3D" type="Area3D" parent="Environment/Points/Points" unique_id=831992658]
+visible = false
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Environment/Points/Points/Area3D" unique_id=1825552739]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -27.418665, 34.538498, -31.464233)
+mesh = SubResource("CylinderMesh_7jvlm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Environment/Points/Points/Area3D" unique_id=1233941448]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.821342, -15.519608, -33.031982)
+shape = SubResource("SphereShape3D_7jvlm")
+debug_color = Color(0.50387067, 0.58038294, 3.85046e-07, 0.41960785)
+
 [connection signal="timeout" from="UI_Update_Timer" to="." method="_on_ui_update_timer_timeout"]
+[connection signal="area_entered" from="Environment/Points/Points/Start" to="." method="end_work"]
+[connection signal="area_entered" from="Environment/Points/Points/Area3D" to="." method="end_work"]

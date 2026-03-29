@@ -35,8 +35,18 @@ var bus_sfx: = AudioServer.get_bus_index("SFX")
 var _phone: = false
 # Sms
 @onready var smses := $Phone/Sms_App/Smses.get_children()
+# Work
+@onready var balance: Label = $Phone/Work_App/Balance_Panel/CenterContainer/Balance
+var working := false
+@onready var points: Array = $"../Environment/Points/Points".get_children()
+@onready var info_full: Label = $Phone/Work_App/Info_Panel/Info_Full
+var point: int
+var adresses := ["","c.Medium School st. 1"]
+var names := ["Jeffry Lum", "Ronald Barr", "Marie Connor", "Kaily Pugh", "Fred Nerk", "Will Forbis"]
+var work_level := 0
 func _ready() -> void:
-	Data.load_data()
+	if not Data.load_data():
+		Data.reset()
 	$Phone/Settings_App/Buttons/Control2/Extra_UI.button_pressed = Data.data["extra_ui"]
 	$Phone/Settings_App/Buttons/Control/FS.button_pressed = Data.data["fs"]
 	extra_ui.visible = Data.data["extra_ui"]
@@ -57,6 +67,9 @@ func _ready() -> void:
 		sfx_volum = 1
 	AudioServer.set_bus_volume_db(bus_sfx, false)
 	AudioServer.set_bus_volume_db(bus_sfx, linear_to_db(sfx_volum))
+	if not DisplayServer.is_touchscreen_available():
+		$Phone_Buttons.visible = false
+	add_money(0)
 	change_text()
 	send_new_sms(false)
 	change_text()
@@ -107,6 +120,10 @@ func change_app(app: Panel, close := false):
 			else:
 				new_sms_pop_up.visible = true 
 func one_shift_notification(_name: String, state: bool):
+	if current_app.name == _name:
+		main_app.get_node(_name).get_child(0).visible = false
+		ones_shifts_apps[_name] = 0
+		return
 	main_app.get_node(_name).get_child(0).visible = state
 	ones_shifts_apps[_name] = int(state)
 	var values = ones_shifts_apps.values()
@@ -181,4 +198,47 @@ func send_new_sms(increment: bool = false):
 		else:
 			i = 5
 			break
+#endregion
+#region Work
+func add_money(value: int = 1):
+	if not working:
+		return
+	Data.data["money"] += value
+	balance.text = "Balance: %d" % Data.data["money"]
+func new_work():
+	if working:
+		push_warning("Still working")
+		return
+	if work_level == 1 and not working:
+		work_level = 1
+		working = true
+		points[point].visible = true
+		points[0].visible = false
+		return
+	working = true
+	point = randi_range(1, points.size()-1)
+	points[0].visible = true
+	info_full.text = "Name: %s
+		To: %s
+		From: Vasa Compony
+		What: Paper
+		Reward: 1 coin
+		Time: no time limit" %[names[point], adresses[point]]
+func end_work():
+	if not working:
+		return
+	if work_level == 0:
+		working = false
+		new_work()
+	work_level = 0
+	add_money()
+	working = false
+	points[point].visible = false
+	one_shift_notification("Work_App", true)
+	info_full.text = "Name: 
+		To: 
+		From:
+		What:
+		Reward:
+		Time:"
 #endregion

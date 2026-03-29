@@ -21,12 +21,13 @@ buses/default_bus_layout="uid://uun8i78ntxl7"
 
 [autoload]
 
-Data="*uid://v0bcwr36pur1"
+Data="*uid://co8ldf2ec3v76"
 
 [display]
 
 window/size/viewport_width=960
 window/size/viewport_height=540
+window/size/mode=3
 window/subwindows/embed_subwindows=false
 window/stretch/mode="viewport"
 window/stretch/aspect="keep_width"

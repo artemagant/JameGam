@@ -123,3 +123,10 @@ func breake(iss: bool = true): # brake
 
 func phone():
 	ui.phone()
+
+
+func end_work(area):
+	if area.name != "Car":
+		print("Body not car")
+		return
+	ui.end_work()

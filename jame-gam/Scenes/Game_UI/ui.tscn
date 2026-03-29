@@ -333,6 +333,125 @@ font_size = 10
 outline_size = 5
 outline_color = Color(0, 0, 0, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2pujl"]
+bg_color = Color(0.61704624, 0.5326723, 0.39074197, 1)
+border_width_left = 8
+border_width_top = 7
+border_width_right = 8
+border_width_bottom = 7
+border_color = Color(0.8, 0.8, 0.8, 0)
+corner_radius_top_left = 7
+corner_radius_top_right = 7
+corner_radius_bottom_right = 7
+corner_radius_bottom_left = 7
+shadow_color = Color(0, 0, 0, 0)
+shadow_size = 2
+shadow_offset = Vector2(3, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8eldu"]
+bg_color = Color(0, 0, 0, 0.6509804)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 0.8156863)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+expand_margin_left = 3.0
+
+[sub_resource type="FontFile" id="FontFile_cxiti"]
+cache/0/variation_coordinates = {}
+cache/0/face_index = 0
+cache/0/embolden = 0.0
+cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
+cache/0/spacing_top = 0
+cache/0/spacing_bottom = 0
+cache/0/spacing_space = 0
+cache/0/spacing_glyph = 0
+cache/0/baseline_offset = 0.0
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/10/0/ascent = 0.0
+cache/0/10/0/descent = 0.0
+cache/0/10/0/underline_position = 0.0
+cache/0/10/0/underline_thickness = 0.0
+cache/0/10/0/scale = 1.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_0nb4j"]
+font = SubResource("FontFile_cxiti")
+font_size = 10
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 2
+shadow_color = Color(0, 0, 0, 0.5568628)
+
+[sub_resource type="FontFile" id="FontFile_uu0mk"]
+cache/0/variation_coordinates = {}
+cache/0/face_index = 0
+cache/0/embolden = 0.0
+cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
+cache/0/spacing_top = 0
+cache/0/spacing_bottom = 0
+cache/0/spacing_space = 0
+cache/0/spacing_glyph = 0
+cache/0/baseline_offset = 0.0
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/10/0/ascent = 0.0
+cache/0/10/0/descent = 0.0
+cache/0/10/0/underline_position = 0.0
+cache/0/10/0/underline_thickness = 0.0
+cache/0/10/0/scale = 1.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cxiti"]
+bg_color = Color(0.34048992, 0.5029561, 0.6465655, 0.7411765)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.20970586, 0.35911784, 0.5069695, 0.80784315)
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+expand_margin_left = 2.0
+expand_margin_right = 2.0
+
+[sub_resource type="FontFile" id="FontFile_20fwi"]
+cache/0/variation_coordinates = {}
+cache/0/face_index = 0
+cache/0/embolden = 0.0
+cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
+cache/0/spacing_top = 0
+cache/0/spacing_bottom = 0
+cache/0/spacing_space = 0
+cache/0/spacing_glyph = 0
+cache/0/baseline_offset = 0.0
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/10/0/ascent = 0.0
+cache/0/10/0/descent = 0.0
+cache/0/10/0/underline_position = 0.0
+cache/0/10/0/underline_thickness = 0.0
+cache/0/10/0/scale = 1.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_no80t"]
+font = SubResource("FontFile_20fwi")
+font_size = 10
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d6fhe"]
 bg_color = Color(0.4054362, 0.5894557, 0.6905548, 1)
 border_width_left = 8
@@ -458,6 +577,9 @@ expand_margin_left = 3.0
 expand_margin_top = 2.0
 
 [sub_resource type="FontFile" id="FontFile_hasax"]
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
 cache/0/variation_coordinates = {}
 cache/0/face_index = 0
 cache/0/embolden = 0.0
@@ -497,6 +619,9 @@ corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
 
 [sub_resource type="FontFile" id="FontFile_2pujl"]
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
 cache/0/variation_coordinates = {}
 cache/0/face_index = 0
 cache/0/embolden = 0.0
@@ -769,6 +894,9 @@ corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
 
 [sub_resource type="FontFile" id="FontFile_lmr3m"]
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
 cache/0/variation_coordinates = {}
 cache/0/face_index = 0
 cache/0/embolden = 0.0
@@ -835,6 +963,9 @@ font = SubResource("FontFile_lmr3m")
 font_size = 100
 
 [sub_resource type="FontFile" id="FontFile_noyia"]
+subpixel_positioning = 0
+msdf_pixel_range = 14
+msdf_size = 128
 cache/0/variation_coordinates = {}
 cache/0/face_index = 0
 cache/0/embolden = 0.0
@@ -1183,14 +1314,13 @@ text = "v.Small"
 label_settings = SubResource("LabelSettings_gvjwk")
 
 [node name="Work_App" type="Panel" parent="Phone" unique_id=321368451]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_20fwi")
+theme_override_styles/panel = SubResource("StyleBoxFlat_2pujl")
 
 [node name="Under_Development_Label" type="Label" parent="Phone/Work_App" unique_id=1011677720]
 modulate = Color(1, 1, 1, 0.5568628)
@@ -1204,6 +1334,69 @@ text = "   This application
      development
                 :("
 label_settings = SubResource("LabelSettings_2cpot")
+
+[node name="Balance_Panel" type="Panel" parent="Phone/Work_App" unique_id=1095332215]
+layout_mode = 0
+offset_left = 70.43477
+offset_top = 10.434784
+offset_right = 130.43478
+offset_bottom = 30.434784
+theme_override_styles/panel = SubResource("StyleBoxFlat_8eldu")
+
+[node name="CenterContainer" type="CenterContainer" parent="Phone/Work_App/Balance_Panel" unique_id=1915176967]
+layout_mode = 0
+offset_left = 0.86956525
+offset_top = 2.6086998
+offset_right = 45.869564
+offset_bottom = 16.6087
+
+[node name="Balance" type="Label" parent="Phone/Work_App/Balance_Panel/CenterContainer" unique_id=151997146]
+layout_mode = 2
+text = "Balance: 0"
+label_settings = SubResource("LabelSettings_0nb4j")
+
+[node name="Stert_Work_Button" type="Button" parent="Phone/Work_App" unique_id=1402421427]
+layout_mode = 0
+offset_left = 73.913025
+offset_top = 33.913044
+offset_right = 126.913025
+offset_bottom = 53.913044
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = SubResource("FontFile_uu0mk")
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxFlat_cxiti")
+text = "Start Work"
+
+[node name="Info_Panel" type="Panel" parent="Phone/Work_App" unique_id=2093576061]
+layout_mode = 0
+offset_left = 13.043465
+offset_top = 55.652184
+offset_right = 130.43478
+offset_bottom = 212.17392
+theme_override_styles/panel = SubResource("StyleBoxFlat_8eldu")
+
+[node name="Info_Full" type="Label" parent="Phone/Work_App/Info_Panel" unique_id=1934026337]
+layout_mode = 0
+offset_left = 2.608698
+offset_top = 17.391304
+offset_right = 96.608696
+offset_bottom = 116.391304
+text = "Name:
+To:
+From: Vasa Compony
+What: Paper
+Reward: 1 coin
+Time: 2m"
+label_settings = SubResource("LabelSettings_no80t")
+
+[node name="Info" type="Label" parent="Phone/Work_App/Info_Panel" unique_id=1677982400]
+layout_mode = 0
+offset_left = 93.91305
+offset_top = 0.86956525
+offset_right = 113.91305
+offset_bottom = 14.869565
+text = "Info:"
+label_settings = SubResource("LabelSettings_no80t")
 
 [node name="Notes_App" type="Panel" parent="Phone" unique_id=950334206]
 visible = false
@@ -1230,6 +1423,7 @@ here soon."
 label_settings = SubResource("LabelSettings_hasax")
 
 [node name="Sms_App" type="Panel" parent="Phone" unique_id=169316686]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -2011,6 +2205,7 @@ offset_bottom = 51.456543
 text = "r"
 label_settings = SubResource("LabelSettings_ndrgk")
 
+[connection signal="pressed" from="Phone/Work_App/Stert_Work_Button" to="." method="new_work"]
 [connection signal="pressed" from="Phone/Settings_App/Buttons/HBoxContainer/Music_Minus" to="." method="_on_music_minus_pressed"]
 [connection signal="pressed" from="Phone/Settings_App/Buttons/HBoxContainer/Music_Plus" to="." method="_on_music_plus_pressed"]
 [connection signal="pressed" from="Phone/Settings_App/Buttons/HBoxContainer2/SFX_Minus" to="." method="_on_sfx_minus_pressed"]

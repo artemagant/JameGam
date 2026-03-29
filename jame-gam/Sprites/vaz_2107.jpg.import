@@ -3,16 +3,16 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cuf402qw2hhyj"
-path.etc2="res://.godot/imported/vaz_2107.jpg-29d549d981ea06b94e80716e7a9974a5.etc2.ctex"
+path.s3tc="res://.godot/imported/vaz_2107.jpg-29d549d981ea06b94e80716e7a9974a5.s3tc.ctex"
 metadata={
-"imported_formats": ["etc2_astc"],
+"imported_formats": ["s3tc_bptc"],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Sprites/vaz_2107.jpg"
-dest_files=["res://.godot/imported/vaz_2107.jpg-29d549d981ea06b94e80716e7a9974a5.etc2.ctex"]
+dest_files=["res://.godot/imported/vaz_2107.jpg-29d549d981ea06b94e80716e7a9974a5.s3tc.ctex"]
 
 [params]
 
